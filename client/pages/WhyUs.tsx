@@ -43,7 +43,7 @@ export default function WhyUs() {
       <section className="bg-gradient-to-br from-holiday-cream via-white to-holiday-cream py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-holiday-green mb-6">
-            Experience The Jolly Deco Difference
+            Experience The Jolly Difference
           </h1>
           <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
             We know what the holiday season can be like for busy families. You
