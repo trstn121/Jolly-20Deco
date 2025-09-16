@@ -62,9 +62,11 @@ const Navigation = () => {
               <Phone className="w-4 h-4" />
               <span className="font-medium">(404) 416-9505</span>
             </a>
-            <Button className="bg-holiday-red hover:bg-holiday-red-dark text-white">
-              Free Consultation
-            </Button>
+            <Link to="/free-consultation">
+              <Button className="bg-holiday-red hover:bg-holiday-red-dark text-white">
+                Free Consultation
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -102,9 +104,11 @@ const Navigation = () => {
                   <Phone className="w-4 h-4" />
                   <span>(404) 416-9505</span>
                 </a>
-                <Button className="w-full bg-holiday-red hover:bg-holiday-red-dark text-white">
-                  Free Consultation
-                </Button>
+                <Link to="/free-consultation">
+                  <Button className="w-full bg-holiday-red hover:bg-holiday-red-dark text-white">
+                    Free Consultation
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

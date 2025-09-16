@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -132,12 +133,14 @@ export default function OurProcess() {
             If our process sounds like the hassle-free holiday solution you've
             been looking for, let's start the conversation.
           </p>
-          <Button
-            size="lg"
-            className="bg-holiday-red hover:bg-holiday-red-dark text-white text-lg px-8 py-6"
-          >
-            Request Your Free Consultation
-          </Button>
+          <Link to="/free-consultation">
+            <Button
+              size="lg"
+              className="bg-holiday-red hover:bg-holiday-red-dark text-white text-lg px-8 py-6"
+            >
+              Request Your Free Consultation
+            </Button>
+          </Link>
         </div>
       </section>
 
