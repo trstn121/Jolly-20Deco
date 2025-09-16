@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Construction } from "lucide-react";
@@ -22,12 +23,14 @@ const PlaceholderPage = ({ title, description }: PlaceholderPageProps) => {
             bring you more detailed information about our services.
           </p>
           <div className="space-y-4">
-            <Button
-              className="bg-holiday-red hover:bg-holiday-red-dark text-white"
-              size="lg"
-            >
-              Request Free Consultation
-            </Button>
+            <Link to="/free-consultation">
+              <Button
+                className="bg-holiday-red hover:bg-holiday-red-dark text-white"
+                size="lg"
+              >
+                Request Free Consultation
+              </Button>
+            </Link>
             <p className="text-sm text-gray-500">
               Continue prompting to help us fill in this page's content!
             </p>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -118,12 +119,14 @@ export default function Index() {
               for your home. Let us bring the magic, so you can make the
               memories.
             </p>
-            <Button
-              size="lg"
-              className="bg-holiday-red hover:bg-holiday-red-dark text-white text-lg px-8 py-6"
-            >
-              Request Your Free Design Consultation
-            </Button>
+            <Link to="/free-consultation">
+              <Button
+                size="lg"
+                className="bg-holiday-red hover:bg-holiday-red-dark text-white text-lg px-8 py-6"
+              >
+                Request Your Free Design Consultation
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="absolute top-0 right-0 w-64 h-64 bg-holiday-gold/10 rounded-full blur-3xl"></div>
@@ -389,13 +392,14 @@ export default function Index() {
                     />
                   </div>
 
-                  <Button
-                    type="submit"
-                    className="w-full bg-holiday-red hover:bg-holiday-red-dark text-white"
-                    size="lg"
-                  >
-                    Request Free Consultation
-                  </Button>
+                  <Link to="/free-consultation" className="block">
+                    <Button
+                      className="w-full bg-holiday-red hover:bg-holiday-red-dark text-white"
+                      size="lg"
+                    >
+                      Request Free Consultation
+                    </Button>
+                  </Link>
                 </form>
               </CardContent>
             </Card>

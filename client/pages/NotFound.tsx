@@ -31,13 +31,15 @@ export default function NotFound() {
               </Button>
             </Link>
             <div className="mt-4">
-              <Button
-                variant="outline"
-                className="border-holiday-red text-holiday-red hover:bg-holiday-red hover:text-white"
-                size="lg"
-              >
-                Request Free Consultation
-              </Button>
+              <Link to="/free-consultation">
+                <Button
+                  variant="outline"
+                  className="border-holiday-red text-holiday-red hover:bg-holiday-red hover:text-white"
+                  size="lg"
+                >
+                  Request Free Consultation
+                </Button>
+              </Link>
             </div>
           </div>
         </CardContent>
