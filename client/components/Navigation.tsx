@@ -22,10 +22,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-holiday-green rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">J</span>
-            </div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F77ba6a01c3f14f688f51d900ca5ec7be?format=webp&width=800"
+              alt="The Jolly Deco Co. Logo"
+              className="w-12 h-12 object-contain"
+            />
             <div className="flex flex-col">
               <span className="text-holiday-green font-bold text-lg leading-none">
                 The Jolly
