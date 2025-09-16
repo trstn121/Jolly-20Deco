@@ -12,7 +12,7 @@ const Navigation = () => {
     { name: "Our Process", href: "/our-process" },
     { name: "Gallery", href: "/gallery" },
     { name: "Why Us", href: "/why-us" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/free-consultation" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
