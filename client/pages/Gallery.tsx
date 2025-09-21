@@ -150,18 +150,26 @@ export default function Gallery() {
 
   const ImagePlaceholder = ({ image }: { image: ImageData }) => (
     <div
-      className={`group relative cursor-pointer overflow-hidden rounded-lg bg-gradient-to-br ${getPlaceholderColor(image.category)} ${getAspectRatioClass(image.aspectRatio)} transition-transform duration-300 hover:scale-105`}
+      className={`group relative cursor-pointer overflow-hidden rounded-lg ${getAspectRatioClass(image.aspectRatio)} transition-transform duration-300 hover:scale-105`}
       onClick={() => openLightbox(image)}
     >
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center p-4">
-          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
-            <div className="w-8 h-8 bg-white/40 rounded"></div>
+      {image.imageUrl ? (
+        <img
+          src={image.imageUrl}
+          alt={image.caption}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <div className={`w-full h-full bg-gradient-to-br ${getPlaceholderColor(image.category)} flex items-center justify-center`}>
+          <div className="text-center p-4">
+            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
+              <div className="w-8 h-8 bg-white/40 rounded"></div>
+            </div>
+            <p className="text-xs text-gray-600 font-medium">Image Placeholder</p>
           </div>
-          <p className="text-xs text-gray-600 font-medium">Image Placeholder</p>
         </div>
-      </div>
-      
+      )}
+
       {/* Hover Caption */}
       <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
         <div className="p-4 text-white">
