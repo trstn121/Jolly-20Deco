@@ -9,6 +9,7 @@ interface ImageData {
   caption: string;
   category: "halloween" | "christmas";
   aspectRatio: "tall" | "wide" | "square";
+  imageUrl?: string;
 }
 
 export default function Gallery() {
