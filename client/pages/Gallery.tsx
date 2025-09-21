@@ -18,19 +18,19 @@ export default function Gallery() {
   const halloweenImages: ImageData[] = [
     {
       id: "h1",
-      caption: "Project: The Roswell Residence | Style: Classic & Spooky Entryway",
+      caption: "Project: Crabapple Home Halloween | Classic Minimal Style",
       category: "halloween",
       aspectRatio: "tall",
     },
     {
       id: "h2",
-      caption: "Project: The Roswell Residence | Detail: Custom Gravestone Arrangement",
+      caption: "Project: Crabapple Home Halloween | Classic Minimal Style",
       category: "halloween",
       aspectRatio: "square",
     },
     {
       id: "h3",
-      caption: "Project: The Alpharetta Home | Style: Elegant Harvest Theme with Pumpkin & Gourd Display",
+      caption: "Project: Crabapple Home Halloween | Classic Minimal Style",
       category: "halloween",
       aspectRatio: "wide",
     },
