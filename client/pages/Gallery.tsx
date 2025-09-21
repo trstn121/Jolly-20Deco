@@ -282,15 +282,23 @@ export default function Gallery() {
             </button>
 
             {/* Image */}
-            <div className={`${getAspectRatioClass(selectedImage.aspectRatio).replace('row-span-2', '').replace('col-span-2', '')} max-w-3xl max-h-[80vh] bg-gradient-to-br ${getPlaceholderColor(selectedImage.category)} rounded-lg overflow-hidden`}>
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-12 h-12 bg-white/40 rounded"></div>
+            <div className={`${getAspectRatioClass(selectedImage.aspectRatio).replace('row-span-2', '').replace('col-span-2', '')} max-w-3xl max-h-[80vh] rounded-lg overflow-hidden`}>
+              {selectedImage.imageUrl ? (
+                <img
+                  src={selectedImage.imageUrl}
+                  alt={selectedImage.caption}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className={`w-full h-full bg-gradient-to-br ${getPlaceholderColor(selectedImage.category)} flex items-center justify-center`}>
+                  <div className="text-center p-8">
+                    <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-12 h-12 bg-white/40 rounded"></div>
+                    </div>
+                    <p className="text-white text-lg font-medium">Image Placeholder</p>
                   </div>
-                  <p className="text-white text-lg font-medium">Image Placeholder</p>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Caption */}
