@@ -37,24 +37,6 @@ export default function Gallery() {
       aspectRatio: "wide",
       imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F7e2113ecaf1645c5b07b297018250951?format=webp&width=800",
     },
-    {
-      id: "h4",
-      caption: "Project: The Alpharetta Home | Detail: Warm White & Orange Roofline Lighting",
-      category: "halloween",
-      aspectRatio: "wide",
-    },
-    {
-      id: "h5",
-      caption: "Project: Milton Manor | Style: Full-Facade Purple & Green Uplighting",
-      category: "halloween",
-      aspectRatio: "tall",
-    },
-    {
-      id: "h6",
-      caption: "Project: Milton Manor | Detail: Atmospheric Fog and Pathway Lighting",
-      category: "halloween",
-      aspectRatio: "square",
-    },
   ];
 
   const christmasImages: ImageData[] = [
