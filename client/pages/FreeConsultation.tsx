@@ -44,7 +44,7 @@ export default function FreeConsultation() {
     "Walk Your Property With You: We'll listen to your ideas and what you hope to achieve, whether you have a specific vision or are looking for brand-new concepts.",
     "Provide Expert Advice & Creative Ideas: We will offer professional design suggestions tailored to your home's architecture, landscaping, and your personal style.",
     "Discuss Products & Materials: We'll show you examples of our premium, commercial-grade lights and decor so you can see and feel the quality for yourself.",
-    "Deliver a No-Obligation Proposal: Within 24-48 hours of our meeting, you will receive a detailed, itemized proposal with a firm price for your project.",
+    "Deliver a No-Obligation Proposal: Within 24 hours of our meeting, you will receive a few generated mock-up design images of your exact home, fully decorated, ensuring you approve of the design before we even start. We will follow this up with a detailed, itemized proposal with a firm price for your project.",
   ];
 
   return (
@@ -72,7 +72,7 @@ export default function FreeConsultation() {
                   What to Expect During Your Consultation
                 </h2>
                 <p className="text-lg text-gray-700 mb-8">
-                  Our goal is to provide you with immense value in a short amount of time. During our 30-45 minute on-site visit, we will:
+                  Our goal is to provide you with immense value in a short amount of time. During our 10-20 minute on-site visit, we will:
                 </p>
               </div>
 
