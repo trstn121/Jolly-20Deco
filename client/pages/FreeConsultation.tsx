@@ -182,7 +182,7 @@ export default function FreeConsultation() {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         How did you hear about us?
                       </label>
-                      <Select onValueChange={handleSelectChange}>
+                      <Select name="source" onValueChange={handleSelectChange}>
                         <SelectTrigger className="border-gray-300 focus:border-holiday-green focus:ring-holiday-green">
                           <SelectValue placeholder="Please select..." />
                         </SelectTrigger>
