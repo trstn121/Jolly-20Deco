@@ -40,54 +40,7 @@ export default function Gallery() {
   ];
 
   const christmasImages: ImageData[] = [
-    {
-      id: "c1",
-      caption: "Project: Buckhead Estate | Style: Grand Winter Wonderland Theme",
-      category: "christmas",
-      aspectRatio: "wide",
-    },
-    {
-      id: "c2",
-      caption: "Project: Buckhead Estate | Detail: Illuminated Reindeer Scene",
-      category: "christmas",
-      aspectRatio: "square",
-    },
-    {
-      id: "c3",
-      caption: "Project: Buckhead Estate | Detail: Lush, Pre-lit Garland on Porch Railings",
-      category: "christmas",
-      aspectRatio: "tall",
-    },
-    {
-      id: "c4",
-      caption: "Project: The Sandy Springs House | Style: Classic Warm White C9 Lighting",
-      category: "christmas",
-      aspectRatio: "wide",
-    },
-    {
-      id: "c5",
-      caption: "Project: The Sandy Springs House | Detail: Perfectly Wrapped Oak Tree",
-      category: "christmas",
-      aspectRatio: "tall",
-    },
-    {
-      id: "c6",
-      caption: "Project: Johns Creek Residence | Style: Coordinated Wreaths on Every Window",
-      category: "christmas",
-      aspectRatio: "square",
-    },
-    {
-      id: "c7",
-      caption: "Project: Johns Creek Residence | Detail: Elegant Entryway with Timed Lighting",
-      category: "christmas",
-      aspectRatio: "wide",
-    },
-    {
-      id: "c8",
-      caption: "Project: Alpharetta Family Home | Style: Fun & Festive with Classic Colors",
-      category: "christmas",
-      aspectRatio: "tall",
-    },
+    // Christmas images will be added when photos are available
   ];
 
   const allImages = [...halloweenImages, ...christmasImages];
