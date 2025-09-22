@@ -150,26 +150,28 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Christmas Section */}
-      <section className="py-20 lg:py-24 bg-holiday-cream/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-4">
-              Christmas & Holiday Designs
-            </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Timeless elegance and festive grandeur are the hallmarks of our Christmas designs. We create warm, inviting, and breathtaking displays that become the centerpiece of your holiday season.
-            </p>
+      {/* Christmas Section - Only show if images are available */}
+      {christmasImages.length > 0 && (
+        <section className="py-20 lg:py-24 bg-holiday-cream/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-4">
+                Christmas & Holiday Designs
+              </h2>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                Timeless elegance and festive grandeur are the hallmarks of our Christmas designs. We create warm, inviting, and breathtaking displays that become the centerpiece of your holiday season.
+              </p>
+            </div>
+
+            {/* Masonry Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-max">
+              {christmasImages.map((image) => (
+                <ImagePlaceholder key={image.id} image={image} />
+              ))}
+            </div>
           </div>
-          
-          {/* Masonry Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-max">
-            {christmasImages.map((image) => (
-              <ImagePlaceholder key={image.id} image={image} />
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Final CTA Section */}
       <section className="py-20 lg:py-24 bg-white">
