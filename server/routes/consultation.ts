@@ -34,7 +34,7 @@ export async function handleConsultation(req: Request, res: Response) {
       service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASS, // App password
+        pass: process.env.EMAIL_PASS?.replace(/\s+/g, ''), // App password (remove spaces)
       },
     });
 
