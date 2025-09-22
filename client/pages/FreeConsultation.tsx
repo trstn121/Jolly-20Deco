@@ -34,22 +34,10 @@ export default function FreeConsultation() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Netlify Forms will handle the submission automatically
-    // Just show success message and reset form
-    setTimeout(() => {
-      alert('Thank you! Your consultation request has been submitted. We will contact you within one business day.');
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        address: "",
-        source: "",
-        message: "",
-      });
-    }, 500);
+    // Let Netlify handle the form submission
+    // The page will redirect to a success page automatically
+    // If JavaScript is enabled, show immediate feedback
+    alert('Thank you! Your consultation request has been submitted. We will contact you within one business day.');
   };
 
   const expectedItems = [
