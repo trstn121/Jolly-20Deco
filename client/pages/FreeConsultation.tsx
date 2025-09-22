@@ -195,6 +195,8 @@ export default function FreeConsultation() {
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
+                      {/* Hidden input to ensure Netlify captures the select value */}
+                      <input type="hidden" name="source" value={formData.source} />
                     </div>
 
                     <div>
