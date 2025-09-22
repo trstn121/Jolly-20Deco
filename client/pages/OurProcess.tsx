@@ -111,12 +111,6 @@ export default function OurProcess() {
                   </p>
                 </div>
 
-                {/* Connector Arrow (except for last item) */}
-                {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 mt-32">
-                    <ArrowRight className="w-8 h-8 text-holiday-green/30" />
-                  </div>
-                )}
               </div>
             ))}
           </div>
