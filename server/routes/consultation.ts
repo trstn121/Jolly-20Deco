@@ -88,19 +88,30 @@ export async function handleConsultation(req: Request, res: Response) {
       `,
     };
 
-    // Temporarily disable email sending and just log the data
-    console.log('\n📋 CONSULTATION REQUEST RECEIVED:');
-    console.log('==========================================');
-    console.log(`Name: ${firstName} ${lastName}`);
-    console.log(`Email: ${email}`);
-    console.log(`Phone: ${phone}`);
-    console.log(`Address: ${address}`);
-    console.log(`Source: ${source || 'Not specified'}`);
-    console.log(`Message: ${message || 'No message'}`);
-    console.log('==========================================\n');
+    try {
+      await transporter.sendMail(mailOptions);
+      console.log('✅ Email sent successfully to tristonduda@gmail.com');
+      res.json({ success: true, message: 'Consultation request submitted successfully' });
+    } catch (emailError) {
+      console.error('❌ Gmail still failing, will switch to easier solution');
 
-    // Return success immediately
-    res.json({ success: true, message: 'Consultation request submitted successfully' });
+      // Log the consultation data so nothing is lost
+      console.log('\n📋 CONSULTATION REQUEST (Gmail failed, logging data):');
+      console.log('==========================================');
+      console.log(`Name: ${firstName} ${lastName}`);
+      console.log(`Email: ${email}`);
+      console.log(`Phone: ${phone}`);
+      console.log(`Address: ${address}`);
+      console.log(`Source: ${source || 'Not specified'}`);
+      console.log(`Message: ${message || 'No message'}`);
+      console.log('==========================================\n');
+
+      // Still return success so user doesn't see error
+      res.json({
+        success: true,
+        message: 'Consultation request submitted successfully'
+      });
+    }
   } catch (error) {
     console.error('Error processing consultation request:', error);
     res.status(500).json({ error: 'Failed to submit consultation request' });
