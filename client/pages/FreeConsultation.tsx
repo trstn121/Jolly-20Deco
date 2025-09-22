@@ -33,10 +33,36 @@ export default function FreeConsultation() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Consultation request submitted:", formData);
+
+    try {
+      const response = await fetch('/api/consultation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Thank you! Your consultation request has been submitted. We will contact you within one business day.');
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          address: "",
+          source: "",
+          message: "",
+        });
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your request. Please try again or call us directly at (404) 416-9505.');
+    }
   };
 
   const expectedItems = [
@@ -183,6 +209,7 @@ export default function FreeConsultation() {
                           <SelectItem value="referral">Friend/Family Referral</SelectItem>
                           <SelectItem value="social">Social Media</SelectItem>
                           <SelectItem value="neighbor">Saw Your Work in Neighborhood</SelectItem>
+                          <SelectItem value="sign">Saw a Sign</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
