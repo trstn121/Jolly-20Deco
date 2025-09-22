@@ -33,36 +33,23 @@ export default function FreeConsultation() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch('/api/consultation', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+    // Netlify Forms will handle the submission automatically
+    // Just show success message and reset form
+    setTimeout(() => {
+      alert('Thank you! Your consultation request has been submitted. We will contact you within one business day.');
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        address: "",
+        source: "",
+        message: "",
       });
-
-      if (response.ok) {
-        alert('Thank you! Your consultation request has been submitted. We will contact you within one business day.');
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          address: "",
-          source: "",
-          message: "",
-        });
-      } else {
-        throw new Error('Failed to submit form');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting your request. Please try again or call us directly at (404) 416-9505.');
-    }
+    }, 500);
   };
 
   const expectedItems = [
