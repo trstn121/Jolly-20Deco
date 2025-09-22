@@ -18,7 +18,7 @@ export default function OurProcess() {
       title: "The Creative Consultation",
       subtitle: "Where Your Vision Comes to Life",
       description:
-        "Our journey together begins with a complimentary, on-site design consultation. We'll walk your property with you, listening to your ideas, understanding your style, and suggesting creative concepts that complement your home's unique architecture. This collaborative session, typically lasting 30-45 minutes, ensures we capture the exact look and feel you want to achieve.",
+        "Our journey together begins with a complimentary, on-site design consultation. We'll walk your property with you, listening to your ideas, understanding your style, and suggesting creative concepts that complement your home's unique architecture. This collaborative session, typically lasting 10-20 minutes, ensures we capture the exact look and feel you want to achieve.",
     },
     {
       number: "02",
@@ -26,7 +26,7 @@ export default function OurProcess() {
       title: "The Custom Proposal & Booking",
       subtitle: "A Clear, Tailored Plan for Your Home",
       description:
-        "Following our meeting, we will craft a detailed, itemized proposal and email it to you within 24-48 hours. This proposal outlines the full scope of the project, the specific decorations and lighting to be used, and a firm price—with no hidden fees. Once you approve the vision, we'll send a simple digital agreement and require a 50% deposit to officially reserve your spot on our installation schedule.",
+        "Following our meeting, we will craft a detailed, generated fully designed mock-ups of your home. This way you are able to see and approve of the design before we even start, ensuring you get exactly what you want. We follow this up by sending an itemized proposal and email it to you within 24 hours. This proposal outlines the full scope of the project, the specific decorations and lighting to be used, and a firm price—with no hidden fees. Once you approve the vision, we'll send a simple digital agreement and require a 50% deposit to officially reserve your spot on our installation schedule.",
     },
     {
       number: "03",
@@ -34,7 +34,7 @@ export default function OurProcess() {
       title: "The Professional Installation",
       subtitle: "Meticulous, Safe, and Seamless Execution",
       description:
-        "This is where the magic happens. You don't even need to be home. Our professional team will arrive on the scheduled day and bring your design to life with the utmost care for your property. We use only premium, commercial-grade materials, property-safe clips and fasteners, and artfully hidden wiring. We conclude every installation by setting all lights on an automatic timer and conducting a final quality check to ensure every bulb is shining brightly.",
+        "This is where the magic happens. You don't even need to be home. Our professional team will arrive on the scheduled day and bring your design to life with the utmost care for your property. We use only premium, commercial-grade materials, property-safe clips and fasteners, and artful wiring. We conclude every installation by setting all lights on an automatic timer and conducting a final quality check to ensure every bulb is shining brightly.",
     },
     {
       number: "04",
