@@ -30,7 +30,7 @@ export async function handleConsultation(req: Request, res: Response) {
 
     // For now, we'll use a simple Gmail SMTP configuration
     // In production, you should use environment variables for email configuration
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER, // Your email
