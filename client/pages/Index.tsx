@@ -83,19 +83,19 @@ export default function Index() {
 
   const features = [
     {
-      icon: <Eye className="w-8 h-8 text-holiday-gold" />,
+      icon: <Eye className="w-8 h-8 text-accent" />,
       title: "Creative Eye",
       description:
         "Bespoke designs tailored to your home's unique architecture and your personal style.",
     },
     {
-      icon: <Users className="w-8 h-8 text-holiday-gold" />,
+      icon: <Users className="w-8 h-8 text-accent" />,
       title: "Professional Service",
       description:
         "Unmatched work ethic and customer service. We are reliable, communicative, and treat your home like our own.",
     },
     {
-      icon: <Shield className="w-8 h-8 text-holiday-gold" />,
+      icon: <Shield className="w-8 h-8 text-accent" />,
       title: "Peace of Mind",
       description:
         "Fully insured, using only premium, commercial-grade materials for a durable and brilliant display.",
@@ -134,13 +134,13 @@ export default function Index() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
               From a Vision, to Your Home
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-foreground leading-relaxed">
               At The Jolly Deco Co., we believe the holidays are about a
               feeling—the joy, the connection, and the magic that brings
               communities together. My passion for design began at age 8 with
@@ -159,10 +159,10 @@ export default function Index() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-holiday-cream/50">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
               Your Hassle-Free Holiday, in Three Simple Steps
             </h2>
           </div>
@@ -170,15 +170,15 @@ export default function Index() {
             {processSteps.map((step, index) => (
               <Card key={index} className="text-center border-0 shadow-lg">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-holiday-red rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-white font-bold text-xl">
+                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-primary font-bold text-xl">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-holiday-green mb-4">
+                  <h3 className="text-xl font-bold text-primary mb-4">
                     {step.title}
                   </h3>
-                  <p className="text-gray-700">{step.description}</p>
+                  <p className="text-foreground">{step.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -187,10 +187,10 @@ export default function Index() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
               What Makes Us Jolly
             </h2>
           </div>
@@ -198,10 +198,10 @@ export default function Index() {
             {features.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-6">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-holiday-green mb-4">
+                <h3 className="text-xl font-bold text-primary mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-700">{feature.description}</p>
+                <p className="text-foreground">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -209,7 +209,7 @@ export default function Index() {
       </section>
 
       {/* Service Area Section */}
-      <section className="py-20 bg-holiday-green text-white">
+      <section className="py-20 bg-primary text-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Proudly Serving the Greater Atlanta Area
@@ -226,9 +226,9 @@ export default function Index() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-holiday-cream/50">
+      <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-primary text-center mb-12">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
