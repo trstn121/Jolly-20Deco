@@ -112,18 +112,18 @@ export default function Index() {
         }}
       >
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-primary/20"></div>
+        <div className="absolute inset-0 bg-primary/30"></div>
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl lg:text-6xl font-bold text-background mb-6 drop-shadow-lg">
+          <div className="text-center max-w-4xl mx-auto shadow-2xl">
+            <h1 className="text-4xl lg:text-6xl font-bold text-background mb-6" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5)' }}>
               Atlanta's Premier
-              <span className="block text-accent drop-shadow-lg">
+              <span className="block text-accent" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5)' }}>
                 Holiday Design & Installation
               </span>
             </h1>
-            <p className="text-lg lg:text-xl text-background mb-8 max-w-3xl mx-auto drop-shadow-md">
+            <p className="text-lg lg:text-xl text-background mb-8 max-w-3xl mx-auto" style={{ textShadow: '1px 1px 6px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}>
               Elegant, creative, and completely hassle-free holiday decorating
               for your home. Let us bring the magic, so you can make the
               memories.
@@ -131,7 +131,8 @@ export default function Index() {
             <Link to="/free-consultation">
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6"
+                className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6 shadow-xl"
+                style={{ textShadow: '1px 1px 4px rgba(0, 0, 0, 0.3)' }}
               >
                 Request Your Free Design Consultation
               </Button>
