@@ -394,7 +394,7 @@ export default function Index() {
 
                   <Link to="/free-consultation" className="block">
                     <Button
-                      className="w-full bg-holiday-red hover:bg-holiday-red-dark text-white"
+                      className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200"
                       size="lg"
                     >
                       Request Free Consultation
