@@ -52,11 +52,11 @@ export default function FreeConsultation() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-background via-background to-secondary py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
-            Book Your Complimentary Holiday Design Consultation
+          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6 font-heading">
+            Schedule Your Private Design Review
           </h1>
           <p className="text-lg lg:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
-            This is the first step toward a beautiful, effortless holiday season. We know you're busy, which is why we've made our process simple and respectful of your time. This on-site meeting is a no-obligation, creative conversation where we discover what's possible for your home. There are no high-pressure sales tactics, just professional advice and a passion for great design.
+            This is the first step toward securing your bespoke holiday display. We offer a discreet, on-site design review—a no-obligation conversation focused purely on architecting the possibilities for your estate. Our process is designed to be completely respectful of your time, providing professional expertise without any high-pressure sales tactics.
           </p>
         </div>
       </section>
