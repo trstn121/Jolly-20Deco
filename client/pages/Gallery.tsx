@@ -81,7 +81,7 @@ export default function Gallery() {
   const getPlaceholderColor = (category: "halloween" | "christmas") => {
     return category === "halloween" 
       ? "from-orange-100 to-purple-100" 
-      : "from-holiday-green/10 to-holiday-red/10";
+      : "from-accent/10 to-accent/20";
   };
 
   const ImagePlaceholder = ({ image }: { image: ImageData }) => (
@@ -98,8 +98,8 @@ export default function Gallery() {
       ) : (
         <div className={`w-full h-full bg-gradient-to-br ${getPlaceholderColor(image.category)} flex items-center justify-center`}>
           <div className="text-center p-4">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
-              <div className="w-8 h-8 bg-white/40 rounded"></div>
+            <div className="w-16 h-16 bg-background/20 rounded-full flex items-center justify-center mx-auto mb-2">
+              <div className="w-8 h-8 bg-background/40 rounded"></div>
             </div>
             <p className="text-xs text-gray-600 font-medium">Image Placeholder</p>
           </div>
@@ -116,14 +116,14 @@ export default function Gallery() {
   );
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-holiday-cream via-white to-holiday-cream py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-background via-background to-secondary py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-holiday-green mb-6">
+          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
             Inspiration for Your Holiday Home
           </h1>
-          <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+          <p className="text-lg lg:text-xl text-foreground leading-relaxed">
             Welcome to our portfolio. Here you'll find a curated collection of our favorite projects, showcasing the creativity, quality, and meticulous attention to detail we bring to every home. We hope this gallery inspires you and helps you envision the magic we can create together.
           </p>
         </div>
@@ -133,10 +133,10 @@ export default function Gallery() {
       <section className="py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
               Halloween Designs
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            <p className="text-lg text-foreground max-w-3xl mx-auto">
               From elegantly spooky to fun and festive, our Halloween designs create unforgettable atmosphere for your family and neighborhood.
             </p>
           </div>
@@ -152,13 +152,13 @@ export default function Gallery() {
 
       {/* Christmas Section - Only show if images are available */}
       {christmasImages.length > 0 && (
-        <section className="py-20 lg:py-24 bg-holiday-cream/30">
+        <section className="py-20 lg:py-24 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
                 Christmas & Holiday Designs
               </h2>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="text-lg text-foreground max-w-3xl mx-auto">
                 Timeless elegance and festive grandeur are the hallmarks of our Christmas designs. We create warm, inviting, and breathtaking displays that become the centerpiece of your holiday season.
               </p>
             </div>
@@ -174,18 +174,18 @@ export default function Gallery() {
       )}
 
       {/* Final CTA Section */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
             Inspired By What You See?
           </h2>
-          <p className="text-lg lg:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-foreground mb-8 max-w-3xl mx-auto">
             Every great holiday display starts with a simple conversation. Let's discuss your vision and create a custom plan for your home. Contact us today to schedule your complimentary, no-obligation design consultation.
           </p>
           <Link to="/free-consultation">
             <Button
               size="lg"
-              className="bg-holiday-red hover:bg-holiday-red-dark text-white text-lg px-8 py-6"
+              className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6"
             >
               Request Your Free Consultation
             </Button>
@@ -200,7 +200,7 @@ export default function Gallery() {
             {/* Close Button */}
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+              className="absolute top-4 right-4 z-10 bg-background/20 hover:bg-background/30 rounded-full p-2 transition-colors"
             >
               <X className="w-6 h-6 text-white" />
             </button>
@@ -208,13 +208,13 @@ export default function Gallery() {
             {/* Navigation Buttons */}
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-background/20 hover:bg-background/30 rounded-full p-2 transition-colors"
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-background/20 hover:bg-background/30 rounded-full p-2 transition-colors"
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </button>
@@ -230,8 +230,8 @@ export default function Gallery() {
               ) : (
                 <div className={`w-full h-full bg-gradient-to-br ${getPlaceholderColor(selectedImage.category)} flex items-center justify-center`}>
                   <div className="text-center p-8">
-                    <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="w-12 h-12 bg-white/40 rounded"></div>
+                    <div className="w-24 h-24 bg-background/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-12 h-12 bg-background/40 rounded"></div>
                     </div>
                     <p className="text-white text-lg font-medium">Image Placeholder</p>
                   </div>
