@@ -124,7 +124,7 @@ export default function Gallery() {
             Inspiration for Your Holiday Home
           </h1>
           <p className="text-lg lg:text-xl text-foreground leading-relaxed">
-            Welcome to our portfolio. Here you'll find a curated collection of our favorite projects, showcasing the creativity, quality, and meticulous attention to detail we bring to every home. We hope this gallery inspires you and helps you envision the magic we can create together.
+            Welcome to our curated portfolio. Each image showcases our dedication to <span className="font-semibold">architectural precision</span> and the art of <span className="font-semibold">effortless elegance</span>. We invite you to explore this collection and envision the transformative experience we can create for your estate.
           </p>
         </div>
       </section>
