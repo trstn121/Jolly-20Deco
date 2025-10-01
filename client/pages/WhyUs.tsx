@@ -42,18 +42,11 @@ export default function WhyUs() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-background via-background to-secondary py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
-            Experience The Jolly Difference
+          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6 font-heading">
+            The Elevated Standard of Holiday Artistry
           </h1>
           <p className="text-lg lg:text-xl text-foreground leading-relaxed">
-            We know what the holiday season can be like for busy families. You
-            want a home that shines with festive magic, but the thought of
-            untangling lights, climbing ladders, and spending entire weekends on
-            setup can be overwhelming. The Jolly Deco Co. was founded on a
-            simple principle: you should enjoy the magic, not manage the chaos.
-            We offer more than just lights—we deliver a professional, end-to-end
-            design experience built on a foundation of creativity, quality, and
-            trust.
+            Securing The Jolly Deco Co. means choosing a standard of service that is rarely found. Our promise is a refined, hands-off experience that delivers architecturally precise design and unwavering professionalism, ensuring your holiday season is defined by effortless beauty, not effort.
           </p>
         </div>
       </section>
