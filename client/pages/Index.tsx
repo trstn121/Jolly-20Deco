@@ -304,11 +304,11 @@ export default function Index() {
                 </div>
               </div>
 
-              <div className="bg-primary-foreground p-6 rounded-lg">
+              <div className="bg-background p-6 rounded-lg">
                 <h3 className="font-semibold text-accent mb-2">
                   Service Areas
                 </h3>
-                <p className="text-background">
+                <p className="text-primary">
                   Alpharetta, Roswell, Milton, Johns Creek, Sandy Springs, and
                   Buckhead
                 </p>
