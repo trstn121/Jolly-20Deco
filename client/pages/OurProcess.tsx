@@ -14,7 +14,7 @@ export default function OurProcess() {
   const processSteps = [
     {
       number: "01",
-      icon: <FileText className="w-8 h-8 text-holiday-gold" />,
+      icon: <FileText className="w-8 h-8 text-accent" />,
       title: "The Creative Consultation",
       subtitle: "Where Your Vision Comes to Life",
       description:
@@ -22,7 +22,7 @@ export default function OurProcess() {
     },
     {
       number: "02",
-      icon: <Calendar className="w-8 h-8 text-holiday-gold" />,
+      icon: <Calendar className="w-8 h-8 text-accent" />,
       title: "The Custom Proposal & Booking",
       subtitle: "A Clear, Tailored Plan for Your Home",
       description:
@@ -30,7 +30,7 @@ export default function OurProcess() {
     },
     {
       number: "03",
-      icon: <Sparkles className="w-8 h-8 text-holiday-gold" />,
+      icon: <Sparkles className="w-8 h-8 text-accent" />,
       title: "The Professional Installation",
       subtitle: "Meticulous, Safe, and Seamless Execution",
       description:
@@ -38,7 +38,7 @@ export default function OurProcess() {
     },
     {
       number: "04",
-      icon: <Settings className="w-8 h-8 text-holiday-gold" />,
+      icon: <Settings className="w-8 h-8 text-accent" />,
       title: "In-Season Support & Maintenance",
       subtitle: "We Keep Your Display Perfect, All Season Long",
       description:
@@ -46,7 +46,7 @@ export default function OurProcess() {
     },
     {
       number: "05",
-      icon: <Package className="w-8 h-8 text-holiday-gold" />,
+      icon: <Package className="w-8 h-8 text-accent" />,
       title: "Post-Season Takedown & Optional Storage",
       subtitle: "An Effortless Ending to a Beautiful Season",
       description:
@@ -55,14 +55,14 @@ export default function OurProcess() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-holiday-cream via-white to-holiday-cream py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-background via-background to-secondary py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-holiday-green mb-6">
+          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
             Your Effortless Path to a Magical Holiday Display
           </h1>
-          <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+          <p className="text-lg lg:text-xl text-foreground leading-relaxed">
             At The Jolly Deco Co., we believe that creating a stunning holiday
             home should be a joyful experience, not a stressful one. We've
             meticulously designed our process to be transparent, professional,
@@ -87,12 +87,12 @@ export default function OurProcess() {
                 {/* Step Number and Icon */}
                 <div className="flex-shrink-0 text-center lg:text-left">
                   <div className="relative">
-                    <div className="w-24 h-24 bg-holiday-green rounded-full flex items-center justify-center mb-4 mx-auto lg:mx-0">
-                      <span className="text-white font-bold text-2xl">
+                    <div className="w-24 h-24 bg-accent rounded-full flex items-center justify-center mb-4 mx-auto lg:mx-0">
+                      <span className="text-background font-bold text-2xl">
                         {step.number}
                       </span>
                     </div>
-                    <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-holiday-cream">
+                    <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-background rounded-full flex items-center justify-center shadow-lg border-2 border-holiday-cream">
                       {step.icon}
                     </div>
                   </div>
@@ -100,13 +100,13 @@ export default function OurProcess() {
 
                 {/* Content */}
                 <div className="flex-1 text-center lg:text-left">
-                  <h2 className="text-2xl lg:text-3xl font-bold text-holiday-green mb-3">
+                  <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-3">
                     {step.title}
                   </h2>
-                  <h3 className="text-lg lg:text-xl font-semibold text-holiday-red mb-4">
+                  <h3 className="text-lg lg:text-xl font-semibold text-accent mb-4">
                     {step.subtitle}
                   </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed">
+                  <p className="text-foreground text-lg leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -118,7 +118,7 @@ export default function OurProcess() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-holiday-green text-white">
+      <section className="py-20 bg-accent text-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Ready to Experience the Difference?
@@ -130,7 +130,7 @@ export default function OurProcess() {
           <Link to="/free-consultation">
             <Button
               size="lg"
-              className="bg-holiday-red hover:bg-holiday-red-dark text-white text-lg px-8 py-6"
+              className="bg-holiday-red hover:bg-holiday-red-dark text-background text-lg px-8 py-6"
             >
               Request Your Free Consultation
             </Button>
@@ -139,39 +139,39 @@ export default function OurProcess() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-16 bg-holiday-cream/50">
+      <section className="py-16 bg-background/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="w-16 h-16 bg-holiday-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FileText className="w-8 h-8 text-holiday-green" />
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileText className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-semibold text-holiday-green mb-2">
+              <h3 className="font-semibold text-primary mb-2">
                 Transparent Pricing
               </h3>
-              <p className="text-gray-700 text-sm">
+              <p className="text-foreground text-sm">
                 Detailed proposals with no hidden fees or surprises
               </p>
             </div>
             <div>
-              <div className="w-16 h-16 bg-holiday-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Sparkles className="w-8 h-8 text-holiday-green" />
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Sparkles className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-semibold text-holiday-green mb-2">
+              <h3 className="font-semibold text-primary mb-2">
                 Premium Materials
               </h3>
-              <p className="text-gray-700 text-sm">
+              <p className="text-foreground text-sm">
                 Commercial-grade decorations and professional installation
               </p>
             </div>
             <div>
-              <div className="w-16 h-16 bg-holiday-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Settings className="w-8 h-8 text-holiday-green" />
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Settings className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-semibold text-holiday-green mb-2">
+              <h3 className="font-semibold text-primary mb-2">
                 Service Guarantee
               </h3>
-              <p className="text-gray-700 text-sm">
+              <p className="text-foreground text-sm">
                 We maintain your display perfectly throughout the season
               </p>
             </div>
