@@ -56,28 +56,21 @@ export default function WhyUs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary">
-                Bespoke Design, Not Just Decoration
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary font-heading">
+                Bespoke Artistry: Crafted for Your Architecture
               </h2>
               <p className="text-lg text-foreground leading-relaxed">
-                Your home is unique, and your holiday display should be too. As
-                a designer with a background in electrical work, I blend
-                artistic creativity with technical precision. We don't offer
-                cookie-cutter packages. Instead, we collaborate with you to
-                create a custom, cohesive design that enhances your home's
-                architecture and reflects your personal style. Every element is
-                thoughtfully considered to create a breathtaking and elegant
-                final product.
+                We view every property as a canvas. Our designers meticulously craft a vision that accentuates your home's unique architectural elements, ensuring your display is an exclusive, tailor-made masterpiece—never a standard install.
               </p>
             </div>
             <div className="order-first lg:order-last">
               <div className="relative">
                 <div className="aspect-[4/3] bg-gradient-to-br from-accent/10 to-background rounded-lg overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center space-y-4">
+                    <div className="text-center space-y-4 p-6">
                       <Home className="w-16 h-16 text-primary mx-auto" />
-                      <p className="text-primary font-semibold">
-                        Custom Design Preview
+                      <p className="text-primary font-semibold text-sm">
+                        Image: Designer's hand sketching a home exterior with stylus, overlaid with subtle gold architectural lines
                       </p>
                     </div>
                   </div>
@@ -95,29 +88,21 @@ export default function WhyUs() {
             <div className="relative">
               <div className="aspect-[4/3] bg-gradient-to-br from-accent/10 to-background rounded-lg overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4">
+                  <div className="text-center space-y-4 p-6">
                     <Award className="w-16 h-16 text-accent mx-auto" />
-                    <p className="text-primary font-semibold">
-                      Premium Quality Materials
+                    <p className="text-primary font-semibold text-sm">
+                      Image: Macro shot of gloved hand adjusting perfect commercial-grade LED light or luxury wreath section. Deep, rich colors.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary">
-                Quality You Can See, Service You Can Trust
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary font-heading">
+                Uncompromising Quality and Guaranteed Brilliance
               </h2>
               <p className="text-lg text-foreground leading-relaxed">
-                Our commitment to professionalism is unwavering. We exclusively
-                use premium, commercial-grade lighting and decor—the same
-                materials used in professional city displays. This ensures
-                vibrant colors, superior durability, and reliable performance
-                all season long. Our installation techniques are meticulous and
-                property-safe, and we stand by our work with an in-season
-                maintenance guarantee. We are a fully insured, owner-operated
-                local business that treats your home with the respect it
-                deserves.
+                Our commitment to excellence is non-negotiable. We exclusively utilize commercial-grade, highly durable materials and provide comprehensive liability coverage. This dedication ensures not just a beautiful display, but a brilliant, reliable, and entirely risk-free investment for your estate.
               </p>
             </div>
           </div>
@@ -129,27 +114,21 @@ export default function WhyUs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary">
-                Your Complete, Done-For-You Holiday Solution
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary font-heading">
+                The Ultimate Luxury: Reclaiming Your Time
               </h2>
               <p className="text-lg text-foreground leading-relaxed">
-                We are built for your busy lifestyle. Our process is designed to
-                be the ultimate hassle-free experience. From the initial on-site
-                consultation to the meticulous installation, in-season support,
-                and timely post-season takedown, we manage every single detail.
-                With our optional storage service, your holiday display simply
-                appears and disappears like magic, leaving you with nothing but
-                fond memories and a beautiful home.
+                Our service is built on the premise that your time is your most valuable asset. We manage the entire seasonal lifecycle—from private design review to seamless retirement and storage—allowing you to fully disconnect from the logistics and focus entirely on creating cherished memories.
               </p>
             </div>
             <div className="order-first lg:order-last">
               <div className="relative">
                 <div className="aspect-[4/3] bg-gradient-to-br from-accent/10 to-background rounded-lg overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center space-y-4">
+                    <div className="text-center space-y-4 p-6">
                       <Clock className="w-16 h-16 text-accent mx-auto" />
-                      <p className="text-primary font-semibold">
-                        Hassle-Free Experience
+                      <p className="text-primary font-semibold text-sm">
+                        Image: Warm photo of family relaxing (by fireplace or with hot cocoa) looking at their illuminated home. Focus on free time experience.
                       </p>
                     </div>
                   </div>
