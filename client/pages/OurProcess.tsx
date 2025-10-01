@@ -88,11 +88,11 @@ export default function OurProcess() {
                 <div className="flex-shrink-0 text-center lg:text-left">
                   <div className="relative">
                     <div className="w-24 h-24 bg-accent rounded-full flex items-center justify-center mb-4 mx-auto lg:mx-0">
-                      <span className="text-background font-bold text-2xl">
+                      <span className="text-primary font-bold text-2xl">
                         {step.number}
                       </span>
                     </div>
-                    <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-background rounded-full flex items-center justify-center shadow-lg border-2 border-holiday-cream">
+                    <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-background rounded-full flex items-center justify-center shadow-lg border-2 border-muted">
                       {step.icon}
                     </div>
                   </div>
@@ -118,7 +118,7 @@ export default function OurProcess() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-accent text-background">
+      <section className="py-20 bg-primary text-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Ready to Experience the Difference?
@@ -130,7 +130,7 @@ export default function OurProcess() {
           <Link to="/free-consultation">
             <Button
               size="lg"
-              className="bg-holiday-red hover:bg-holiday-red-dark text-background text-lg px-8 py-6"
+              className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6"
             >
               Request Your Free Consultation
             </Button>
