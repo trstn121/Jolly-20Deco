@@ -119,7 +119,7 @@ export default function FreeConsultation() {
                           value={formData.firstName}
                           onChange={handleInputChange}
                           required
-                          className="border-gray-300 focus:border-holiday-green focus:ring-holiday-green"
+                          className=""
                         />
                       </div>
                       <div>
@@ -131,7 +131,7 @@ export default function FreeConsultation() {
                           value={formData.lastName}
                           onChange={handleInputChange}
                           required
-                          className="border-gray-300 focus:border-holiday-green focus:ring-holiday-green"
+                          className=""
                         />
                       </div>
                     </div>
@@ -146,7 +146,7 @@ export default function FreeConsultation() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="border-gray-300 focus:border-holiday-green focus:ring-holiday-green"
+                        className=""
                       />
                     </div>
 
@@ -160,7 +160,7 @@ export default function FreeConsultation() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        className="border-gray-300 focus:border-holiday-green focus:ring-holiday-green"
+                        className=""
                       />
                     </div>
 
@@ -173,7 +173,7 @@ export default function FreeConsultation() {
                         value={formData.address}
                         onChange={handleInputChange}
                         required
-                        className="border-gray-300 focus:border-holiday-green focus:ring-holiday-green"
+                        className=""
                         placeholder="Street address, city, ZIP"
                       />
                     </div>
@@ -183,7 +183,7 @@ export default function FreeConsultation() {
                         How did you hear about us?
                       </label>
                       <Select name="source" onValueChange={handleSelectChange}>
-                        <SelectTrigger className="border-gray-300 focus:border-holiday-green focus:ring-holiday-green">
+                        <SelectTrigger className="">
                           <SelectValue placeholder="Please select..." />
                         </SelectTrigger>
                         <SelectContent>
@@ -208,7 +208,7 @@ export default function FreeConsultation() {
                         value={formData.message}
                         onChange={handleInputChange}
                         rows={4}
-                        className="border-gray-300 focus:border-holiday-green focus:ring-holiday-green"
+                        className=""
                         placeholder="Share your vision, special requirements, or any questions you have..."
                       />
                     </div>
