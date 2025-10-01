@@ -63,21 +63,21 @@ export default function Index() {
   const processSteps = [
     {
       number: "01",
-      title: "Consultation",
+      title: "Private Design Review",
       description:
-        "We'll walk your property with you, listening to your vision and sharing our creative ideas to design a unique, personalized plan for your home.",
+        "Our first engagement is a discerning walk-through where we interpret your aesthetic and architect an entirely unique, illuminated vision for your estate.",
     },
     {
       number: "02",
-      title: "Professional Installation",
+      title: "Masterful Execution",
       description:
-        "Our team handles everything with meticulous care, from installing every light with precision to ensuring a clean and safe setup. You don't have to lift a finger.",
+        "Your vision is brought to life by our certified installation team with unmatched precision. Every element is secured and detailed to commercial-grade standards, demanding zero effort from you.",
     },
     {
       number: "03",
-      title: "Timely Takedown & Storage",
+      title: "Seamless Transition",
       description:
-        "Once the season is over, we'll carefully take down and pack all decorations. We also offer an optional storage service in our secure, climate-controlled facility.",
+        "At the season's close, our team conducts a swift, impeccable removal. We offer an exclusive optional service for the secure, climate-controlled retirement of your décor to protect your investment.",
     },
   ];
 
@@ -159,8 +159,8 @@ export default function Index() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Your Hassle-Free Holiday, in Three Simple Steps
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
+              Our Three-Step Process for Bespoke Illumination
             </h2>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
@@ -168,11 +168,11 @@ export default function Index() {
               <Card key={index} className="text-center border-0 shadow-lg">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-primary font-bold text-xl">
+                    <span className="text-primary font-bold text-xl font-heading">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-4">
+                  <h3 className="text-xl font-bold text-primary mb-4 font-heading">
                     {step.title}
                   </h3>
                   <p className="text-foreground">{step.description}</p>
