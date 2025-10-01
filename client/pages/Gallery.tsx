@@ -103,6 +103,7 @@ export default function Gallery() {
           src={image.imageUrl}
           alt={image.caption}
           className="w-full h-full object-cover"
+          style={image.id === "h2" ? { transform: 'rotate(-90deg) scale(1.4)' } : undefined}
         />
       ) : (
         <div className={`w-full h-full bg-gradient-to-br ${getPlaceholderColor(image.category)} flex items-center justify-center`}>
