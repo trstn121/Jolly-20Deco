@@ -28,9 +28,9 @@ export default function WhyUs() {
     },
     {
       quote:
-        "Professional, reliable, and worth every penny. For the first time, I actually got to relax and enjoy the season without the stress of decorating. The quality of the lights and the installation was top-notch. Highly recommend!",
-      author: "M. Davis",
-      location: "Buckhead",
+        "I had Triston help with our decorating outside and couldn't be happier with the result. From start to finish, he worked to complete the look we decided on in the beginning. Very neat and respectful.",
+      author: "The Goldings",
+      location: "Crabapple",
     },
   ];
 
