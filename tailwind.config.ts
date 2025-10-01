@@ -67,6 +67,10 @@ export default {
           silver: "hsl(var(--holiday-silver))",
         },
       },
+      fontFamily: {
+        'heading': ['Playfair Display', 'serif'],
+        'body': ['Inter', 'sans-serif'],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

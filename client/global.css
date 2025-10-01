@@ -1,5 +1,6 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,26 +13,26 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 0 0% 99%;
-    --foreground: 152 25% 15%;
+    --background: 60 56% 91%;
+    --foreground: 0 0% 21%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 152 25% 15%;
+    --card: 60 56% 91%;
+    --card-foreground: 0 0% 21%;
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 152 25% 15%;
+    --popover: 60 56% 91%;
+    --popover-foreground: 0 0% 21%;
 
-    --primary: 152 50% 20%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 21%;
+    --primary-foreground: 60 56% 91%;
 
-    --secondary: 48 100% 95%;
-    --secondary-foreground: 152 25% 15%;
+    --secondary: 60 56% 91%;
+    --secondary-foreground: 0 0% 21%;
 
-    --muted: 48 20% 95%;
-    --muted-foreground: 152 15% 45%;
+    --muted: 60 30% 85%;
+    --muted-foreground: 0 0% 35%;
 
-    --accent: 0 70% 60%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 41 52% 55%;
+    --accent-foreground: 0 0% 21%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -123,5 +124,10 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
   }
 }
