@@ -239,20 +239,20 @@ export default function Index() {
                     onClick={() =>
                       setOpenFaq(openFaq === index ? null : index)
                     }
-                    className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                    className="w-full p-6 text-left flex justify-between items-center hover:bg-muted transition-colors"
                   >
-                    <h3 className="font-semibold text-holiday-green">
+                    <h3 className="font-semibold text-primary">
                       {faq.question}
                     </h3>
                     {openFaq === index ? (
-                      <ChevronUp className="w-5 h-5 text-holiday-green" />
+                      <ChevronUp className="w-5 h-5 text-accent" />
                     ) : (
-                      <ChevronDown className="w-5 h-5 text-holiday-green" />
+                      <ChevronDown className="w-5 h-5 text-accent" />
                     )}
                   </button>
                   {openFaq === index && (
                     <div className="px-6 pb-6 pt-0">
-                      <p className="text-gray-700">{faq.answer}</p>
+                      <p className="text-foreground">{faq.answer}</p>
                     </div>
                   )}
                 </CardContent>
@@ -263,13 +263,13 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
               Ready to Create Your Holiday Masterpiece?
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            <p className="text-lg text-foreground max-w-3xl mx-auto">
               Let's discuss your vision. Call us today or fill out the form
               below to schedule your complimentary consultation.
             </p>
@@ -279,14 +279,14 @@ export default function Index() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-holiday-green rounded-lg flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-holiday-green">Phone</h3>
+                  <h3 className="font-semibold text-primary">Phone</h3>
                   <a
                     href="tel:(404)416-9505"
-                    className="text-lg text-gray-700 hover:text-holiday-green transition-colors"
+                    className="text-lg text-foreground hover:text-accent transition-colors"
                   >
                     (404) 416-9505
                   </a>
@@ -294,25 +294,25 @@ export default function Index() {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-holiday-green rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-holiday-green">Email</h3>
+                  <h3 className="font-semibold text-primary">Email</h3>
                   <a
                     href="mailto:info@thejollydeco.com"
-                    className="text-lg text-gray-700 hover:text-holiday-green transition-colors"
+                    className="text-lg text-foreground hover:text-accent transition-colors"
                   >
                     info@thejollydeco.com
                   </a>
                 </div>
               </div>
 
-              <div className="bg-holiday-cream/50 p-6 rounded-lg">
-                <h3 className="font-semibold text-holiday-green mb-2">
+              <div className="bg-secondary p-6 rounded-lg">
+                <h3 className="font-semibold text-primary mb-2">
                   Service Areas
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-foreground">
                   Alpharetta, Roswell, Milton, Johns Creek, Sandy Springs, and
                   Buckhead
                 </p>
