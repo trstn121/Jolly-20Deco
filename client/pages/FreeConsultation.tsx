@@ -41,10 +41,10 @@ export default function FreeConsultation() {
   };
 
   const expectedItems = [
-    "Walk Your Property With You: We'll listen to your ideas and what you hope to achieve, whether you have a specific vision or are looking for brand-new concepts.",
-    "Provide Expert Advice & Creative Ideas: We will offer professional design suggestions tailored to your home's architecture, landscaping, and your personal style.",
-    "Discuss Products & Materials: We'll show you examples of our premium, commercial-grade lights and decor so you can see and feel the quality for yourself.",
-    "Deliver a No-Obligation Proposal: Within 24 hours of our meeting, you will receive a few generated mock-up design images of your exact home, fully decorated, ensuring you approve of the design before we even start. We will follow this up with a detailed, itemized proposal with a firm price for your project.",
+    "Architectural Review. We walk your property with a discerning eye, listening to your goals and assessing the technical possibilities for brand-new concepts.",
+    "Bespoke Visioning. We offer professional design suggestions tailored precisely to your home's architecture, landscaping, and your personal style.",
+    "Material Selection. We present exclusive samples of our premium, commercial-grade lights and décor so you can see and feel the guaranteed quality for yourself.",
+    "Impeccable Proposal Delivery. Within 24 hours of our private meeting, you will receive a generated, fully detailed mock-up and proposal—a firm price for your project, with zero obligation.",
   ];
 
   return (
@@ -68,11 +68,11 @@ export default function FreeConsultation() {
             {/* Left Column - What to Expect */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-6">
-                  What to Expect During Your Consultation
+                <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-6 font-heading">
+                  Your Review: A Refined 15-Minute Curation
                 </h2>
                 <p className="text-lg text-foreground mb-8">
-                  Our goal is to provide you with immense value in a short amount of time. During our 10-20 minute on-site visit, we will:
+                  Our goal is to provide you with immense value in a short amount of time. During our discreet on-site visit, we will:
                 </p>
               </div>
 
@@ -80,7 +80,7 @@ export default function FreeConsultation() {
                 {expectedItems.map((item, index) => (
                   <div key={index} className="flex items-start space-x-4">
                     <div className="flex-shrink-0 mt-1">
-                      <CheckCircle className="w-6 h-6 text-primary" />
+                      <CheckCircle className="w-6 h-6 text-accent" />
                     </div>
                     <p className="text-foreground leading-relaxed">{item}</p>
                   </div>
