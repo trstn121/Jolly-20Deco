@@ -15,42 +15,42 @@ export default function OurProcess() {
     {
       number: "01",
       icon: <FileText className="w-8 h-8 text-accent" />,
-      title: "The Creative Consultation",
-      subtitle: "Where Your Vision Comes to Life",
+      title: "01: Private Design Review",
+      subtitle: "A Confidential Architectural Curation",
       description:
-        "Our journey together begins with a complimentary, on-site design consultation. We'll walk your property with you, listening to your ideas, understanding your style, and suggesting creative concepts that complement your home's unique architecture. This collaborative session, typically lasting 10-20 minutes, ensures we capture the exact look and feel you want to achieve.",
+        "Our process begins with an exclusive, on-site discussion where we listen intently to your vision and provide creative insights. We collaborate to capture the precise aesthetic that will elevate your home, ensuring the final design is both uniquely yours and architecturally harmonious.",
     },
     {
       number: "02",
       icon: <Calendar className="w-8 h-8 text-accent" />,
-      title: "The Custom Proposal & Booking",
-      subtitle: "A Clear, Tailored Plan for Your Home",
+      title: "02: Bespoke Proposal & Reserved Execution",
+      subtitle: "Securing Your Vision and Date",
       description:
-        "Following our meeting, we will craft a detailed, generated fully designed mock-ups of your home. This way you are able to see and approve of the design before we even start, ensuring you get exactly what you want. We follow this up by sending an itemized proposal and email it to you within 24 hours. This proposal outlines the full scope of the project, the specific decorations and lighting to be used, and a firm price—with no hidden fees. Once you approve the vision, we'll send a simple digital agreement and require a 50% deposit to officially reserve your spot on our installation schedule.",
+        "Following our review, we will present a detailed, custom-generated mock-up of your property, allowing you to visualize the final result before we begin. A deposit secures your installation date and guarantees the full resources required for your display, including access to our exclusive, commercial-grade décor inventory.",
     },
     {
       number: "03",
       icon: <Sparkles className="w-8 h-8 text-accent" />,
-      title: "The Professional Installation",
-      subtitle: "Meticulous, Safe, and Seamless Execution",
+      title: "03: Masterful Installation",
+      subtitle: "Uncompromising Precision. Zero Effort Required.",
       description:
-        "This is where the magic happens. You don't even need to be home. Our professional team will arrive on the scheduled day and bring your design to life with the utmost care for your property. We use only premium, commercial-grade materials, property-safe clips and fasteners, and artful wiring. We conclude every installation by setting all lights on an automatic timer and conducting a final quality check to ensure every bulb is shining brightly.",
+        "This is where technical artistry meets elegance. Our certified team arrives to implement your display using only premium, commercial-grade materials and proprietary methods. We oversee every precise detail—from wiring to timing—to guarantee a brilliant, flawless display that requires no effort from your family.",
     },
     {
       number: "04",
       icon: <Settings className="w-8 h-8 text-accent" />,
-      title: "In-Season Support & Maintenance",
-      subtitle: "We Keep Your Display Perfect, All Season Long",
+      title: "04: Guaranteed Seasonal Brilliance",
+      subtitle: "Our Promise of Uninterrupted Elegance",
       description:
-        "Your peace of mind is our priority. In the unlikely event a bulb burns out or a winter storm shifts a decoration, our service guarantee has you covered. Simply give us a call, and we will dispatch our team—typically within 48 hours—to resolve any issue and ensure your home remains picture-perfect throughout the holidays.",
+        "We stand by the brilliance of our work with our comprehensive service guarantee. Should any element of your display require attention, our team will be dispatched discreetly and promptly to ensure your home maintains its perfect, illuminated status throughout the entire season.",
     },
     {
       number: "05",
       icon: <Package className="w-8 h-8 text-accent" />,
-      title: "Post-Season Takedown & Optional Storage",
-      subtitle: "An Effortless Ending to a Beautiful Season",
+      title: "05: Seamless Seasonal Retirement",
+      subtitle: "Protecting Your Investment and Time",
       description:
-        "When the holidays conclude, we handle the final chapter. During the first two weeks of January, we will schedule a time to return and carefully take down, label, and pack all of your decorations. For the ultimate hassle-free experience, ask about our premium storage service. We'll transport your decor to our secure, climate-controlled facility, keeping it safe and organized, and freeing up valuable space in your garage or attic.",
+        "As the season transitions, we provide impeccable, stress-free takedown service during the first two weeks of January. We carefully package your custom décor. We also offer exclusive, optional storage in our secure, climate-controlled facility, ensuring your investment is preserved and ready for the following year.",
     },
   ];
 
