@@ -24,7 +24,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F90381439d9a94211b4fc9dd80242e72a?format=webp&width=800"
+              src="https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fe2cf7d947c4349dab891698e99052d11?format=webp&width=800"
               alt="The Jolly Deco Co. Logo"
               className="h-16 w-auto object-contain"
             />
