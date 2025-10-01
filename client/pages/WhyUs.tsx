@@ -13,13 +13,10 @@ import {
 
 export default function WhyUs() {
   const promiseItems = [
-    "Owner-Operated & Local to Alpharetta",
-    "Fully Insured for Your Peace of Mind",
-    "Premium, Commercial-Grade Materials",
-    "Custom Designs Tailored to Your Home",
-    "In-Season Maintenance Guarantee",
-    "Professional Takedown & Storage Services",
-    "Clear, Transparent Pricing with No Hidden Fees",
+    "Architectural Design",
+    "Commercial-Grade Materials",
+    "Fully Insured & Certified Team",
+    "Seamless Seasonal Retirement",
   ];
 
   const testimonials = [
@@ -143,15 +140,15 @@ export default function WhyUs() {
       <section className="py-20 lg:py-24 bg-primary text-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Our Promise to You, At a Glance
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-accent font-heading">
+              Our Guarantee of Effortless Excellence
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {promiseItems.map((item, index) => (
-              <div key={index} className="flex items-center space-x-4">
-                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
-                <span className="text-lg">{item}</span>
+              <div key={index} className="flex flex-col items-center text-center space-y-3">
+                <CheckCircle className="w-8 h-8 text-accent flex-shrink-0" />
+                <span className="text-lg font-semibold">{item}</span>
               </div>
             ))}
           </div>
@@ -162,8 +159,8 @@ export default function WhyUs() {
       <section className="py-20 lg:py-24 bg-background/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
-              Hear From Our Happy Clients
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6 font-heading">
+              Endorsements of Excellence
             </h2>
           </div>
           <div className="grid lg:grid-cols-2 gap-8">
@@ -202,20 +199,18 @@ export default function WhyUs() {
       {/* Final CTA Section */}
       <section className="py-20 lg:py-24 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
-            Ready for a Stress-Free & Beautiful Holiday?
+          <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6 font-heading">
+            Are You Ready to Elevate Your Estate?
           </h2>
           <p className="text-lg lg:text-xl text-foreground mb-8 max-w-3xl mx-auto">
-            Let us show you the difference a professional, creative partner can
-            make. Contact us today to begin designing your perfect holiday
-            display.
+            Let us show you the difference a professional, creative partner can make. Contact us today to begin designing your perfect holiday display.
           </p>
           <Link to="/free-consultation">
             <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6"
             >
-              Request Your Free Consultation
+              Schedule Private Design Review
             </Button>
           </Link>
         </div>
