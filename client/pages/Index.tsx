@@ -105,16 +105,16 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-holiday-cream via-white to-holiday-cream py-20 lg:py-32">
+      <section className="relative bg-gradient-to-br from-background via-background to-secondary py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl lg:text-6xl font-bold text-holiday-green mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-primary mb-6">
               Atlanta's Premier
-              <span className="block text-holiday-red">
+              <span className="block text-accent">
                 Holiday Design & Installation
               </span>
             </h1>
-            <p className="text-lg lg:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg lg:text-xl text-foreground mb-8 max-w-3xl mx-auto">
               Elegant, creative, and completely hassle-free holiday decorating
               for your home. Let us bring the magic, so you can make the
               memories.
@@ -122,15 +122,15 @@ export default function Index() {
             <Link to="/free-consultation">
               <Button
                 size="lg"
-                className="bg-holiday-red hover:bg-holiday-red-dark text-white text-lg px-8 py-6"
+                className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6"
               >
                 Request Your Free Design Consultation
               </Button>
             </Link>
           </div>
         </div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-holiday-gold/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-holiday-green/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
       </section>
 
       {/* Our Story Section */}
