@@ -325,7 +325,7 @@ export default function Index() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Name *
                       </label>
                       <Input
@@ -333,11 +333,10 @@ export default function Index() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="border-gray-300"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-foreground mb-2">
                         Phone *
                       </label>
                       <Input
@@ -346,13 +345,12 @@ export default function Index() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        className="border-gray-300"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Email *
                     </label>
                     <Input
@@ -361,12 +359,11 @@ export default function Index() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="border-gray-300"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Service Address *
                     </label>
                     <Input
@@ -374,12 +371,11 @@ export default function Index() {
                       value={formData.address}
                       onChange={handleInputChange}
                       required
-                      className="border-gray-300"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Brief Message
                     </label>
                     <Textarea
@@ -387,7 +383,6 @@ export default function Index() {
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={4}
-                      className="border-gray-300"
                       placeholder="Tell us about your vision..."
                     />
                   </div>
