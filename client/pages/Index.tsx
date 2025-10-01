@@ -105,16 +105,25 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-background via-background to-secondary py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section
+        className="relative py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F296e6a4682304726a0836e7d50277bf7?format=webp&width=2000')`
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-primary/20"></div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl lg:text-6xl font-bold text-primary mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold text-background mb-6 drop-shadow-lg">
               Atlanta's Premier
-              <span className="block text-accent">
+              <span className="block text-accent drop-shadow-lg">
                 Holiday Design & Installation
               </span>
             </h1>
-            <p className="text-lg lg:text-xl text-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-lg lg:text-xl text-background mb-8 max-w-3xl mx-auto drop-shadow-md">
               Elegant, creative, and completely hassle-free holiday decorating
               for your home. Let us bring the magic, so you can make the
               memories.
@@ -129,8 +138,6 @@ export default function Index() {
             </Link>
           </div>
         </div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
       </section>
 
       {/* Our Story Section */}
