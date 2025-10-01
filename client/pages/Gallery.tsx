@@ -29,6 +29,7 @@ export default function Gallery() {
       caption: "Project: Crabapple Home Halloween | Classic Minimal Style",
       category: "themed",
       aspectRatio: "tall",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F9e3b25c3254d444b93c0bbacc6b8322c?format=webp&width=800",
     },
     {
       id: "h2",
