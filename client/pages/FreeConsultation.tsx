@@ -231,17 +231,17 @@ export default function FreeConsultation() {
       {/* Alternative Contact Section */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-4">
-            Prefer to Speak With Us Directly?
+          <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-4 font-heading">
+            Concierge Service via Phone
           </h2>
           <p className="text-lg text-foreground mb-8 max-w-2xl mx-auto">
-            We'd be happy to answer your questions and schedule your consultation over the phone. Give us a call today.
+            We are happy to answer any preliminary questions and schedule your review immediately. We invite you to contact your dedicated specialist today.
           </p>
           <div className="inline-flex items-center space-x-4 bg-background rounded-lg px-8 py-6 shadow-lg">
-            <Phone className="w-8 h-8 text-primary" />
+            <Phone className="w-8 h-8 text-accent" />
             <a
               href="tel:(404)416-9505"
-              className="text-3xl lg:text-4xl font-bold text-primary hover:text-primary-light transition-colors"
+              className="text-3xl lg:text-4xl font-bold text-accent hover:text-accent/80 transition-colors"
             >
               (404) 416-9505
             </a>
