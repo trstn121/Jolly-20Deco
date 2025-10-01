@@ -93,11 +93,11 @@ export default function FreeConsultation() {
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-8">
                   <div className="text-center mb-8">
-                    <h2 className="text-2xl font-bold text-primary mb-3">
-                      Take the First Step
+                    <h2 className="text-2xl font-bold text-primary mb-3 font-heading">
+                      Begin Your Bespoke Journey
                     </h2>
                     <p className="text-foreground">
-                      Fill out the form below, and we will contact you within one business day to schedule a convenient time for your on-site consultation.
+                      Fill out the form below, and we will contact you within one business day to schedule a convenient time for your private design review.
                     </p>
                   </div>
 
@@ -218,7 +218,7 @@ export default function FreeConsultation() {
                       className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg py-6"
                       size="lg"
                     >
-                      Schedule My Consultation
+                      Reserve Private Design Review
                     </Button>
                   </form>
                 </CardContent>
