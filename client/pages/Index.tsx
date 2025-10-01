@@ -145,22 +145,11 @@ export default function Index() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
-              From a Vision, to Your Home
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6 font-heading">
+              The Art of Effortless Elegance
             </h2>
             <p className="text-lg text-foreground leading-relaxed">
-              At The Jolly Deco Co., we believe the holidays are about a
-              feeling—the joy, the connection, and the magic that brings
-              communities together. My passion for design began at age 8 with
-              graphic design and has grown into a lifelong love for bringing
-              creative ideas to life. As an electrician with a craftsman's
-              spirit, I saw an opportunity to blend my technical skill with my
-              creative vision. I always admired the beautifully decorated homes
-              that lit up the holidays, and I started The Jolly Deco Co. to
-              bring that same elegance and wonder to families like yours. Our
-              mission is simple: to provide a professional, hassle-free design
-              experience that not only saves you time but elevates your home and
-              lets you focus on what truly matters.
+              The Jolly Deco Co. was born from a singular vision: to fuse technical mastery with uncompromising creative vision. Our foundation is built on the refined precision of a craftsman, enabling us to deliver installations that are not merely decorations, but architectural masterpieces. We don't just decorate; we curate a legacy of wonder, restoring the luxury of time and flawless execution to your holiday season.
             </p>
           </div>
         </div>
