@@ -167,8 +167,8 @@ export default function Index() {
             {processSteps.map((step, index) => (
               <Card key={index} className="text-center border-0 shadow-lg">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-primary font-bold text-xl font-heading">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-accent font-bold text-xl font-heading">
                       {step.number}
                     </span>
                   </div>
