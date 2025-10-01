@@ -87,8 +87,8 @@ export default function OurProcess() {
                 {/* Step Number and Icon */}
                 <div className="flex-shrink-0 text-center lg:text-left">
                   <div className="relative">
-                    <div className="w-24 h-24 bg-accent rounded-full flex items-center justify-center mb-4 mx-auto lg:mx-0">
-                      <span className="text-primary font-bold text-2xl">
+                    <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto lg:mx-0">
+                      <span className="text-accent font-bold text-2xl font-heading">
                         {step.number}
                       </span>
                     </div>
@@ -100,10 +100,10 @@ export default function OurProcess() {
 
                 {/* Content */}
                 <div className="flex-1 text-center lg:text-left">
-                  <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-3">
+                  <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-3 font-heading">
                     {step.title}
                   </h2>
-                  <h3 className="text-lg lg:text-xl font-semibold text-accent mb-4">
+                  <h3 className="text-lg lg:text-xl font-semibold text-accent mb-4 font-heading">
                     {step.subtitle}
                   </h3>
                   <p className="text-foreground text-lg leading-relaxed">
