@@ -260,15 +260,14 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Ready to Create Your Holiday Masterpiece?
+            <h2 className="text-3xl lg:text-4xl font-bold text-accent mb-4 font-heading">
+              The Season Awaits Your Signature
             </h2>
-            <p className="text-lg text-foreground max-w-3xl mx-auto">
-              Let's discuss your vision. Call us today or fill out the form
-              below to schedule your complimentary consultation.
+            <p className="text-lg text-background max-w-3xl mx-auto">
+              Begin the process of elevating your estate. We invite you to schedule a private design review to explore the possibilities of bespoke holiday illumination.
             </p>
           </div>
 
@@ -280,10 +279,10 @@ export default function Index() {
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-primary">Phone</h3>
+                  <h3 className="font-semibold text-accent">Phone</h3>
                   <a
                     href="tel:(404)416-9505"
-                    className="text-lg text-foreground hover:text-accent transition-colors"
+                    className="text-lg text-background hover:text-accent transition-colors"
                   >
                     (404) 416-9505
                   </a>
@@ -295,21 +294,21 @@ export default function Index() {
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-primary">Email</h3>
+                  <h3 className="font-semibold text-accent">Email</h3>
                   <a
                     href="mailto:info@thejollydeco.com"
-                    className="text-lg text-foreground hover:text-accent transition-colors"
+                    className="text-lg text-background hover:text-accent transition-colors"
                   >
                     info@thejollydeco.com
                   </a>
                 </div>
               </div>
 
-              <div className="bg-secondary p-6 rounded-lg">
-                <h3 className="font-semibold text-primary mb-2">
+              <div className="bg-primary-foreground p-6 rounded-lg">
+                <h3 className="font-semibold text-accent mb-2">
                   Service Areas
                 </h3>
-                <p className="text-foreground">
+                <p className="text-background">
                   Alpharetta, Roswell, Milton, Johns Creek, Sandy Springs, and
                   Buckhead
                 </p>
@@ -389,7 +388,7 @@ export default function Index() {
                       className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200"
                       size="lg"
                     >
-                      Request Free Consultation
+                      Schedule Private Design Review
                     </Button>
                   </Link>
                 </form>
