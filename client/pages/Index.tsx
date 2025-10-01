@@ -84,21 +84,21 @@ export default function Index() {
   const features = [
     {
       icon: <Eye className="w-8 h-8 text-accent" />,
-      title: "Creative Eye",
+      title: "Bespoke Vision",
       description:
-        "Bespoke designs tailored to your home's unique architecture and your personal style.",
+        "Architectural lighting and décor customized exclusively to enhance your home's distinct form and profile.",
     },
     {
       icon: <Users className="w-8 h-8 text-accent" />,
-      title: "Professional Service",
+      title: "Discreet Professionalism",
       description:
-        "Unmatched work ethic and customer service. We are reliable, communicative, and treat your home like our own.",
+        "Unwavering attention to detail and reliable communication. We manage the process with the highest respect for your property and privacy.",
     },
     {
       icon: <Shield className="w-8 h-8 text-accent" />,
-      title: "Peace of Mind",
+      title: "Guaranteed Investment",
       description:
-        "Fully insured, using only premium, commercial-grade materials for a durable and brilliant display.",
+        "Full liability insurance coupled with the exclusive use of premium, commercial-grade materials ensures a brilliant, enduring, and maintenance-free display.",
     },
   ];
 
@@ -187,18 +187,18 @@ export default function Index() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              What Makes Us Jolly
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
+              The Jolly Deco Co. Distinction
             </h2>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-6">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-primary mb-4">
+                <h3 className="text-xl font-bold text-accent mb-4 font-heading">
                   {feature.title}
                 </h3>
-                <p className="text-foreground">{feature.description}</p>
+                <p className="text-primary">{feature.description}</p>
               </div>
             ))}
           </div>
