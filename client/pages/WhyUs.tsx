@@ -38,14 +38,14 @@ export default function WhyUs() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-holiday-cream via-white to-holiday-cream py-20 lg:py-24">
+      <section className="bg-gradient-to-br from-background via-background to-secondary py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-holiday-green mb-6">
+          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
             Experience The Jolly Difference
           </h1>
-          <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+          <p className="text-lg lg:text-xl text-foreground leading-relaxed">
             We know what the holiday season can be like for busy families. You
             want a home that shines with festive magic, but the thought of
             untangling lights, climbing ladders, and spending entire weekends on
@@ -63,10 +63,10 @@ export default function WhyUs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green">
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary">
                 Bespoke Design, Not Just Decoration
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed">
                 Your home is unique, and your holiday display should be too. As
                 a designer with a background in electrical work, I blend
                 artistic creativity with technical precision. We don't offer
@@ -79,11 +79,11 @@ export default function WhyUs() {
             </div>
             <div className="order-first lg:order-last">
               <div className="relative">
-                <div className="aspect-[4/3] bg-gradient-to-br from-holiday-green/10 to-holiday-cream rounded-lg overflow-hidden">
+                <div className="aspect-[4/3] bg-gradient-to-br from-accent/10 to-background rounded-lg overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center space-y-4">
-                      <Home className="w-16 h-16 text-holiday-green mx-auto" />
-                      <p className="text-holiday-green font-semibold">
+                      <Home className="w-16 h-16 text-primary mx-auto" />
+                      <p className="text-primary font-semibold">
                         Custom Design Preview
                       </p>
                     </div>
@@ -96,15 +96,15 @@ export default function WhyUs() {
       </section>
 
       {/* Section 2: Quality & Service */}
-      <section className="py-20 lg:py-24 bg-holiday-cream/30">
+      <section className="py-20 lg:py-24 bg-background/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-holiday-gold/10 to-white rounded-lg overflow-hidden">
+              <div className="aspect-[4/3] bg-gradient-to-br from-accent/10 to-background rounded-lg overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center space-y-4">
-                    <Award className="w-16 h-16 text-holiday-gold mx-auto" />
-                    <p className="text-holiday-green font-semibold">
+                    <Award className="w-16 h-16 text-accent mx-auto" />
+                    <p className="text-primary font-semibold">
                       Premium Quality Materials
                     </p>
                   </div>
@@ -112,10 +112,10 @@ export default function WhyUs() {
               </div>
             </div>
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green">
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary">
                 Quality You Can See, Service You Can Trust
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed">
                 Our commitment to professionalism is unwavering. We exclusively
                 use premium, commercial-grade lighting and decor—the same
                 materials used in professional city displays. This ensures
@@ -136,10 +136,10 @@ export default function WhyUs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green">
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary">
                 Your Complete, Done-For-You Holiday Solution
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed">
                 We are built for your busy lifestyle. Our process is designed to
                 be the ultimate hassle-free experience. From the initial on-site
                 consultation to the meticulous installation, in-season support,
@@ -151,11 +151,11 @@ export default function WhyUs() {
             </div>
             <div className="order-first lg:order-last">
               <div className="relative">
-                <div className="aspect-[4/3] bg-gradient-to-br from-holiday-red/10 to-holiday-cream rounded-lg overflow-hidden">
+                <div className="aspect-[4/3] bg-gradient-to-br from-accent/10 to-background rounded-lg overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center space-y-4">
-                      <Clock className="w-16 h-16 text-holiday-red mx-auto" />
-                      <p className="text-holiday-green font-semibold">
+                      <Clock className="w-16 h-16 text-accent mx-auto" />
+                      <p className="text-primary font-semibold">
                         Hassle-Free Experience
                       </p>
                     </div>
@@ -168,7 +168,7 @@ export default function WhyUs() {
       </section>
 
       {/* Promise Section */}
-      <section className="py-20 lg:py-24 bg-holiday-green text-white">
+      <section className="py-20 lg:py-24 bg-primary text-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
@@ -178,7 +178,7 @@ export default function WhyUs() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {promiseItems.map((item, index) => (
               <div key={index} className="flex items-center space-x-4">
-                <CheckCircle className="w-6 h-6 text-holiday-gold flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
                 <span className="text-lg">{item}</span>
               </div>
             ))}
@@ -187,10 +187,10 @@ export default function WhyUs() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 lg:py-24 bg-holiday-cream/50">
+      <section className="py-20 lg:py-24 bg-background/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
               Hear From Our Happy Clients
             </h2>
           </div>
@@ -202,19 +202,19 @@ export default function WhyUs() {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 text-holiday-gold fill-current"
+                        className="w-5 h-5 text-accent fill-current"
                       />
                     ))}
                   </div>
-                  <blockquote className="text-gray-700 text-lg mb-6 leading-relaxed">
+                  <blockquote className="text-foreground text-lg mb-6 leading-relaxed">
                     "{testimonial.quote}"
                   </blockquote>
                   <div className="flex items-center space-x-3">
                     <div className="w-12 h-12 bg-holiday-green/10 rounded-full flex items-center justify-center">
-                      <Users className="w-6 h-6 text-holiday-green" />
+                      <Users className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <p className="font-semibold text-holiday-green">
+                      <p className="font-semibold text-primary">
                         {testimonial.author}
                       </p>
                       <p className="text-gray-600">{testimonial.location}</p>
@@ -228,12 +228,12 @@ export default function WhyUs() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-holiday-green mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
             Ready for a Stress-Free & Beautiful Holiday?
           </h2>
-          <p className="text-lg lg:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-foreground mb-8 max-w-3xl mx-auto">
             Let us show you the difference a professional, creative partner can
             make. Contact us today to begin designing your perfect holiday
             display.
@@ -241,7 +241,7 @@ export default function WhyUs() {
           <Link to="/free-consultation">
             <Button
               size="lg"
-              className="bg-holiday-red hover:bg-holiday-red-dark text-white text-lg px-8 py-6"
+              className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6"
             >
               Request Your Free Consultation
             </Button>
@@ -254,22 +254,22 @@ export default function WhyUs() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center space-y-2">
-              <Shield className="w-8 h-8 text-holiday-green" />
-              <p className="font-semibold text-holiday-green">Fully Insured</p>
+              <Shield className="w-8 h-8 text-primary" />
+              <p className="font-semibold text-primary">Fully Insured</p>
               <p className="text-sm text-gray-600">
                 Complete protection for your property
               </p>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <Home className="w-8 h-8 text-holiday-green" />
-              <p className="font-semibold text-holiday-green">Local Business</p>
+              <Home className="w-8 h-8 text-primary" />
+              <p className="font-semibold text-primary">Local Business</p>
               <p className="text-sm text-gray-600">
                 Proudly serving Greater Atlanta
               </p>
             </div>
             <div className="flex flex-col items-center space-y-2">
-              <Award className="w-8 h-8 text-holiday-green" />
-              <p className="font-semibold text-holiday-green">
+              <Award className="w-8 h-8 text-primary" />
+              <p className="font-semibold text-primary">
                 Premium Quality
               </p>
               <p className="text-sm text-gray-600">
