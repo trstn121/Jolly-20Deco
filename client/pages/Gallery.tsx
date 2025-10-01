@@ -208,13 +208,13 @@ export default function Gallery() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 lg:py-24 bg-primary">
+      <section className="py-20 lg:py-24 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-accent mb-6 font-heading">
-            Inspired By What You See?
+          <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6 font-heading">
+            Ready to Curate Your Own Masterpiece?
           </h2>
-          <p className="text-lg lg:text-xl text-background mb-8 max-w-3xl mx-auto">
-            Every distinguished display begins with a private conversation. We invite you to schedule your complimentary design review to explore how we can elevate your estate.
+          <p className="text-lg lg:text-xl text-foreground mb-8 max-w-3xl mx-auto">
+            Every exclusive holiday display begins with a private conversation. Contact us today to schedule your complimentary, no-obligation Private Design Review.
           </p>
           <Link to="/free-consultation">
             <Button
