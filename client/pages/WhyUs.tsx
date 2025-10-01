@@ -179,14 +179,14 @@ export default function WhyUs() {
                     "{testimonial.quote}"
                   </blockquote>
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-holiday-green/10 rounded-full flex items-center justify-center">
-                      <Users className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                      <Users className="w-6 h-6 text-accent" />
                     </div>
                     <div>
                       <p className="font-semibold text-primary">
                         {testimonial.author}
                       </p>
-                      <p className="text-gray-600">{testimonial.location}</p>
+                      <p className="text-muted-foreground">{testimonial.location}</p>
                     </div>
                   </div>
                 </CardContent>
