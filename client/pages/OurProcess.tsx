@@ -120,58 +120,55 @@ export default function OurProcess() {
       {/* Final CTA Section */}
       <section className="py-20 bg-primary text-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Ready to Experience the Difference?
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-accent font-heading">
+            Experience the Elegance of Effortless Design
           </h2>
-          <p className="text-lg lg:text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            If our process sounds like the hassle-free holiday solution you've
-            been looking for, let's start the conversation.
+          <p className="text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
+            Your time is your most valuable asset. If you are seeking a truly high-touch, hassle-free holiday solution, we invite you to begin the conversation today.
           </p>
           <Link to="/free-consultation">
             <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6"
             >
-              Request Your Free Consultation
+              Schedule Private Design Review
             </Button>
           </Link>
         </div>
-      </section>
 
-      {/* Trust Indicators */}
-      <section className="py-16 bg-background/50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Trust Indicators */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FileText className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 bg-background/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileText className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="font-semibold text-primary mb-2">
+              <h3 className="font-semibold text-accent mb-2">
                 Transparent Pricing
               </h3>
-              <p className="text-foreground text-sm">
+              <p className="text-background text-sm">
                 Detailed proposals with no hidden fees or surprises
               </p>
             </div>
             <div>
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Sparkles className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 bg-background/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Sparkles className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="font-semibold text-primary mb-2">
+              <h3 className="font-semibold text-accent mb-2">
                 Premium Materials
               </h3>
-              <p className="text-foreground text-sm">
+              <p className="text-background text-sm">
                 Commercial-grade decorations and professional installation
               </p>
             </div>
             <div>
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Settings className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 bg-background/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Settings className="w-8 h-8 text-accent" />
               </div>
-              <h3 className="font-semibold text-primary mb-2">
+              <h3 className="font-semibold text-accent mb-2">
                 Service Guarantee
               </h3>
-              <p className="text-foreground text-sm">
+              <p className="text-background text-sm">
                 We maintain your display perfectly throughout the season
               </p>
             </div>
