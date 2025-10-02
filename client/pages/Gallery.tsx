@@ -66,6 +66,13 @@ export default function Gallery() {
       aspectRatio: "wide",
       imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F23042ec71e4140878a85d5b566e5592d?format=webp&width=800",
     },
+    {
+      id: "h7",
+      caption: "Halloween Spectacular | Dramatic Architectural Lighting",
+      category: "themed",
+      aspectRatio: "tall",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Ff2a3a0252a584977b1e9ee4e0be4226c?format=webp&width=800",
+    },
   ];
 
   const allImages = [...architecturalImages, ...seasonalImages, ...themedImages];
