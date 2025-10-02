@@ -56,6 +56,7 @@ export default function Gallery() {
       caption: "Elegant Estate Transformation | Luxury Holiday Lighting",
       category: "themed",
       aspectRatio: "tall",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F4a0fd848ed144b91b2bede8b8448289a?format=webp&width=800",
     },
     {
       id: "h6",
