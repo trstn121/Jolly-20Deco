@@ -43,7 +43,11 @@ export default function WhyUs() {
             The Elevated Standard of Holiday Artistry
           </h1>
           <p className="text-lg lg:text-xl text-foreground leading-relaxed">
-            Securing The Jolly Deco Co. means choosing a standard of service that is rarely found. Our promise is a refined, hands-off experience that delivers architecturally precise design and unwavering professionalism, ensuring your holiday season is defined by effortless beauty, not effort.
+            Securing The Jolly Deco Co. means choosing a standard of service
+            that is rarely found. Our promise is a refined, hands-off experience
+            that delivers architecturally precise design and unwavering
+            professionalism, ensuring your holiday season is defined by
+            effortless beauty, not effort.
           </p>
         </div>
       </section>
@@ -57,7 +61,10 @@ export default function WhyUs() {
                 Bespoke Artistry: Crafted for Your Architecture
               </h2>
               <p className="text-lg text-foreground leading-relaxed">
-                We view every property as a canvas. Our designers meticulously craft a vision that accentuates your home's unique architectural elements, ensuring your display is an exclusive, tailor-made masterpiece—never a standard install.
+                We view every property as a canvas. Our designers meticulously
+                craft a vision that accentuates your home's unique architectural
+                elements, ensuring your display is an exclusive, tailor-made
+                masterpiece—never a standard install.
               </p>
             </div>
             <div className="order-first lg:order-last">
@@ -93,7 +100,11 @@ export default function WhyUs() {
                 Uncompromising Quality and Guaranteed Brilliance
               </h2>
               <p className="text-lg text-foreground leading-relaxed">
-                Our commitment to excellence is non-negotiable. We exclusively utilize commercial-grade, highly durable materials and provide comprehensive liability coverage. This dedication ensures not just a beautiful display, but a brilliant, reliable, and entirely risk-free investment for your estate.
+                Our commitment to excellence is non-negotiable. We exclusively
+                utilize commercial-grade, highly durable materials and provide
+                comprehensive liability coverage. This dedication ensures not
+                just a beautiful display, but a brilliant, reliable, and
+                entirely risk-free investment for your estate.
               </p>
             </div>
           </div>
@@ -109,7 +120,11 @@ export default function WhyUs() {
                 The Ultimate Luxury: Reclaiming Your Time
               </h2>
               <p className="text-lg text-foreground leading-relaxed">
-                Our service is built on the premise that your time is your most valuable asset. We manage the entire seasonal lifecycle—from private design review to seamless retirement and storage—allowing you to fully disconnect from the logistics and focus entirely on creating cherished memories.
+                Our service is built on the premise that your time is your most
+                valuable asset. We manage the entire seasonal lifecycle—from
+                private design review to seamless retirement and
+                storage—allowing you to fully disconnect from the logistics and
+                focus entirely on creating cherished memories.
               </p>
             </div>
             <div className="order-first lg:order-last">
@@ -137,7 +152,10 @@ export default function WhyUs() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {promiseItems.map((item, index) => (
-              <div key={index} className="flex flex-col items-center text-center space-y-3">
+              <div
+                key={index}
+                className="flex flex-col items-center text-center space-y-3"
+              >
                 <CheckCircle className="w-8 h-8 text-accent flex-shrink-0" />
                 <span className="text-lg font-semibold">{item}</span>
               </div>
@@ -177,7 +195,9 @@ export default function WhyUs() {
                       <p className="font-semibold text-primary">
                         {testimonial.author}
                       </p>
-                      <p className="text-muted-foreground">{testimonial.location}</p>
+                      <p className="text-muted-foreground">
+                        {testimonial.location}
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -194,7 +214,9 @@ export default function WhyUs() {
             Are You Ready to Elevate Your Estate?
           </h2>
           <p className="text-lg lg:text-xl text-foreground mb-8 max-w-3xl mx-auto">
-            Let us show you the difference a professional, creative partner can make. Contact us today to begin designing your perfect holiday display.
+            Let us show you the difference a professional, creative partner can
+            make. Contact us today to begin designing your perfect holiday
+            display.
           </p>
           <Link to="/free-consultation">
             <Button
@@ -227,9 +249,7 @@ export default function WhyUs() {
             </div>
             <div className="flex flex-col items-center space-y-2">
               <Award className="w-8 h-8 text-primary" />
-              <p className="font-semibold text-primary">
-                Premium Quality
-              </p>
+              <p className="font-semibold text-primary">Premium Quality</p>
               <p className="text-sm text-gray-600">
                 Commercial-grade materials only
               </p>
