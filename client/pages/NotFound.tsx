@@ -31,7 +31,10 @@ export default function NotFound() {
               </Button>
             </Link>
             <div className="mt-4">
-              <Link to="/free-consultation" className="inline-block w-full sm:w-auto px-4 sm:px-0">
+              <Link
+                to="/free-consultation"
+                className="inline-block w-full sm:w-auto px-4 sm:px-0"
+              >
                 <Button
                   variant="outline"
                   className="border-accent text-accent hover:bg-accent hover:text-primary w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"

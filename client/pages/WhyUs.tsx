@@ -218,7 +218,10 @@ export default function WhyUs() {
             make. Contact us today to begin designing your perfect holiday
             display.
           </p>
-          <Link to="/free-consultation" className="inline-block w-full sm:w-auto px-4 sm:px-0">
+          <Link
+            to="/free-consultation"
+            className="inline-block w-full sm:w-auto px-4 sm:px-0"
+          >
             <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"

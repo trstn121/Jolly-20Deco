@@ -23,7 +23,10 @@ const PlaceholderPage = ({ title, description }: PlaceholderPageProps) => {
             bring you more detailed information about our services.
           </p>
           <div className="space-y-4">
-            <Link to="/free-consultation" className="inline-block w-full sm:w-auto px-4 sm:px-0">
+            <Link
+              to="/free-consultation"
+              className="inline-block w-full sm:w-auto px-4 sm:px-0"
+            >
               <Button
                 className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
                 size="lg"

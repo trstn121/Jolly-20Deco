@@ -28,7 +28,7 @@ export default function Index() {
   });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -109,8 +109,8 @@ export default function Index() {
         className="relative py-20 lg:py-32 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F296e6a4682304726a0836e7d50277bf7?format=webp&width=2000')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 35%'
+          backgroundSize: "cover",
+          backgroundPosition: "center 35%",
         }}
       >
         {/* Dark overlay for text readability */}
@@ -119,22 +119,43 @@ export default function Index() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto shadow-2xl">
-            <h1 className="text-4xl lg:text-6xl font-bold text-background mb-6" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5)' }}>
+            <h1
+              className="text-4xl lg:text-6xl font-bold text-background mb-6"
+              style={{
+                textShadow:
+                  "2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5)",
+              }}
+            >
               Atlanta's Premier
-              <span className="block text-accent" style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5)' }}>
+              <span
+                className="block text-accent"
+                style={{
+                  textShadow:
+                    "2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5)",
+                }}
+              >
                 Holiday Design & Installation
               </span>
             </h1>
-            <p className="text-lg lg:text-xl text-background mb-8 max-w-3xl mx-auto" style={{ textShadow: '1px 1px 6px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)' }}>
+            <p
+              className="text-lg lg:text-xl text-background mb-8 max-w-3xl mx-auto"
+              style={{
+                textShadow:
+                  "1px 1px 6px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)",
+              }}
+            >
               Elegant, creative, and completely hassle-free holiday decorating
               for your home. Let us bring the magic, so you can make the
               memories.
             </p>
-            <Link to="/free-consultation" className="inline-block w-full sm:w-auto px-4 sm:px-0">
+            <Link
+              to="/free-consultation"
+              className="inline-block w-full sm:w-auto px-4 sm:px-0"
+            >
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 shadow-xl w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
-                style={{ textShadow: '1px 1px 4px rgba(0, 0, 0, 0.3)' }}
+                style={{ textShadow: "1px 1px 4px rgba(0, 0, 0, 0.3)" }}
               >
                 Request Your Free Design Consultation
               </Button>
@@ -151,7 +172,13 @@ export default function Index() {
               The Art of Effortless Elegance
             </h2>
             <p className="text-lg text-foreground leading-relaxed">
-              The Jolly Deco Co. was born from a singular vision: to fuse technical mastery with uncompromising creative vision. Our foundation is built on the refined precision of a craftsman, enabling us to deliver installations that are not merely decorations, but architectural masterpieces. We don't just decorate; we curate a legacy of wonder, restoring the luxury of time and flawless execution to your holiday season.
+              The Jolly Deco Co. was born from a singular vision: to fuse
+              technical mastery with uncompromising creative vision. Our
+              foundation is built on the refined precision of a craftsman,
+              enabling us to deliver installations that are not merely
+              decorations, but architectural masterpieces. We don't just
+              decorate; we curate a legacy of wonder, restoring the luxury of
+              time and flawless execution to your holiday season.
             </p>
           </div>
         </div>
@@ -235,9 +262,7 @@ export default function Index() {
               <Card key={index} className="border border-gray-200">
                 <CardContent className="p-0">
                   <button
-                    onClick={() =>
-                      setOpenFaq(openFaq === index ? null : index)
-                    }
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
                     className="w-full p-6 text-left flex justify-between items-center hover:bg-muted transition-colors"
                   >
                     <h3 className="font-semibold text-primary">
@@ -269,7 +294,9 @@ export default function Index() {
               The Season Awaits Your Signature
             </h2>
             <p className="text-lg text-background max-w-3xl mx-auto">
-              Begin the process of elevating your estate. We invite you to schedule a private design review to explore the possibilities of bespoke holiday illumination.
+              Begin the process of elevating your estate. We invite you to
+              schedule a private design review to explore the possibilities of
+              bespoke holiday illumination.
             </p>
           </div>
 

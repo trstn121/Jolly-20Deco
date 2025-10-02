@@ -3,7 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Phone, CheckCircle } from "lucide-react";
 
 export default function FreeConsultation() {
@@ -18,7 +24,7 @@ export default function FreeConsultation() {
   });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -37,7 +43,9 @@ export default function FreeConsultation() {
     // Let Netlify handle the form submission
     // The page will redirect to a success page automatically
     // If JavaScript is enabled, show immediate feedback
-    alert('Thank you! Your consultation request has been submitted. We will contact you within one business day.');
+    alert(
+      "Thank you! Your consultation request has been submitted. We will contact you within one business day.",
+    );
   };
 
   const expectedItems = [
@@ -56,7 +64,12 @@ export default function FreeConsultation() {
             Schedule Your Private Design Review
           </h1>
           <p className="text-lg lg:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
-            This is the first step toward securing your bespoke holiday display. We offer a discreet, on-site design review—a no-obligation conversation focused purely on architecting the possibilities for your estate. Our process is designed to be completely respectful of your time, providing professional expertise without any high-pressure sales tactics.
+            This is the first step toward securing your bespoke holiday display.
+            We offer a discreet, on-site design review—a no-obligation
+            conversation focused purely on architecting the possibilities for
+            your estate. Our process is designed to be completely respectful of
+            your time, providing professional expertise without any
+            high-pressure sales tactics.
           </p>
         </div>
       </section>
@@ -72,7 +85,8 @@ export default function FreeConsultation() {
                   Your Review: A Refined 15-Minute Curation
                 </h2>
                 <p className="text-lg text-foreground mb-8">
-                  Our goal is to provide you with immense value in a short amount of time. During our discreet on-site visit, we will:
+                  Our goal is to provide you with immense value in a short
+                  amount of time. During our discreet on-site visit, we will:
                 </p>
               </div>
 
@@ -97,7 +111,9 @@ export default function FreeConsultation() {
                       Begin Your Bespoke Journey
                     </h2>
                     <p className="text-foreground">
-                      Fill out the form below, and we will contact you within one business day to schedule a convenient time for your private design review.
+                      Fill out the form below, and we will contact you within
+                      one business day to schedule a convenient time for your
+                      private design review.
                     </p>
                   </div>
 
@@ -108,7 +124,11 @@ export default function FreeConsultation() {
                     onSubmit={handleSubmit}
                     className="space-y-6"
                   >
-                    <input type="hidden" name="form-name" value="consultation-request" />
+                    <input
+                      type="hidden"
+                      name="form-name"
+                      value="consultation-request"
+                    />
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
@@ -188,15 +208,23 @@ export default function FreeConsultation() {
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="google">Google Search</SelectItem>
-                          <SelectItem value="referral">Friend/Family Referral</SelectItem>
+                          <SelectItem value="referral">
+                            Friend/Family Referral
+                          </SelectItem>
                           <SelectItem value="social">Social Media</SelectItem>
-                          <SelectItem value="neighbor">Saw Your Work in Neighborhood</SelectItem>
+                          <SelectItem value="neighbor">
+                            Saw Your Work in Neighborhood
+                          </SelectItem>
                           <SelectItem value="sign">Saw a Sign</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
                       {/* Hidden input to ensure Netlify captures the select value */}
-                      <input type="hidden" name="source" value={formData.source} />
+                      <input
+                        type="hidden"
+                        name="source"
+                        value={formData.source}
+                      />
                     </div>
 
                     <div>
@@ -235,7 +263,9 @@ export default function FreeConsultation() {
             Concierge Service via Phone
           </h2>
           <p className="text-lg text-foreground mb-8 max-w-2xl mx-auto">
-            We are happy to answer any preliminary questions and schedule your review immediately. We invite you to contact your dedicated specialist today.
+            We are happy to answer any preliminary questions and schedule your
+            review immediately. We invite you to contact your dedicated
+            specialist today.
           </p>
           <div className="inline-flex items-center space-x-4 bg-background rounded-lg px-8 py-6 shadow-lg">
             <Phone className="w-8 h-8 text-accent" />
@@ -253,7 +283,8 @@ export default function FreeConsultation() {
       <footer className="py-8 bg-background border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-muted-foreground">
-            The Jolly Deco Co. is a fully insured business proudly serving the Greater Atlanta Area.
+            The Jolly Deco Co. is a fully insured business proudly serving the
+            Greater Atlanta Area.
           </p>
         </div>
       </footer>

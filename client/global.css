@@ -129,7 +129,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     overflow-x: hidden;
     width: 100%;
     position: relative;
@@ -141,8 +141,10 @@
     position: sticky;
   }
 
-  h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+  h1,
+  h2,
+  h3 {
+    font-family: "Playfair Display", serif;
   }
 
   /* Ensure images don't overflow */
