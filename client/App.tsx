@@ -44,11 +44,11 @@ const App = () => (
 );
 
 const rootElement = document.getElementById("root")!;
+let root = (window as any).__root;
 
-if (!rootElement._reactRoot) {
-  const root = createRoot(rootElement);
-  (rootElement as any)._reactRoot = root;
-  root.render(<App />);
-} else {
-  (rootElement as any)._reactRoot.render(<App />);
+if (!root) {
+  root = createRoot(rootElement);
+  (window as any).__root = root;
 }
+
+root.render(<App />);
