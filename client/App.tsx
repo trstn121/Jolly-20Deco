@@ -15,6 +15,7 @@ import Gallery from "./pages/Gallery";
 import WhyUs from "./pages/WhyUs";
 import Contact from "./pages/Contact";
 import FreeConsultation from "./pages/FreeConsultation";
+import ThankYou from "./pages/ThankYou";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
