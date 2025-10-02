@@ -106,11 +106,12 @@ export default function Index() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative min-h-[500px] sm:min-h-[600px] lg:min-h-[700px] py-12 sm:py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
+        className="relative flex items-center justify-center py-16 sm:py-24 lg:py-32 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F296e6a4682304726a0836e7d50277bf7?format=webp&width=2000')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          minHeight: 'calc(100vh - 4rem)'
         }}
       >
         {/* Dark overlay for text readability */}
@@ -144,7 +145,7 @@ export default function Index() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 sm:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6 font-heading">
