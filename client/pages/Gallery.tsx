@@ -50,6 +50,7 @@ export default function Gallery() {
       caption: "Custom Holiday Display | Bespoke Seasonal Design",
       category: "themed",
       aspectRatio: "square",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F7407ca2d9726403dabda16fd95f4e130?format=webp&width=800",
     },
     {
       id: "h5",
