@@ -45,6 +45,24 @@ export default function Gallery() {
       aspectRatio: "wide",
       imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fb0a89b0d83f74da7b11ded7e74346aaa?format=webp&width=800",
     },
+    {
+      id: "h4",
+      caption: "Custom Holiday Display | Bespoke Seasonal Design",
+      category: "themed",
+      aspectRatio: "square",
+    },
+    {
+      id: "h5",
+      caption: "Elegant Estate Transformation | Luxury Holiday Lighting",
+      category: "themed",
+      aspectRatio: "tall",
+    },
+    {
+      id: "h6",
+      caption: "Grand Entryway Design | Premium Seasonal Accents",
+      category: "themed",
+      aspectRatio: "wide",
+    },
   ];
 
   const allImages = [...architecturalImages, ...seasonalImages, ...themedImages];
