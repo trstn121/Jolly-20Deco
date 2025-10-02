@@ -57,7 +57,7 @@ const Navigation = () => {
               <span className="font-medium">(404) 416-9505</span>
             </a>
             <Link to="/free-consultation">
-              <Button className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200">
+              <Button className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 whitespace-nowrap">
                 Free Consultation
               </Button>
             </Link>

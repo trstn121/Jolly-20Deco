@@ -283,7 +283,7 @@ export default function Gallery() {
           <Link to="/free-consultation">
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6"
+              className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
             >
               Schedule Private Design Review
             </Button>
