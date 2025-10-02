@@ -120,7 +120,7 @@ export default function FreeConsultation() {
                     name="consultation-request"
                     method="POST"
                     data-netlify="true"
-                    action="/thank-you.html"
+                    action="/thank-you"
                     className="space-y-6"
                   >
                     <input
