@@ -64,6 +64,7 @@ export default function Gallery() {
       caption: "Grand Entryway Design | Premium Seasonal Accents",
       category: "themed",
       aspectRatio: "wide",
+      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F23042ec71e4140878a85d5b566e5592d?format=webp&width=800",
     },
   ];
 
