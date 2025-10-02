@@ -84,14 +84,11 @@ export default function WhyUs() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative">
               <div className="aspect-[4/3] bg-gradient-to-br from-accent/10 to-background rounded-lg overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4 p-6">
-                    <Award className="w-16 h-16 text-accent mx-auto" />
-                    <p className="text-primary font-semibold text-sm">
-                      Image: Macro shot of gloved hand adjusting perfect commercial-grade LED light or luxury wreath section. Deep, rich colors.
-                    </p>
-                  </div>
-                </div>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F9f652529dc854ebea11fe584ad24b9aa?format=webp&width=800"
+                  alt="Macro shot of gloved hand adjusting perfect commercial-grade LED light or luxury wreath section"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="space-y-6">
