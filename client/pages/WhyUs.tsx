@@ -115,14 +115,11 @@ export default function WhyUs() {
             <div className="order-first lg:order-last">
               <div className="relative">
                 <div className="aspect-[4/3] bg-gradient-to-br from-accent/10 to-background rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center space-y-4 p-6">
-                      <Clock className="w-16 h-16 text-accent mx-auto" />
-                      <p className="text-primary font-semibold text-sm">
-                        Image: Warm photo of family relaxing (by fireplace or with hot cocoa) looking at their illuminated home. Focus on free time experience.
-                      </p>
-                    </div>
-                  </div>
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fb252bacc2770427ca0ef20fda285adfc?format=webp&width=800"
+                    alt="Warm photo of family relaxing by fireplace looking at their illuminated home"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
