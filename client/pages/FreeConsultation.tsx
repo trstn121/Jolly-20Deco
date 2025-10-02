@@ -215,7 +215,7 @@ export default function FreeConsultation() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg py-6"
+                      className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg py-4 sm:py-6 whitespace-normal text-center"
                       size="lg"
                     >
                       Reserve Private Design Review
