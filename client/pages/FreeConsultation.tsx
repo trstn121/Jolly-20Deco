@@ -41,8 +41,7 @@ export default function FreeConsultation() {
 
   const handleSubmit = (e: React.FormEvent) => {
     // Let Netlify handle the form submission
-    // The page will redirect to a success page automatically
-    // If JavaScript is enabled, show immediate feedback
+    // Show immediate feedback if JavaScript is enabled
     alert(
       "Thank you! Your consultation request has been submitted. We will contact you within one business day.",
     );

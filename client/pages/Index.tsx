@@ -37,9 +37,11 @@ export default function Index() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    // Let Netlify handle the form submission
+    // Show immediate feedback if JavaScript is enabled
+    alert(
+      "Thank you for your message! We will contact you within one business day."
+    );
   };
 
   const faqItems = [
@@ -347,7 +349,14 @@ export default function Index() {
             {/* Contact Form */}
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  name="contact-form"
+                  method="POST"
+                  data-netlify="true"
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="contact-form" />
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
