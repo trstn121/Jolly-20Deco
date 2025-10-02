@@ -120,7 +120,7 @@ export default function FreeConsultation() {
                     name="consultation-request"
                     method="POST"
                     data-netlify="true"
-                    onSubmit={handleSubmit}
+                    action="/thank-you.html"
                     className="space-y-6"
                   >
                     <input
