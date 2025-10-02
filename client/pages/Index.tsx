@@ -385,7 +385,7 @@ export default function Index() {
 
                   <Link to="/free-consultation" className="block">
                     <Button
-                      className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200"
+                      className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg whitespace-normal text-center"
                       size="lg"
                     >
                       Schedule Private Design Review
