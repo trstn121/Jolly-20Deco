@@ -40,7 +40,7 @@ export default function Index() {
     // Let Netlify handle the form submission
     // Show immediate feedback if JavaScript is enabled
     alert(
-      "Thank you for your message! We will contact you within one business day."
+      "Thank you for your message! We will contact you within one business day.",
     );
   };
 
