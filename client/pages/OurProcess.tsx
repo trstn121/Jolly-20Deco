@@ -126,10 +126,10 @@ export default function OurProcess() {
           <p className="text-lg lg:text-xl mb-8 max-w-3xl mx-auto">
             Your time is your most valuable asset. If you are seeking a truly high-touch, hassle-free holiday solution, we invite you to begin the conversation today.
           </p>
-          <Link to="/free-consultation">
+          <Link to="/free-consultation" className="inline-block w-full sm:w-auto px-4 sm:px-0">
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6"
+              className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
             >
               Schedule Private Design Review
             </Button>
