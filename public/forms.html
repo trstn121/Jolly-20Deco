@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms - The Jolly Deco Co.</title>
+</head>
+<body>
+  <!-- This file is used by Netlify to detect forms in a SPA -->
+  <!-- It is never shown to users -->
+  
+  <!-- Contact Form -->
+  <form name="contact-form" method="POST" data-netlify="true" action="/thank-you.html" hidden>
+    <input type="hidden" name="form-name" value="contact-form" />
+    <input type="text" name="name" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <input type="text" name="address" />
+    <textarea name="message"></textarea>
+  </form>
+
+  <!-- Consultation Request Form -->
+  <form name="consultation-request" method="POST" data-netlify="true" action="/thank-you.html" hidden>
+    <input type="hidden" name="form-name" value="consultation-request" />
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="text" name="address" />
+    <input type="text" name="source" />
+    <textarea name="projectDetails"></textarea>
+  </form>
+</body>
+</html>
