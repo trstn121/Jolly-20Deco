@@ -128,10 +128,10 @@ export default function Index() {
               for your home. Let us bring the magic, so you can make the
               memories.
             </p>
-            <Link to="/free-consultation">
+            <Link to="/free-consultation" className="inline-block w-full sm:w-auto px-4 sm:px-0">
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-lg px-8 py-6 shadow-xl"
+                className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 shadow-xl w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
                 style={{ textShadow: '1px 1px 4px rgba(0, 0, 0, 0.3)' }}
               >
                 Request Your Free Design Consultation
