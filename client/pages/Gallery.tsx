@@ -252,7 +252,7 @@ export default function Gallery() {
             {/* Close Button */}
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 z-10 bg-background/20 hover:bg-background/30 rounded-full p-2 transition-colors"
+              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 rounded-full p-2 transition-colors"
             >
               <X className="w-6 h-6 text-white" />
             </button>
@@ -260,13 +260,13 @@ export default function Gallery() {
             {/* Navigation Buttons */}
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-background/20 hover:bg-background/30 rounded-full p-2 transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 rounded-full p-2 transition-colors"
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-background/20 hover:bg-background/30 rounded-full p-2 transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 rounded-full p-2 transition-colors"
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </button>
