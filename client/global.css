@@ -161,5 +161,12 @@
   #root {
     overflow-x: hidden;
     width: 100%;
+    padding-top: 4rem; /* Account for fixed header height */
+  }
+
+  @media (min-width: 1024px) {
+    #root {
+      padding-top: 5rem; /* Larger header on desktop */
+    }
   }
 }
