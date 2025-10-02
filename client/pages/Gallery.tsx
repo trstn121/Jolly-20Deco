@@ -29,57 +29,68 @@ export default function Gallery() {
       caption: "Project: Crabapple Home Halloween | Classic Minimal Style",
       category: "themed",
       aspectRatio: "tall",
-      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fc32c3788289e49a19ec9160612d6f620?format=webp&width=800",
+      imageUrl:
+        "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fc32c3788289e49a19ec9160612d6f620?format=webp&width=800",
     },
     {
       id: "h2",
       caption: "Project: Crabapple Home Halloween | Classic Minimal Style",
       category: "themed",
       aspectRatio: "square",
-      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F289612d4b3654b879557478d8c21bbe5?format=webp&width=800",
+      imageUrl:
+        "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F289612d4b3654b879557478d8c21bbe5?format=webp&width=800",
     },
     {
       id: "h3",
       caption: "Project: Crabapple Home Halloween | Classic Minimal Style",
       category: "themed",
       aspectRatio: "wide",
-      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fb0a89b0d83f74da7b11ded7e74346aaa?format=webp&width=800",
+      imageUrl:
+        "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fb0a89b0d83f74da7b11ded7e74346aaa?format=webp&width=800",
     },
     {
       id: "h4",
       caption: "Custom Holiday Display | Bespoke Seasonal Design",
       category: "themed",
       aspectRatio: "square",
-      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F7407ca2d9726403dabda16fd95f4e130?format=webp&width=800",
+      imageUrl:
+        "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F7407ca2d9726403dabda16fd95f4e130?format=webp&width=800",
     },
     {
       id: "h5",
       caption: "Elegant Estate Transformation | Luxury Holiday Lighting",
       category: "themed",
       aspectRatio: "tall",
-      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F4a0fd848ed144b91b2bede8b8448289a?format=webp&width=800",
+      imageUrl:
+        "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F4a0fd848ed144b91b2bede8b8448289a?format=webp&width=800",
     },
     {
       id: "h6",
       caption: "Grand Entryway Design | Premium Seasonal Accents",
       category: "themed",
       aspectRatio: "wide",
-      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F23042ec71e4140878a85d5b566e5592d?format=webp&width=800",
+      imageUrl:
+        "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F23042ec71e4140878a85d5b566e5592d?format=webp&width=800",
     },
     {
       id: "h7",
       caption: "Halloween Spectacular | Dramatic Architectural Lighting",
       category: "themed",
       aspectRatio: "tall",
-      imageUrl: "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Ff2a3a0252a584977b1e9ee4e0be4226c?format=webp&width=800",
+      imageUrl:
+        "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Ff2a3a0252a584977b1e9ee4e0be4226c?format=webp&width=800",
     },
   ];
 
-  const allImages = [...architecturalImages, ...seasonalImages, ...themedImages];
+  const allImages = [
+    ...architecturalImages,
+    ...seasonalImages,
+    ...themedImages,
+  ];
 
   const openLightbox = (image: ImageData) => {
     setSelectedImage(image);
-    setCurrentIndex(allImages.findIndex(img => img.id === image.id));
+    setCurrentIndex(allImages.findIndex((img) => img.id === image.id));
   };
 
   const closeLightbox = () => {
@@ -110,7 +121,9 @@ export default function Gallery() {
     }
   };
 
-  const getPlaceholderColor = (category: "architectural" | "seasonal" | "themed") => {
+  const getPlaceholderColor = (
+    category: "architectural" | "seasonal" | "themed",
+  ) => {
     switch (category) {
       case "architectural":
         return "from-accent/10 to-primary/10";
@@ -132,15 +145,25 @@ export default function Gallery() {
           src={image.imageUrl}
           alt={image.caption}
           className="w-full h-full object-cover"
-          style={image.id === "h2" ? { transform: 'rotate(90deg) scale(1.4)' } : image.id === "h6" ? { transform: 'rotate(90deg) scale(1.33)' } : undefined}
+          style={
+            image.id === "h2"
+              ? { transform: "rotate(90deg) scale(1.4)" }
+              : image.id === "h6"
+                ? { transform: "rotate(90deg) scale(1.33)" }
+                : undefined
+          }
         />
       ) : (
-        <div className={`w-full h-full bg-gradient-to-br ${getPlaceholderColor(image.category)} flex items-center justify-center`}>
+        <div
+          className={`w-full h-full bg-gradient-to-br ${getPlaceholderColor(image.category)} flex items-center justify-center`}
+        >
           <div className="text-center p-4">
             <div className="w-16 h-16 bg-background/20 rounded-full flex items-center justify-center mx-auto mb-2">
               <div className="w-8 h-8 bg-background/40 rounded"></div>
             </div>
-            <p className="text-xs text-muted-foreground font-medium">Image Placeholder</p>
+            <p className="text-xs text-muted-foreground font-medium">
+              Image Placeholder
+            </p>
           </div>
         </div>
       )}
@@ -148,7 +171,9 @@ export default function Gallery() {
       {/* Hover Caption Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
         <div className="p-6 w-full">
-          <p className="text-background text-sm font-medium leading-tight drop-shadow-md">{image.caption}</p>
+          <p className="text-background text-sm font-medium leading-tight drop-shadow-md">
+            {image.caption}
+          </p>
         </div>
       </div>
     </div>
@@ -163,7 +188,13 @@ export default function Gallery() {
             Inspiration for Your Holiday Home
           </h1>
           <p className="text-lg lg:text-xl text-foreground leading-relaxed">
-            Welcome to our curated portfolio. Each image showcases our dedication to <span className="font-semibold">architectural precision</span> and the art of <span className="font-semibold">effortless elegance</span>. We invite you to explore this collection and envision the transformative experience we can create for your estate.
+            Welcome to our curated portfolio. Each image showcases our
+            dedication to{" "}
+            <span className="font-semibold">architectural precision</span> and
+            the art of{" "}
+            <span className="font-semibold">effortless elegance</span>. We
+            invite you to explore this collection and envision the
+            transformative experience we can create for your estate.
           </p>
         </div>
       </section>
@@ -177,10 +208,11 @@ export default function Gallery() {
                 Architectural Lighting Masterpieces
               </h2>
               <p className="text-lg text-foreground max-w-3xl mx-auto">
-                Illumination designed to enhance and celebrate the unique architectural character of distinguished estates.
+                Illumination designed to enhance and celebrate the unique
+                architectural character of distinguished estates.
               </p>
             </div>
-            
+
             {/* Sophisticated Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-max">
               {architecturalImages.map((image) => (
@@ -200,7 +232,8 @@ export default function Gallery() {
                 Seasonal Accents & Entryway Elegance
               </h2>
               <p className="text-lg text-foreground max-w-3xl mx-auto">
-                Refined details and welcoming touches that set the tone for an extraordinary holiday season.
+                Refined details and welcoming touches that set the tone for an
+                extraordinary holiday season.
               </p>
             </div>
 
@@ -222,10 +255,11 @@ export default function Gallery() {
               Custom Holiday Themes
             </h2>
             <p className="text-lg text-foreground max-w-3xl mx-auto">
-              Bespoke seasonal visions brought to life with artistry and precision, from elegantly spooky to festive grandeur.
+              Bespoke seasonal visions brought to life with artistry and
+              precision, from elegantly spooky to festive grandeur.
             </p>
           </div>
-          
+
           {/* Sophisticated Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-max">
             {themedImages.map((image) => (
@@ -242,7 +276,9 @@ export default function Gallery() {
             Ready to Curate Your Own Masterpiece?
           </h2>
           <p className="text-lg lg:text-xl text-foreground mb-8 max-w-3xl mx-auto">
-            Every exclusive holiday display begins with a private conversation. Contact us today to schedule your complimentary, no-obligation Private Design Review.
+            Every exclusive holiday display begins with a private conversation.
+            Contact us today to schedule your complimentary, no-obligation
+            Private Design Review.
           </p>
           <Link to="/free-consultation">
             <Button
@@ -257,8 +293,14 @@ export default function Gallery() {
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4" onClick={closeLightbox}>
-          <div className="relative max-w-4xl max-h-full" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          <div
+            className="relative max-w-4xl max-h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
             {/* Close Button */}
             <button
               onClick={closeLightbox}
@@ -282,21 +324,33 @@ export default function Gallery() {
             </button>
 
             {/* Image */}
-            <div className={`${getAspectRatioClass(selectedImage.aspectRatio).replace('lg:row-span-2', '').replace('md:col-span-2', '')} max-w-3xl max-h-[80vh] rounded-lg overflow-hidden shadow-2xl`}>
+            <div
+              className={`${getAspectRatioClass(selectedImage.aspectRatio).replace("lg:row-span-2", "").replace("md:col-span-2", "")} max-w-3xl max-h-[80vh] rounded-lg overflow-hidden shadow-2xl`}
+            >
               {selectedImage.imageUrl ? (
                 <img
                   src={selectedImage.imageUrl}
                   alt={selectedImage.caption}
                   className="w-full h-full object-cover"
-                  style={selectedImage.id === "h2" ? { transform: 'rotate(90deg) scale(1.4)' } : selectedImage.id === "h6" ? { transform: 'rotate(90deg) scale(1.33)' } : undefined}
+                  style={
+                    selectedImage.id === "h2"
+                      ? { transform: "rotate(90deg) scale(1.4)" }
+                      : selectedImage.id === "h6"
+                        ? { transform: "rotate(90deg) scale(1.33)" }
+                        : undefined
+                  }
                 />
               ) : (
-                <div className={`w-full h-full bg-gradient-to-br ${getPlaceholderColor(selectedImage.category)} flex items-center justify-center`}>
+                <div
+                  className={`w-full h-full bg-gradient-to-br ${getPlaceholderColor(selectedImage.category)} flex items-center justify-center`}
+                >
                   <div className="text-center p-8">
                     <div className="w-24 h-24 bg-background/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <div className="w-12 h-12 bg-background/40 rounded"></div>
                     </div>
-                    <p className="text-white text-lg font-medium">Image Placeholder</p>
+                    <p className="text-white text-lg font-medium">
+                      Image Placeholder
+                    </p>
                   </div>
                 </div>
               )}
@@ -304,7 +358,9 @@ export default function Gallery() {
 
             {/* Caption */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-              <p className="text-white text-lg font-medium">{selectedImage.caption}</p>
+              <p className="text-white text-lg font-medium">
+                {selectedImage.caption}
+              </p>
             </div>
           </div>
         </div>
