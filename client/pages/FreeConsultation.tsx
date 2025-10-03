@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,6 +14,7 @@ import {
 import { Phone, CheckCircle } from "lucide-react";
 
 export default function FreeConsultation() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -39,12 +41,23 @@ export default function FreeConsultation() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    // Let Netlify handle the form submission
-    // Show immediate feedback if JavaScript is enabled
-    alert(
-      "Thank you! Your consultation request has been submitted. We will contact you within one business day.",
-    );
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formDataToSend = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formDataToSend as any).toString(),
+      });
+
+      navigate("/thank-you");
+    } catch (error) {
+      alert("There was an error submitting the form. Please try again.");
+    }
   };
 
   const expectedItems = [
@@ -120,7 +133,7 @@ export default function FreeConsultation() {
                     name="consultation-request"
                     method="POST"
                     data-netlify="true"
-                    action="/thank-you"
+                    onSubmit={handleSubmit}
                     className="space-y-6"
                   >
                     <input
