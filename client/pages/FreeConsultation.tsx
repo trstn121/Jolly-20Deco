@@ -54,6 +54,11 @@ export default function FreeConsultation() {
         body: new URLSearchParams(formDataToSend as any).toString(),
       });
 
+      // Track form submission with Meta Pixel
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead');
+      }
+
       navigate("/thank-you");
     } catch (error) {
       alert("There was an error submitting the form. Please try again.");
