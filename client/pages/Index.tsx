@@ -366,7 +366,7 @@ export default function Index() {
                   name="contact-form"
                   method="POST"
                   data-netlify="true"
-                  action="/thank-you"
+                  onSubmit={handleSubmit}
                   className="space-y-6"
                 >
                   <input type="hidden" name="form-name" value="contact-form" />
