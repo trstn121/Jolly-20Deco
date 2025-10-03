@@ -22,7 +22,7 @@ export default function FreeConsultation() {
     phone: "",
     address: "",
     source: "",
-    message: "",
+    projectDetails: "",
   });
 
   const handleInputChange = (
@@ -244,8 +244,8 @@ export default function FreeConsultation() {
                         Tell us a little about your project...
                       </label>
                       <Textarea
-                        name="message"
-                        value={formData.message}
+                        name="projectDetails"
+                        value={formData.projectDetails}
                         onChange={handleInputChange}
                         rows={4}
                         className=""
