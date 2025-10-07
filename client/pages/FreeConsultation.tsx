@@ -2,42 +2,23 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Phone, CheckCircle } from "lucide-react";
+import { Phone, CheckCircle, Star } from "lucide-react";
 
 export default function FreeConsultation() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
-    lastName: "",
     email: "",
     phone: "",
-    address: "",
-    source: "",
-    projectDetails: "",
   });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement>,
   ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSelectChange = (value: string) => {
-    setFormData({
-      ...formData,
-      source: value,
     });
   };
 
@@ -66,10 +47,27 @@ export default function FreeConsultation() {
   };
 
   const expectedItems = [
-    "Architectural Review. We walk your property with a discerning eye, listening to your goals and assessing the technical possibilities for brand-new concepts.",
-    "Bespoke Visioning. We offer professional design suggestions tailored precisely to your home's architecture, landscaping, and your personal style.",
-    "Material Selection. We present exclusive samples of our premium, commercial-grade lights and décor so you can see and feel the guaranteed quality for yourself.",
-    "Impeccable Proposal Delivery. Within 24 hours of our private meeting, you will receive a generated, fully detailed mock-up and proposal—a firm price for your project, with zero obligation.",
+    "Property Walkthrough: We assess your home's architecture and discuss your vision",
+    "Custom Design Ideas: Get professional suggestions tailored to your style and budget",
+    "Transparent Proposal: Receive a detailed quote within 24 hours—zero obligation",
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah M.",
+      location: "Alpharetta",
+      quote: "The Jolly Deco Co. transformed our home for Christmas. Professional, creative, and completely stress-free!",
+    },
+    {
+      name: "Michael R.",
+      location: "Roswell",
+      quote: "Exceptional service from start to finish. Our neighbors can't stop complimenting our holiday display!",
+    },
+    {
+      name: "Jennifer L.",
+      location: "Johns Creek",
+      quote: "Worth every penny! They handled everything and our home looked absolutely magical.",
+    },
   ];
 
   return (
@@ -78,15 +76,10 @@ export default function FreeConsultation() {
       <section className="bg-gradient-to-br from-background via-background to-secondary py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6 font-heading">
-            Schedule Your Private Design Review
+            Schedule Your Free Design Consultation
           </h1>
           <p className="text-lg lg:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
-            This is the first step toward securing your bespoke holiday display.
-            We offer a discreet, on-site design review—a no-obligation
-            conversation focused purely on architecting the possibilities for
-            your estate. Our process is designed to be completely respectful of
-            your time, providing professional expertise without any
-            high-pressure sales tactics.
+            Let's bring your holiday vision to life. Get a personalized quote and design plan—no obligation, no pressure. Just expert guidance tailored to your home.
           </p>
         </div>
       </section>
@@ -99,38 +92,38 @@ export default function FreeConsultation() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-6 font-heading">
-                  Your Review: A Refined 15-Minute Curation
+                  What to Expect in Your Consultation
                 </h2>
-                <p className="text-lg text-foreground mb-8">
-                  Our goal is to provide you with immense value in a short
-                  amount of time. During our discreet on-site visit, we will:
-                </p>
+                <div className="space-y-6 mt-8">
+                  {expectedItems.map((item, index) => (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="flex-shrink-0 mt-1">
+                        <CheckCircle className="w-6 h-6 text-accent" />
+                      </div>
+                      <p className="text-foreground text-lg leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              <div className="space-y-6">
-                {expectedItems.map((item, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 mt-1">
-                      <CheckCircle className="w-6 h-6 text-accent" />
-                    </div>
-                    <p className="text-foreground leading-relaxed">{item}</p>
-                  </div>
-                ))}
+              {/* Pricing Indicator */}
+              <div className="bg-accent/10 border-l-4 border-accent p-6 rounded-r-lg">
+                <p className="text-foreground leading-relaxed">
+                  <span className="font-semibold">Professional holiday lighting installations starting at $800.</span> Most homes range from $1,200-$3,500 depending on size and design complexity.
+                </p>
               </div>
             </div>
 
             {/* Right Column - Contact Form */}
-            <div>
+            <div className="space-y-8">
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-8">
                   <div className="text-center mb-8">
                     <h2 className="text-2xl font-bold text-primary mb-3 font-heading">
-                      Begin Your Bespoke Journey
+                      Ready to Get Started?
                     </h2>
                     <p className="text-foreground">
-                      Fill out the form below, and we will contact you within
-                      one business day to schedule a convenient time for your
-                      private design review.
+                      Fill out the form below or give us a call. We'll schedule a convenient time for your free, no-pressure consultation.
                     </p>
                   </div>
 
@@ -146,31 +139,18 @@ export default function FreeConsultation() {
                       name="form-name"
                       value="consultation-request"
                     />
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">
-                          First Name *
-                        </label>
-                        <Input
-                          name="firstName"
-                          value={formData.firstName}
-                          onChange={handleInputChange}
-                          required
-                          className=""
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">
-                          Last Name *
-                        </label>
-                        <Input
-                          name="lastName"
-                          value={formData.lastName}
-                          onChange={handleInputChange}
-                          required
-                          className=""
-                        />
-                      </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        First Name *
+                      </label>
+                      <Input
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        required
+                        className="text-base"
+                      />
                     </div>
 
                     <div>
@@ -183,7 +163,7 @@ export default function FreeConsultation() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className=""
+                        className="text-base"
                       />
                     </div>
 
@@ -197,78 +177,51 @@ export default function FreeConsultation() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        className=""
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Service Address *
-                      </label>
-                      <Input
-                        name="address"
-                        value={formData.address}
-                        onChange={handleInputChange}
-                        required
-                        className=""
-                        placeholder="Street address, city, ZIP"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        How did you hear about us?
-                      </label>
-                      <Select name="source" onValueChange={handleSelectChange}>
-                        <SelectTrigger className="">
-                          <SelectValue placeholder="Please select..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="google">Google Search</SelectItem>
-                          <SelectItem value="referral">
-                            Friend/Family Referral
-                          </SelectItem>
-                          <SelectItem value="social">Social Media</SelectItem>
-                          <SelectItem value="neighbor">
-                            Saw Your Work in Neighborhood
-                          </SelectItem>
-                          <SelectItem value="sign">Saw a Sign</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {/* Hidden input to ensure Netlify captures the select value */}
-                      <input
-                        type="hidden"
-                        name="source"
-                        value={formData.source}
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Tell us a little about your project...
-                      </label>
-                      <Textarea
-                        name="projectDetails"
-                        value={formData.projectDetails}
-                        onChange={handleInputChange}
-                        rows={4}
-                        className=""
-                        placeholder="Share your vision, special requirements, or any questions you have..."
+                        className="text-base"
                       />
                     </div>
 
                     <Button
                       type="submit"
-                      className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg py-4 sm:py-6 whitespace-normal text-center"
+                      className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg py-6 whitespace-normal text-center"
                       size="lg"
                     >
-                      Reserve Private Design Review
+                      Get My Free Consultation
                     </Button>
+
+                    <p className="text-sm text-muted-foreground text-center mt-3">
+                      No obligation. Response within 1 business day.
+                    </p>
                   </form>
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Section */}
+      <section className="py-16 bg-secondary/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-primary text-center mb-12 font-heading">
+            Trusted by Families Across North Atlanta
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="border-0 shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                    ))}
+                  </div>
+                  <p className="text-foreground mb-4 italic">"{testimonial.quote}"</p>
+                  <p className="text-sm font-semibold text-primary">
+                    {testimonial.name}, {testimonial.location}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -287,7 +240,7 @@ export default function FreeConsultation() {
           <div className="inline-flex items-center space-x-4 bg-background rounded-lg px-8 py-6 shadow-lg">
             <Phone className="w-8 h-8 text-accent" />
             <a
-              href="tel:(404)416-9505"
+              href="tel:4044169505"
               className="text-3xl lg:text-4xl font-bold text-accent hover:text-accent/80 transition-colors"
             >
               (404) 416-9505
