@@ -64,9 +64,9 @@ export default function FreeConsultation() {
       quote: "Exceptional service from start to finish. Our neighbors can't stop complimenting our holiday display!",
     },
     {
-      name: "Jennifer L.",
-      location: "Johns Creek",
-      quote: "Worth every penny! They handled everything and our home looked absolutely magical.",
+      name: "The Goldings",
+      location: "Crabapple",
+      quote: "I had Triston help with our decorating outside and couldn't be happier with the result. From start to finish, he worked to complete the look we decided on in the beginning. Very neat and respectful.",
     },
   ];
 
