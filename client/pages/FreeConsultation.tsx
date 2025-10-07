@@ -13,9 +13,7 @@ export default function FreeConsultation() {
     phone: "",
   });
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -56,17 +54,20 @@ export default function FreeConsultation() {
     {
       name: "Sarah M.",
       location: "Alpharetta",
-      quote: "The Jolly Deco Co. transformed our home for Christmas. Professional, creative, and completely stress-free!",
+      quote:
+        "The Jolly Deco Co. transformed our home for Christmas. Professional, creative, and completely stress-free!",
     },
     {
       name: "Michael R.",
       location: "Roswell",
-      quote: "Exceptional service from start to finish. Our neighbors can't stop complimenting our holiday display!",
+      quote:
+        "Exceptional service from start to finish. Our neighbors can't stop complimenting our holiday display!",
     },
     {
       name: "The Goldings",
       location: "Crabapple",
-      quote: "I had Triston help with our decorating outside and couldn't be happier with the result. From start to finish, he worked to complete the look we decided on in the beginning. Very neat and respectful.",
+      quote:
+        "I had Triston help with our decorating outside and couldn't be happier with the result. From start to finish, he worked to complete the look we decided on in the beginning. Very neat and respectful.",
     },
   ];
 
@@ -79,7 +80,9 @@ export default function FreeConsultation() {
             Schedule Your Free Design Consultation
           </h1>
           <p className="text-lg lg:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
-            Let's bring your holiday vision to life. Get a personalized quote and design plan—no obligation, no pressure. Just expert guidance tailored to your home.
+            Let's bring your holiday vision to life. Get a personalized quote
+            and design plan—no obligation, no pressure. Just expert guidance
+            tailored to your home.
           </p>
         </div>
       </section>
@@ -100,7 +103,9 @@ export default function FreeConsultation() {
                       <div className="flex-shrink-0 mt-1">
                         <CheckCircle className="w-6 h-6 text-accent" />
                       </div>
-                      <p className="text-foreground text-lg leading-relaxed">{item}</p>
+                      <p className="text-foreground text-lg leading-relaxed">
+                        {item}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -109,7 +114,12 @@ export default function FreeConsultation() {
               {/* Pricing Indicator */}
               <div className="bg-accent/10 border-l-4 border-accent p-6 rounded-r-lg">
                 <p className="text-foreground leading-relaxed">
-                  <span className="font-semibold">Professional holiday lighting installations starting at $800.</span> Most homes range from $1,200-$3,500 depending on size and design complexity.
+                  <span className="font-semibold">
+                    Professional holiday lighting installations starting at
+                    $800.
+                  </span>{" "}
+                  Most homes range from $1,200-$3,500 depending on size and
+                  design complexity.
                 </p>
               </div>
             </div>
@@ -123,7 +133,8 @@ export default function FreeConsultation() {
                       Ready to Get Started?
                     </h2>
                     <p className="text-foreground">
-                      Fill out the form below or give us a call. We'll schedule a convenient time for your free, no-pressure consultation.
+                      Fill out the form below or give us a call. We'll schedule
+                      a convenient time for your free, no-pressure consultation.
                     </p>
                   </div>
 
@@ -139,7 +150,7 @@ export default function FreeConsultation() {
                       name="form-name"
                       value="consultation-request"
                     />
-                    
+
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
                         First Name *
@@ -212,10 +223,15 @@ export default function FreeConsultation() {
                 <CardContent className="p-6">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-accent text-accent"
+                      />
                     ))}
                   </div>
-                  <p className="text-foreground mb-4 italic">"{testimonial.quote}"</p>
+                  <p className="text-foreground mb-4 italic">
+                    "{testimonial.quote}"
+                  </p>
                   <p className="text-sm font-semibold text-primary">
                     {testimonial.name}, {testimonial.location}
                   </p>
