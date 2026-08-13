@@ -1,28 +1,25 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const Navigation = () => {
+const navigationItems = [
+  { name: "Services", href: "/#services" },
+  { name: "Meet Triston", href: "/#about" },
+  { name: "Reviews", href: "/#reviews" },
+  { name: "Contact", href: "/#contact" },
+];
+
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
-  const navigationItems = [
-    { name: "Home", href: "/" },
-    { name: "Our Process", href: "/our-process" },
-    { name: "Gallery", href: "/gallery" },
-    { name: "Why Us", href: "/why-us" },
-    { name: "Contact", href: "/free-consultation" },
-  ];
-
-  const isActive = (path: string) => location.pathname === path;
+  const isHome = location.pathname === "/";
 
   return (
-    <nav className="bg-primary shadow-md fixed top-0 left-0 right-0 z-[100]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 lg:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
+    <nav className="fixed inset-x-0 top-0 z-[100] bg-primary shadow-md">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between lg:h-20">
+          <Link to="/" className="flex items-center" aria-label="The Jolly Deco Co. home">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fe2cf7d947c4349dab891698e99052d11?format=webp&width=800"
               alt="The Jolly Deco Co. Logo"
@@ -30,77 +27,83 @@ const Navigation = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-10">
+          <div className="hidden items-center gap-8 lg:flex">
+            <Link
+              to="/"
+              className={`font-medium transition-colors ${
+                isHome ? "text-accent" : "text-background/90 hover:text-accent"
+              }`}
+            >
+              Home
+            </Link>
             {navigationItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
-                to={item.href}
-                className={`font-medium transition-colors duration-200 py-2 px-1 ${
-                  isActive(item.href)
-                    ? "text-background border-b-2 border-accent"
-                    : "text-background/90 hover:text-accent"
-                }`}
+                href={item.href}
+                className="font-medium text-background/90 transition-colors hover:text-accent"
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden items-center gap-4 lg:flex">
             <a
-              href="tel:(404)416-9505"
-              className="flex items-center space-x-2 text-accent hover:text-accent/80 transition-colors"
+              href="tel:4044169505"
+              className="flex items-center gap-2 font-medium text-accent transition-colors hover:text-accent/80"
             >
-              <Phone className="w-4 h-4" />
-              <span className="font-medium">(404) 416-9505</span>
+              <Phone className="h-4 w-4" />
+              <span>(404) 416-9505</span>
             </a>
             <Link to="/free-consultation">
-              <Button className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 whitespace-nowrap">
-                Free Consultation
+              <Button className="bg-accent font-semibold text-primary hover:bg-accent/90">
+                Get a Free Quote
               </Button>
             </Link>
           </div>
 
-          {/* Mobile menu button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-background hover:text-accent hover:bg-primary-foreground/10"
+            type="button"
+            onClick={() => setIsOpen((open) => !open)}
+            className="rounded-md p-2 text-background transition-colors hover:bg-background/10 hover:text-accent lg:hidden"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-background/20">
-            <div className="flex flex-col space-y-4">
+          <div className="border-t border-background/20 py-4 lg:hidden">
+            <div className="flex flex-col gap-3">
+              <Link
+                to="/"
+                onClick={() => setIsOpen(false)}
+                className="py-2 font-medium text-background transition-colors hover:text-accent"
+              >
+                Home
+              </Link>
               {navigationItems.map((item) => (
-                <Link
+                <a
                   key={item.name}
-                  to={item.href}
+                  href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`font-medium py-2 transition-colors duration-200 ${
-                    isActive(item.href)
-                      ? "text-accent"
-                      : "text-background hover:text-accent"
-                  }`}
+                  className="py-2 font-medium text-background transition-colors hover:text-accent"
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
-              <div className="pt-4 border-t border-background/20 space-y-3">
+              <div className="mt-1 space-y-3 border-t border-background/20 pt-4">
                 <a
-                  href="tel:(404)416-9505"
-                  className="flex items-center space-x-2 text-accent font-medium"
+                  href="tel:4044169505"
+                  className="flex items-center gap-2 font-medium text-accent"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="h-4 w-4" />
                   <span>(404) 416-9505</span>
                 </a>
-                <Link to="/free-consultation">
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200">
-                    Free Consultation
+                <Link to="/free-consultation" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full bg-accent font-semibold text-primary hover:bg-accent/90">
+                    Get a Free Quote
                   </Button>
                 </Link>
               </div>
@@ -110,6 +113,4 @@ const Navigation = () => {
       </div>
     </nav>
   );
-};
-
-export default Navigation;
+}

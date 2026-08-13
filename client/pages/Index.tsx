@@ -1,21 +1,66 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent } from "@/components/ui/card";
+import ServiceTierCard from "@/components/ServiceTierCard";
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  CheckCircle,
-  Eye,
-  Shield,
-  Users,
   ChevronDown,
   ChevronUp,
+  Mail,
+  MapPin,
+  Phone,
+  Quote,
 } from "lucide-react";
+
+const completedWorkImage =
+  "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F4a0fd848ed144b91b2bede8b8448289a?format=webp&width=1600";
+
+const serviceTiers = [
+  {
+    title: "Elegance",
+    description: "A clean, classic roofline that makes your home feel ready for the season.",
+    included: ["Roofline and eaves C9 lighting", "Warm-white lights"],
+  },
+  {
+    title: "Elegance Plus",
+    description: "Everything in Elegance, with the extra touches that bring the whole front yard together.",
+    included: [
+      "Everything in Elegance",
+      "Tree and bush decorating",
+      "Garland, wreaths, and bows",
+      "Three reindeer",
+    ],
+  },
+  {
+    title: "Winter Wonderland",
+    description: "A full-property display for homes ready to go all out for the holidays.",
+    included: [
+      "Glittery snowflake-style house wrap",
+      "Fully decorated yard and walkway",
+      "Custom multi-color options",
+    ],
+  },
+];
+
+const faqItems = [
+  {
+    question: "How does pricing work?",
+    answer:
+      "Every home is different, so Triston will look at the roofline, the scope of the display, and the tier that fits before providing a clear quote.",
+  },
+  {
+    question: "What is included in the service?",
+    answer:
+      "The details are set out in your quote before work begins. We will walk through what you want, what is included, and the plan for your home.",
+  },
+  {
+    question: "Can I request a custom look?",
+    answer:
+      "Yes. Winter Wonderland includes custom multi-color options, and we are happy to talk through a look that fits your home and budget.",
+  },
+];
 
 export default function Index() {
   const navigate = useNavigate();
@@ -29,429 +74,345 @@ export default function Index() {
   });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const form = e.currentTarget;
-    const formDataToSend = new FormData(form);
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const submission = new FormData(form);
 
     try {
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formDataToSend as any).toString(),
+        body: new URLSearchParams(submission as any).toString(),
       });
 
-      // Track form submission with Meta Pixel
       if (typeof window !== "undefined" && (window as any).fbq) {
         (window as any).fbq("track", "Lead");
       }
 
       navigate("/thank-you");
-    } catch (error) {
+    } catch {
       alert("There was an error submitting the form. Please try again.");
     }
   };
 
-  const faqItems = [
-    {
-      question: "Do I own the decorations?",
-      answer:
-        "Yes. We work with you to source and purchase premium, commercial-grade decorations that are yours to keep. This ensures a custom look for your home year after year.",
-    },
-    {
-      question: "What happens if a light goes out during the season?",
-      answer:
-        "We guarantee our work. If any part of your display has an issue, simply call us, and we will come out to fix it promptly at no charge.",
-    },
-    {
-      question: "How much does it cost?",
-      answer:
-        "Every home is unique, so we provide a custom quote after our free on-site consultation. This ensures accurate, fair pricing tailored to your specific vision and property.",
-    },
-  ];
-
-  const processSteps = [
-    {
-      number: "01",
-      title: "Private Design Review",
-      description:
-        "Our first engagement is a discerning walk-through where we interpret your aesthetic and architect an entirely unique, illuminated vision for your estate.",
-    },
-    {
-      number: "02",
-      title: "Masterful Execution",
-      description:
-        "Your vision is brought to life by our certified installation team with unmatched precision. Every element is secured and detailed to commercial-grade standards, demanding zero effort from you.",
-    },
-    {
-      number: "03",
-      title: "Seamless Transition",
-      description:
-        "At the season's close, our team conducts a swift, impeccable removal. We offer an exclusive optional service for the secure, climate-controlled retirement of your décor to protect your investment.",
-    },
-  ];
-
-  const features = [
-    {
-      icon: <Eye className="w-8 h-8 text-accent" />,
-      title: "Bespoke Vision",
-      description:
-        "Architectural lighting and décor customized exclusively to enhance your home's distinct form and profile.",
-    },
-    {
-      icon: <Users className="w-8 h-8 text-accent" />,
-      title: "Discreet Professionalism",
-      description:
-        "Unwavering attention to detail and reliable communication. We manage the process with the highest respect for your property and privacy.",
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-accent" />,
-      title: "Guaranteed Investment",
-      description:
-        "Full liability insurance coupled with the exclusive use of premium, commercial-grade materials ensures a brilliant, enduring, and maintenance-free display.",
-    },
-  ];
-
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section
-        className="relative py-20 lg:py-32 bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F296e6a4682304726a0836e7d50277bf7?format=webp&width=2000')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center 35%",
-        }}
-      >
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-primary/30"></div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto shadow-2xl">
-            <h1
-              className="text-4xl lg:text-6xl font-bold text-background mb-6"
-              style={{
-                textShadow:
-                  "2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5)",
-              }}
-            >
-              Atlanta's Premier
-              <span
-                className="block text-accent"
-                style={{
-                  textShadow:
-                    "2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5)",
-                }}
-              >
-                Holiday Design & Installation
-              </span>
+    <main className="min-h-screen bg-background">
+      <section className="relative isolate min-h-[620px] overflow-hidden bg-primary py-20 sm:py-28 lg:flex lg:min-h-[680px] lg:items-center">
+        <img
+          src={completedWorkImage}
+          alt="Completed warm-white roofline C9 lighting on a two-story home"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary via-primary/85 to-primary/35" />
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl text-background">
+            <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-accent sm:text-base">
+              The Jolly Deco Co. · Cumming, GA
+            </p>
+            <h1 className="font-heading text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+              Holiday lighting for Cumming, Alpharetta, and Johns Creek.
             </h1>
-            <p
-              className="text-lg lg:text-xl text-background mb-8 max-w-3xl mx-auto"
-              style={{
-                textShadow:
-                  "1px 1px 6px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.5)",
-              }}
-            >
-              Elegant, creative, and completely hassle-free holiday decorating
-              for your home. Let us bring the magic, so you can make the
-              memories.
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-background/95 sm:text-xl">
+              Simple, well-done holiday decorating from a local owner who cares
+              about the details at your home.
             </p>
-            <Link
-              to="/free-consultation"
-              className="inline-block w-full sm:w-auto px-4 sm:px-0"
-            >
-              <Button
-                size="lg"
-                className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 shadow-xl w-full sm:w-auto whitespace-normal sm:whitespace-nowrap text-center"
-                style={{ textShadow: "1px 1px 4px rgba(0, 0, 0, 0.3)" }}
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <Link to="/free-consultation" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="w-full bg-accent px-7 text-base font-semibold text-primary hover:bg-accent/90 sm:w-auto"
+                >
+                  Get a Free Quote
+                </Button>
+              </Link>
+              <a
+                href="tel:4044169505"
+                className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-background transition-colors hover:text-accent sm:justify-start"
               >
-                Request Your Free Design Consultation
-              </Button>
-            </Link>
+                <Phone className="h-4 w-4" />
+                (404) 416-9505
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Our Story Section */}
-      <section className="py-16 sm:py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6 font-heading">
-              The Art of Effortless Elegance
+      <section id="services" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-holiday-green">
+              Holiday lighting packages
+            </p>
+            <h2 className="mt-3 font-heading text-3xl font-bold text-primary sm:text-4xl">
+              Pick the level that fits your home.
             </h2>
-            <p className="text-lg text-foreground leading-relaxed">
-              The Jolly Deco Co. was born from a singular vision: to fuse
-              technical mastery with uncompromising creative vision. Our
-              foundation is built on the refined precision of a craftsman,
-              enabling us to deliver installations that are not merely
-              decorations, but architectural masterpieces. We don't just
-              decorate; we curate a legacy of wonder, restoring the luxury of
-              time and flawless execution to your holiday season.
+            <p className="mt-4 text-lg leading-relaxed text-foreground">
+              We will walk the property with you, discuss what you have in mind,
+              and give you a clear quote before any work begins.
+            </p>
+          </div>
+          <div className="mt-11 grid gap-6 lg:grid-cols-3 lg:gap-8">
+            {serviceTiers.map((tier) => (
+              <ServiceTierCard key={tier.title} {...tier} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="scroll-mt-24 bg-secondary/45 py-16 sm:py-20 lg:py-24">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-16 lg:px-8">
+          <div className="rounded-2xl bg-primary p-8 text-background sm:p-10">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-accent">
+              Meet the owner
+            </p>
+            <h2 className="mt-4 font-heading text-4xl font-bold leading-tight">
+              Hey, I&apos;m Triston.
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-background/90">
+              I&apos;m building Jolly Deco Co. one house, one season, and one
+              satisfied customer at a time.
+            </p>
+          </div>
+          <div className="space-y-6 text-lg leading-relaxed text-foreground">
+            <p>
+              Before this, I did door-to-door roofing sales and spent close to a
+              year as an industrial electrical apprentice — refineries, chemical
+              plants, warehouses. I learned more than I expected about how
+              things actually work, and figured out along the way that I liked
+              being outside making things look good a lot more than being inside
+              a plant.
+            </p>
+            <p>
+              Both jobs taught me the same thing: people need help, and doing
+              that well is worth building a living around. That&apos;s why we
+              started Jolly Deco Co. We&apos;re not trying to be the biggest
+              lighting company in North Georgia — just the one that shows up,
+              does it right, and treats your house like it matters. Satisfied
+              customers is the whole goal.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
-              Our Three-Step Process for Bespoke Illumination
-            </h2>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {processSteps.map((step, index) => (
-              <Card key={index} className="text-center border-0 shadow-lg">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-accent font-bold text-xl font-heading">
-                      {step.number}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-primary mb-4 font-heading">
-                    {step.title}
-                  </h3>
-                  <p className="text-foreground">{step.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4 font-heading">
-              The Jolly Deco Co. Distinction
-            </h2>
-          </div>
-          <div className="grid lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-6">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-accent mb-4 font-heading">
-                  {feature.title}
-                </h3>
-                <p className="text-primary">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Service Area Section */}
-      <section className="py-20 bg-primary text-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Proudly Serving the Greater Atlanta Area
+      <section className="bg-primary py-16 text-background sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <MapPin className="mx-auto h-8 w-8 text-accent" />
+          <h2 className="mt-5 font-heading text-3xl font-bold sm:text-4xl">
+            Your local holiday lighting crew.
           </h2>
-          <p className="text-lg mb-8 max-w-3xl mx-auto">
-            We are based in the Alpharetta/Roswell area and provide services to
-            Milton, Johns Creek, Sandy Springs, and Buckhead.
+          <p className="mt-4 text-xl font-semibold leading-relaxed text-background/95">
+            Proudly serving Cumming, Alpharetta, and Johns Creek, GA.
           </p>
-          <div className="flex justify-center">
-            <MapPin className="w-6 h-6 mr-2" />
-            <span className="text-lg">Greater Atlanta Area</span>
-          </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {faqItems.map((faq, index) => (
-              <Card key={index} className="border border-gray-200">
-                <CardContent className="p-0">
-                  <button
-                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="w-full p-6 text-left flex justify-between items-center hover:bg-muted transition-colors"
-                  >
-                    <h3 className="font-semibold text-primary">
-                      {faq.question}
-                    </h3>
-                    {openFaq === index ? (
-                      <ChevronUp className="w-5 h-5 text-accent" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-accent" />
-                    )}
-                  </button>
-                  {openFaq === index && (
-                    <div className="px-6 pb-6 pt-0">
-                      <p className="text-foreground">{faq.answer}</p>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 bg-primary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-accent mb-4 font-heading">
-              The Season Awaits Your Signature
+      <section id="reviews" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-holiday-green">
+              From a customer
+            </p>
+            <h2 className="mt-3 font-heading text-3xl font-bold text-primary sm:text-4xl">
+              Real feedback, not filler.
             </h2>
-            <p className="text-lg text-background max-w-3xl mx-auto">
-              Begin the process of elevating your estate. We invite you to
-              schedule a private design review to explore the possibilities of
-              bespoke holiday illumination.
+          </div>
+          <Card className="mt-10 border border-primary/10 shadow-md">
+            <CardContent className="p-7 sm:p-10">
+              <Quote className="h-10 w-10 text-accent" aria-hidden="true" />
+              <blockquote className="mt-4 font-heading text-2xl leading-relaxed text-primary sm:text-3xl">
+                “I had Triston help with our decorating outside and couldn&apos;t be
+                happier with the result. From start to finish, he worked to
+                complete the look we decided on in the beginning. Very neat and
+                respectful.”
+              </blockquote>
+              <p className="mt-6 font-semibold text-foreground">
+                — The Goldings, Crabapple
+              </p>
+            </CardContent>
+          </Card>
+          <p className="mx-auto mt-7 max-w-2xl text-center leading-relaxed text-muted-foreground">
+            This is Jolly Deco Co&apos;s first season taking on residential clients
+            at scale — check back soon for more reviews.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-secondary/45 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center font-heading text-3xl font-bold text-primary sm:text-4xl">
+            A few good questions to ask.
+          </h2>
+          <div className="mt-10 space-y-3">
+            {faqItems.map((faq, index) => {
+              const isOpen = openFaq === index;
+              return (
+                <Card key={faq.question} className="border border-primary/10 shadow-none">
+                  <CardContent className="p-0">
+                    <button
+                      type="button"
+                      onClick={() => setOpenFaq(isOpen ? null : index)}
+                      aria-expanded={isOpen}
+                      className="flex w-full items-center justify-between gap-4 p-5 text-left text-primary transition-colors hover:bg-background/70 sm:p-6"
+                    >
+                      <span className="font-semibold">{faq.question}</span>
+                      {isOpen ? (
+                        <ChevronUp className="h-5 w-5 flex-none text-holiday-green" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5 flex-none text-holiday-green" />
+                      )}
+                    </button>
+                    {isOpen && (
+                      <p className="px-5 pb-5 leading-relaxed text-foreground sm:px-6 sm:pb-6">
+                        {faq.answer}
+                      </p>
+                    )}
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="scroll-mt-24 bg-primary py-16 sm:py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center text-background">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-accent">
+              Let&apos;s talk about your home
+            </p>
+            <h2 className="mt-3 font-heading text-3xl font-bold sm:text-4xl">
+              Ready to plan your holiday lights?
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-background/90">
+              Tell us a little about your home and what you&apos;re considering.
+              Triston will follow up with you directly.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
+          <div className="mx-auto mt-11 grid max-w-5xl gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="space-y-6 rounded-2xl border border-background/15 bg-background/5 p-7 text-background sm:p-8">
+              <div className="flex gap-4">
+                <Phone className="mt-1 h-5 w-5 flex-none text-accent" />
                 <div>
-                  <h3 className="font-semibold text-accent">Phone</h3>
+                  <p className="font-semibold text-accent">Call or text</p>
                   <a
-                    href="tel:(404)416-9505"
-                    className="text-lg text-background hover:text-accent transition-colors"
+                    href="tel:4044169505"
+                    className="mt-1 inline-block text-lg hover:text-accent"
                   >
                     (404) 416-9505
                   </a>
                 </div>
               </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-primary" />
-                </div>
+              <div className="flex gap-4">
+                <Mail className="mt-1 h-5 w-5 flex-none text-accent" />
                 <div>
-                  <h3 className="font-semibold text-accent">Email</h3>
+                  <p className="font-semibold text-accent">Email</p>
                   <a
                     href="mailto:info@thejollydeco.com"
-                    className="text-lg text-background hover:text-accent transition-colors"
+                    className="mt-1 inline-block break-all text-lg hover:text-accent"
                   >
                     info@thejollydeco.com
                   </a>
                 </div>
               </div>
-
-              <div className="bg-background p-6 rounded-lg">
-                <h3 className="font-semibold text-accent mb-2">
-                  Service Areas
-                </h3>
-                <p className="text-primary">
-                  Alpharetta, Roswell, Milton, Johns Creek, Sandy Springs, and
-                  Buckhead
-                </p>
+              <div className="flex gap-4">
+                <MapPin className="mt-1 h-5 w-5 flex-none text-accent" />
+                <div>
+                  <p className="font-semibold text-accent">Service area</p>
+                  <p className="mt-1 leading-relaxed text-background/90">
+                    Cumming, Alpharetta, and Johns Creek, GA
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
+            <Card className="border-0 shadow-xl">
+              <CardContent className="p-6 sm:p-8">
                 <form
                   name="contact-form"
                   method="POST"
                   data-netlify="true"
                   onSubmit={handleSubmit}
-                  className="space-y-6"
+                  className="space-y-5"
                 >
                   <input type="hidden" name="form-name" value="contact-form" />
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Name *
-                      </label>
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <label className="block text-sm font-medium text-foreground">
+                      Name *
                       <Input
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
                         required
+                        className="mt-2"
                       />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Phone *
-                      </label>
+                    </label>
+                    <label className="block text-sm font-medium text-foreground">
+                      Phone *
                       <Input
                         name="phone"
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
+                        className="mt-2"
                       />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Email *
                     </label>
+                  </div>
+                  <label className="block text-sm font-medium text-foreground">
+                    Email *
                     <Input
                       name="email"
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       required
+                      className="mt-2"
                     />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Service Address *
-                    </label>
+                  </label>
+                  <label className="block text-sm font-medium text-foreground">
+                    Service address *
                     <Input
                       name="address"
                       value={formData.address}
                       onChange={handleInputChange}
                       required
+                      className="mt-2"
                     />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Brief Message
-                    </label>
+                  </label>
+                  <label className="block text-sm font-medium text-foreground">
+                    Tell us what you have in mind
                     <Textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={4}
-                      placeholder="Tell us about your vision..."
+                      className="mt-2"
+                      placeholder="Roofline lighting, yard décor, or a full display..."
                     />
-                  </div>
-
-                  <Link to="/free-consultation" className="block">
-                    <Button
-                      className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg whitespace-normal text-center"
-                      size="lg"
-                    >
-                      Schedule Private Design Review
-                    </Button>
-                  </Link>
+                  </label>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full bg-accent font-semibold text-primary hover:bg-accent/90"
+                  >
+                    Request a Free Quote
+                  </Button>
                 </form>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
