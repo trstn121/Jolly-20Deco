@@ -12,6 +12,7 @@ export default function FreeConsultation() {
     firstName: "",
     email: "",
     phone: "",
+    address: "",
     idea: "",
   });
 
@@ -185,7 +186,20 @@ export default function FreeConsultation() {
 
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
-                        What do you already have in mind?
+                        Service address *
+                      </label>
+                      <Input
+                        name="address"
+                        value={formData.address}
+                        onChange={handleInputChange}
+                        required
+                        className="text-base"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Tell us what you have in mind
                       </label>
                       <Textarea
                         name="idea"
@@ -193,7 +207,7 @@ export default function FreeConsultation() {
                         onChange={handleInputChange}
                         rows={4}
                         className="text-base"
-                        placeholder="Tell us about the look or areas you are thinking about."
+                        placeholder="Roofline lighting, yard décor, or a full display..."
                       />
                     </div>
 
