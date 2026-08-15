@@ -50,12 +50,12 @@ const faqItems = [
   {
     question: "How does pricing work?",
     answer:
-      "Every home is different, so Triston will look at the roofline, the scope of the display, and the tier that fits before providing a clear quote.",
+      "Every home is different, we will look at the roofline, the scope of the display, and the tier that fits before providing a clear quote.",
   },
   {
     question: "What is included in the service?",
     answer:
-      "The details are set out in your quote before work begins. We will walk through what you want, what is included, and the plan for your home.",
+      "Jolly Deco Co. provides a free design consultation, followed by custom made mockups. Upon contracting, Jolly Deco Co. owns and provides all lighting, decoration, and equipment used for the display. Jolly Deco Co. provides professional install, in season maintenance, post season take down and storage, customer priority and pricing next season. Other seasonal home maintenance options available upon ask.",
   },
   {
     question: "Can I request a custom look?",
