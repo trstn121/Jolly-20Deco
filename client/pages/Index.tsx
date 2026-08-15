@@ -153,11 +153,11 @@ export default function Index() {
               Holiday lighting packages
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-primary sm:text-4xl">
-              Pick the level that fits your home.
+              Home Décor. Your way.
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-foreground">
-              We will walk the property with you, discuss what you have in mind,
-              and give you a clear quote before any work begins.
+              After a 15 minute design consultation and idea understanding, we
+              present you a custom tailored design based off one of our 3 packages
             </p>
           </div>
           <div className="mt-11 grid gap-6 lg:grid-cols-3 lg:gap-8">
@@ -175,11 +175,11 @@ export default function Index() {
               Meet the owner
             </p>
             <h2 className="mt-4 font-heading text-4xl font-bold leading-tight">
-              Hey, I&apos;m Triston.
+              What&apos;s up, I&apos;m Triston.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-background/90">
-              I&apos;m building Jolly Deco Co. one house, one season, and one
-              satisfied customer at a time.
+              I&apos;m building Jolly Deco Co. one house, one season, and one happy
+              customer at a time.
             </p>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-foreground">
@@ -317,10 +317,10 @@ export default function Index() {
                 <div>
                   <p className="font-semibold text-accent">Email</p>
                   <a
-                    href="mailto:info@thejollydeco.com"
+                    href="mailto:info@jollydecoco.com"
                     className="mt-1 inline-block break-all text-lg hover:text-accent"
                   >
-                    info@thejollydeco.com
+                    info@jollydecoco.com
                   </a>
                 </div>
               </div>
