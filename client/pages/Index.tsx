@@ -20,11 +20,13 @@ const completedWorkImage =
 const serviceTiers = [
   {
     title: "Elegance",
+    price: "$800+",
     description: "A clean, classic roofline that makes your home feel ready for the season.",
     included: ["Roofline and eaves C9 lighting", "Warm-white lights"],
   },
   {
-    title: "Elegance Plus",
+    title: "Premier",
+    price: "$1500+",
     description: "Everything in Elegance, with the extra touches that bring the whole front yard together.",
     included: [
       "Everything in Elegance",
@@ -33,8 +35,9 @@ const serviceTiers = [
     ],
   },
   {
-    title: "Winter Wonderland",
-    description: "A full-property display for homes ready to go all out for the holidays.",
+    title: "WonderWorld",
+    price: "Custom, please contact",
+    description: "Full property creation — trees, walkway, and landscape accents, built around exactly what you're looking after our design consultation.",
     included: [
       "Fully custom lighting & yard display",
       "Tailored design",
@@ -57,7 +60,7 @@ const faqItems = [
   {
     question: "Can I request a custom look?",
     answer:
-      "Yes. Winter Wonderland includes custom multi-color options, and we are happy to talk through a look that fits your home and budget.",
+      "Yes. WonderWorld includes custom multi-color options, and we are happy to talk through a look that fits your home and budget.",
   },
 ];
 
@@ -145,6 +148,18 @@ export default function Index() {
         </div>
       </section>
 
+      <section className="bg-primary py-16 text-background sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <MapPin className="mx-auto h-8 w-8 text-accent" />
+          <h2 className="mt-5 font-heading text-3xl font-bold sm:text-4xl">
+            Your local holiday lighting crew.
+          </h2>
+          <p className="mt-4 text-xl font-semibold leading-relaxed text-background/95">
+            Proudly serving Cumming, Alpharetta, and Johns Creek, GA.
+          </p>
+        </div>
+      </section>
+
       <section id="services" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -174,43 +189,31 @@ export default function Index() {
               Meet the owner
             </p>
             <h2 className="mt-4 font-heading text-4xl font-bold leading-tight">
-              What&apos;s up, I&apos;m Triston.
+              Hey, I&apos;m Triston.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-background/90">
-              I&apos;m building Jolly Deco Co. one house, one season, and one happy
-              customer at a time.
+              Jolly Deco Co. grows one house, one season, and one happy customer
+              at a time.
             </p>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-foreground">
             <p>
-              Before this, I did door-to-door roofing sales and spent close to a
-              year as an industrial electrical apprentice — refineries, chemical
-              plants, warehouses. I learned more than I expected about how
-              things actually work, and figured out along the way that I liked
-              being outside making things look good a lot more than being inside
-              a plant.
+              Before I started this, I did door-to-door roofing sales and spent
+              close to a year as an industrial electrical apprentice — refineries,
+              chemical plants, warehouses. I learned more than I thought I would
+              about how some things actually work, and figured out along the way
+              that I liked being outside making things look good a lot more than
+              being inside a plant.
             </p>
             <p>
-              Both jobs taught me the same thing: people need help, and doing
-              that well is worth building a living around. That&apos;s why we
-              started Jolly Deco Co. We&apos;re not trying to be the biggest
+              Both jobs and the time I spent in school taught me the same thing:
+              people need help, and doing that well builds a living. That&apos;s why
+              we started Jolly Deco Co. We&apos;re not trying to be the biggest
               lighting company in North Georgia — just the one that shows up,
               does it right, and treats your house like it matters. Satisfied
-              customers is the whole goal.
+              customers and safety is the whole goal.
             </p>
           </div>
-        </div>
-      </section>
-
-      <section className="bg-primary py-16 text-background sm:py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <MapPin className="mx-auto h-8 w-8 text-accent" />
-          <h2 className="mt-5 font-heading text-3xl font-bold sm:text-4xl">
-            Your local holiday lighting crew.
-          </h2>
-          <p className="mt-4 text-xl font-semibold leading-relaxed text-background/95">
-            Proudly serving Cumming, Alpharetta, and Johns Creek, GA.
-          </p>
         </div>
       </section>
 
