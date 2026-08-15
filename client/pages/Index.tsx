@@ -30,15 +30,14 @@ const serviceTiers = [
       "Everything in Elegance",
       "Tree and bush decorating",
       "Garland, wreaths, and bows",
-      "Three reindeer",
     ],
   },
   {
     title: "Winter Wonderland",
     description: "A full-property display for homes ready to go all out for the holidays.",
     included: [
-      "Glittery snowflake-style house wrap",
-      "Fully decorated yard and walkway",
+      "Fully custom lighting & yard display",
+      "Tailored design",
       "Custom multi-color options",
     ],
   },
