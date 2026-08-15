@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, CheckCircle, Star } from "lucide-react";
 
@@ -11,9 +12,12 @@ export default function FreeConsultation() {
     firstName: "",
     email: "",
     phone: "",
+    idea: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -47,22 +51,10 @@ export default function FreeConsultation() {
   const expectedItems = [
     "Property Walkthrough: We assess your home's architecture and discuss your vision",
     "Custom Design Ideas: Get professional suggestions tailored to your style and budget",
-    "Transparent Proposal: Receive a detailed quote within 24 hours—zero obligation",
+    "Transparent Proposal: Receive a detailed quote within 24 hours",
   ];
 
   const testimonials = [
-    {
-      name: "Sarah M.",
-      location: "Alpharetta",
-      quote:
-        "The Jolly Deco Co. transformed our home for Christmas. Professional, creative, and completely stress-free!",
-    },
-    {
-      name: "Michael R.",
-      location: "Roswell",
-      quote:
-        "Exceptional service from start to finish. Our neighbors can't stop complimenting our holiday display!",
-    },
     {
       name: "The Goldings",
       location: "Crabapple",
@@ -77,12 +69,11 @@ export default function FreeConsultation() {
       <section className="bg-gradient-to-br from-background via-background to-secondary py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6 font-heading">
-            Schedule Your Free Design Consultation
+            Schedule A Free Design Consultation
           </h1>
           <p className="text-lg lg:text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
             Let's bring your holiday vision to life. Get a personalized quote
-            and design plan—no obligation, no pressure. Just expert guidance
-            tailored to your home.
+            and design plan. Expert guidance tailored to your home.
           </p>
         </div>
       </section>
@@ -130,11 +121,11 @@ export default function FreeConsultation() {
                 <CardContent className="p-8">
                   <div className="text-center mb-8">
                     <h2 className="text-2xl font-bold text-primary mb-3 font-heading">
-                      Ready to Get Started?
+                      Get Started
                     </h2>
                     <p className="text-foreground">
                       Fill out the form below or give us a call. We'll schedule
-                      a convenient time for your free, no-pressure consultation.
+                      a convenient time for your free, design-oriented consultation.
                     </p>
                   </div>
 
@@ -192,13 +183,29 @@ export default function FreeConsultation() {
                       />
                     </div>
 
-                    <Button
-                      type="submit"
-                      className="w-full bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg py-6 whitespace-normal text-center"
-                      size="lg"
-                    >
-                      Get My Free Consultation
-                    </Button>
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        What do you already have in mind?
+                      </label>
+                      <Textarea
+                        name="idea"
+                        value={formData.idea}
+                        onChange={handleInputChange}
+                        rows={4}
+                        className="text-base"
+                        placeholder="Tell us about the look or areas you are thinking about."
+                      />
+                    </div>
+
+                    <div className="flex justify-center">
+                      <Button
+                        type="submit"
+                        className="bg-accent hover:bg-accent/90 text-primary hover:shadow-lg transition-all duration-200 text-base sm:text-lg py-6 whitespace-normal text-center"
+                        size="lg"
+                      >
+                        Schedule Free Consultation
+                      </Button>
+                    </div>
 
                     <p className="text-sm text-muted-foreground text-center mt-3">
                       No obligation. Response within 1 business day.
@@ -215,12 +222,12 @@ export default function FreeConsultation() {
       <section className="py-16 bg-secondary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary text-center mb-12 font-heading">
-            Trusted by Families Across North Atlanta
+            What the Others Say
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="mx-auto grid max-w-2xl items-center justify-center gap-8">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="border-0 shadow-lg">
-                <CardContent className="p-6">
+                <CardContent className="mx-auto flex flex-col items-start justify-start p-6 text-left">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -246,12 +253,11 @@ export default function FreeConsultation() {
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold text-primary mb-4 font-heading">
-            Concierge Service via Phone
+            Schedule via Phone
           </h2>
           <p className="text-lg text-foreground mb-8 max-w-2xl mx-auto">
-            We are happy to answer any preliminary questions and schedule your
-            review immediately. We invite you to contact your dedicated
-            specialist today.
+            Prefer to call? We are happy to answer any questions and schedule
+            your review.
           </p>
           <div className="inline-flex items-center space-x-4 bg-background rounded-lg px-8 py-6 shadow-lg">
             <Phone className="w-8 h-8 text-accent" />
@@ -269,8 +275,7 @@ export default function FreeConsultation() {
       <footer className="py-8 bg-background border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-muted-foreground">
-            The Jolly Deco Co. is a fully insured business proudly serving the
-            Greater Atlanta Area.
+            The Jolly Deco Co.
           </p>
         </div>
       </footer>
