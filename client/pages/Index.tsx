@@ -188,7 +188,7 @@ export default function Index() {
               present you a custom tailored design based off one of our 3 packages
             </p>
           </div>
-          <div className="mt-11 grid gap-6 lg:grid-cols-3 lg:gap-8">
+          <div className="mt-11 grid items-stretch gap-6 lg:grid-cols-3 lg:gap-8">
             {serviceTiers.map((tier) => (
               <ServiceTierCard key={tier.title} {...tier} />
             ))}
