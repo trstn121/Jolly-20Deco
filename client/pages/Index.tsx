@@ -20,29 +20,43 @@ const completedWorkImage =
 const serviceTiers = [
   {
     title: "Elegance",
-    price: "$800+",
+    price: "Starting at $1,000",
     description: "A clean, classic roofline that makes your home feel ready for the season.",
     included: ["Roofline and eaves C9 lighting", "Warm-white lights"],
+    imageUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Ffd0e879892d24477bf4d05d52665cbb1?format=webp&width=800&height=1200",
+    imageAlt: "Illustrative example of the Elegance package with warm-white roofline lighting",
+    imageCaption: "Example: Elegance package",
   },
   {
     title: "Premier",
-    price: "$1500+",
+    price: "Starting at $2,000",
     description: "Everything in Elegance, with the extra touches that bring the whole front yard together.",
     included: [
       "Everything in Elegance",
-      "Tree and bush decorating",
-      "Garland, wreaths, and bows",
+      "Mini-light bush wrapping",
+      "Wreaths, garland, and bows",
+      "Walkway lighting",
+      "Porch decoration",
     ],
+    imageUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fdc212b84a9014d09bdb706ee9ee67f46?format=webp&width=800&height=1200",
+    imageAlt: "Illustrative example of the Premier package with roofline and yard lighting",
+    imageCaption: "Example: Premier package",
   },
   {
     title: "WonderWorld",
-    price: "Custom, please contact",
-    description: "Full property creation — trees, walkway, and landscape accents, built around exactly what you're looking after our design consultation.",
+    price: "Custom, starting around $3,000",
+    description: "Full-property, fully custom — built around exactly what you want.",
     included: [
-      "Fully custom lighting & yard display",
-      "Tailored design",
-      "Custom multi-color options",
+      "Everything in Premier",
+      "Custom tree and yard decor",
+      "Personal design consultation",
     ],
+    imageUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fc124233793f94130b06a360d0308b3a8?format=webp&width=800&height=1200",
+    imageAlt: "Illustrative example of the WonderWorld package with full-property lighting",
+    imageCaption: "Example: Wonderworld package",
   },
 ];
 

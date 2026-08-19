@@ -6,6 +6,9 @@ interface ServiceTierCardProps {
   price: string;
   description: string;
   included: string[];
+  imageUrl: string;
+  imageAlt: string;
+  imageCaption: string;
 }
 
 export default function ServiceTierCard({
@@ -13,6 +16,9 @@ export default function ServiceTierCard({
   price,
   description,
   included,
+  imageUrl,
+  imageAlt,
+  imageCaption,
 }: ServiceTierCardProps) {
   return (
     <Card className="h-full border border-primary/10 bg-background shadow-sm transition-shadow hover:shadow-lg">
@@ -22,6 +28,16 @@ export default function ServiceTierCard({
         <p className="mt-3 text-base leading-relaxed text-foreground">
           {description}
         </p>
+        <figure className="mt-6 overflow-hidden rounded-lg border border-primary/10 bg-secondary/30">
+          <img
+            src={imageUrl}
+            alt={imageAlt}
+            className="aspect-[4/3] w-full object-cover"
+          />
+          <figcaption className="px-3 py-2 text-xs font-medium text-muted-foreground">
+            {imageCaption}
+          </figcaption>
+        </figure>
         <ul className="mt-7 space-y-3 border-t border-primary/10 pt-6">
           {included.map((item) => (
             <li key={item} className="flex gap-3 text-sm leading-relaxed text-foreground">
@@ -31,7 +47,7 @@ export default function ServiceTierCard({
           ))}
         </ul>
         <p className="mt-auto pt-7 text-xs leading-relaxed text-muted-foreground">
-          All quotes are customer tailored, please contact for further pricing inquiry
+          All quotes are customer tailored, please contact for further pricing inquiry, more available upon request
         </p>
       </CardContent>
     </Card>
