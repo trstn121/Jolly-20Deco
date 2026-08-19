@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import MobileTierCarousel from "@/components/MobileTierCarousel";
 import ServiceTierCard from "@/components/ServiceTierCard";
 import {
   ChevronDown,
@@ -122,7 +123,7 @@ export default function Index() {
 
   return (
     <main className="min-h-screen bg-background">
-      <section className="relative isolate min-h-[620px] overflow-hidden bg-primary py-20 sm:py-28 lg:flex lg:min-h-[680px] lg:items-center">
+      <section className="relative isolate min-h-[560px] overflow-hidden bg-primary py-14 sm:min-h-[620px] sm:py-28 lg:flex lg:min-h-[680px] lg:items-center">
         <img
           src={completedWorkImage}
           alt="Completed warm-white roofline C9 lighting on a two-story home"
@@ -162,7 +163,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="bg-primary py-16 text-background sm:py-20">
+      <section className="bg-primary py-10 text-background sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <MapPin className="mx-auto h-8 w-8 text-accent" />
           <h2 className="mt-5 font-heading text-3xl font-bold sm:text-4xl">
@@ -174,7 +175,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="services" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
+      <section id="services" className="scroll-mt-24 py-12 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-holiday-green">
@@ -183,12 +184,15 @@ export default function Index() {
             <h2 className="mt-3 font-heading text-3xl font-bold text-primary sm:text-4xl">
               Home Décor. Your way.
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-foreground">
+            <p className="mt-3 text-lg leading-relaxed text-foreground sm:mt-4">
               After a 15 minute design consultation and idea understanding, we
               present you a custom tailored design based off one of our 3 packages
             </p>
           </div>
-          <div className="mt-11 grid items-stretch gap-6 lg:grid-cols-3 lg:gap-8">
+          <div className="mt-8 sm:mt-11 lg:hidden">
+            <MobileTierCarousel tiers={serviceTiers} />
+          </div>
+          <div className="mt-11 hidden items-stretch gap-6 lg:grid lg:grid-cols-3 lg:gap-8">
             {serviceTiers.map((tier) => (
               <ServiceTierCard key={tier.title} {...tier} />
             ))}
@@ -196,7 +200,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="about" className="scroll-mt-24 bg-secondary/45 py-16 sm:py-20 lg:py-24">
+      <section id="about" className="scroll-mt-24 bg-secondary/45 py-12 sm:py-20 lg:py-24">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-16 lg:px-8">
           <div className="rounded-2xl bg-primary p-8 text-background sm:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-accent">
@@ -231,7 +235,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="reviews" className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
+      <section id="reviews" className="scroll-mt-24 py-12 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-holiday-green">
@@ -262,7 +266,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="bg-secondary/45 py-16 sm:py-20">
+      <section className="bg-secondary/45 py-12 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center font-heading text-3xl font-bold text-primary sm:text-4xl">
             A few good questions to ask.
@@ -299,7 +303,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="contact" className="scroll-mt-24 bg-primary py-16 sm:py-20 lg:py-24">
+      <section id="contact" className="scroll-mt-24 bg-primary py-12 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center text-background">
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-accent">
