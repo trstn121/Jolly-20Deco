@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import ServiceTierCard, { type ServiceTier } from "@/components/ServiceTierCard";
 
 interface MobileTierCarouselProps {
@@ -6,52 +7,59 @@ interface MobileTierCarouselProps {
 }
 
 export default function MobileTierCarousel({ tiers }: MobileTierCarouselProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+  const showPrevious = () => {
+    setActiveIndex((index) => (index === 0 ? tiers.length - 1 : index - 1));
+  };
 
-    const updateActiveIndex = () => {
-      const center = container.scrollLeft + container.clientWidth / 2;
-      let closestIndex = 0;
-      let closestDistance = Number.POSITIVE_INFINITY;
-
-      Array.from(container.children).forEach((child, index) => {
-        const element = child as HTMLElement;
-        const childCenter = element.offsetLeft + element.offsetWidth / 2;
-        const distance = Math.abs(center - childCenter);
-
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = index;
-        }
-      });
-
-      setActiveIndex(closestIndex);
-    };
-
-    updateActiveIndex();
-    container.addEventListener("scroll", updateActiveIndex, { passive: true });
-
-    return () => container.removeEventListener("scroll", updateActiveIndex);
-  }, [tiers.length]);
+  const showNext = () => {
+    setActiveIndex((index) => (index === tiers.length - 1 ? 0 : index + 1));
+  };
 
   return (
-    <div
-      ref={containerRef}
-      aria-label="Holiday lighting package options"
-      className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-    >
-      {tiers.map((tier, index) => (
-        <div
-          key={tier.title}
-          className="w-[88vw] max-w-[360px] flex-none snap-center"
-        >
-          <ServiceTierCard {...tier} selected={index === activeIndex} />
+    <div aria-label="Holiday lighting package options">
+      <div className="relative mx-auto max-w-[390px]">
+        <div className="mx-auto w-[88vw] max-w-[360px]">
+          <ServiceTierCard {...tiers[activeIndex]} selected />
         </div>
-      ))}
+        <button
+          type="button"
+          onClick={showPrevious}
+          aria-label="Show previous package"
+          className="absolute inset-y-0 left-0 z-10 flex w-14 items-center justify-start text-primary/70 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        >
+          <span className="rounded-full bg-background/85 p-1 shadow-sm">
+            <ChevronLeft className="h-5 w-5" />
+          </span>
+        </button>
+        <button
+          type="button"
+          onClick={showNext}
+          aria-label="Show next package"
+          className="absolute inset-y-0 right-0 z-10 flex w-14 items-center justify-end text-primary/70 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        >
+          <span className="rounded-full bg-background/85 p-1 shadow-sm">
+            <ChevronRight className="h-5 w-5" />
+          </span>
+        </button>
+      </div>
+      <div className="mt-4 flex justify-center gap-2">
+        {tiers.map((tier, index) => (
+          <button
+            key={tier.title}
+            type="button"
+            onClick={() => setActiveIndex(index)}
+            aria-label={`Show ${tier.title} package`}
+            aria-current={index === activeIndex ? "true" : undefined}
+            className={`h-2 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
+              index === activeIndex
+                ? "w-6 bg-primary"
+                : "w-2 bg-primary/25 hover:bg-primary/50"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
