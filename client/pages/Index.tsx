@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import MobileTierCarousel from "@/components/MobileTierCarousel";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import ServiceTierCard from "@/components/ServiceTierCard";
 import {
   ChevronDown,
@@ -178,6 +179,8 @@ export default function Index() {
 
       <HowItWorksSection />
 
+      <WhyChooseUsSection />
+
       <section id="services" className="scroll-mt-24 py-12 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -225,6 +228,13 @@ export default function Index() {
               about how some things actually work, and figured out along the way
               that I liked being outside making things look good a lot more than
               being inside a plant.
+            </p>
+            <p>
+              What I like best, though, is the part in between: coming up with a
+              design, showing you a mockup of what your house could look like,
+              and then getting to turn that into something real. There&apos;s
+              nothing like install day — seeing the exact picture we talked about
+              actually lit up on your house for the first time.
             </p>
             <p>
               Both jobs and the time I spent in school taught me the same thing:
