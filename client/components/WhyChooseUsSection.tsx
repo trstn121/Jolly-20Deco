@@ -5,13 +5,13 @@ const comparisons = [
     imageUrl:
       "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fd3515df3f30b4247b094075fee843cfa?format=webp&width=800&height=1200",
     alt: "Illustrative DIY attempt with mini-lights on a home's roofline",
-    caption: "A DIY attempt",
+    caption: "DIY",
   },
   {
     imageUrl:
       "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2F66d265b55dcc4b0e896c9f234dc42f0e?format=webp&width=800&height=1200",
     alt: "Illustrative Jolly Deco Co install with even C9 roofline lighting",
-    caption: "A Jolly Deco Co install",
+    caption: "Professional install",
   },
 ];
 
