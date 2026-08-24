@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import HowItWorksSection from "@/components/HowItWorksSection";
 import MobileTierCarousel from "@/components/MobileTierCarousel";
 import ServiceTierCard from "@/components/ServiceTierCard";
 import {
@@ -174,6 +175,8 @@ export default function Index() {
           </p>
         </div>
       </section>
+
+      <HowItWorksSection />
 
       <section id="services" className="scroll-mt-24 py-12 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
