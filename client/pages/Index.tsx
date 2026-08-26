@@ -167,8 +167,6 @@ export default function Index() {
 
       <HowItWorksSection dark />
 
-      <WhyChooseUsSection />
-
       <section id="services" className="scroll-mt-24 py-12 sm:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -193,6 +191,8 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      <WhyChooseUsSection />
 
       <section id="about" className="scroll-mt-24 bg-secondary/45 py-12 sm:py-20 lg:py-24">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-16 lg:px-8">
