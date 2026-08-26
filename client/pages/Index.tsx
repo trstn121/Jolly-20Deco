@@ -174,11 +174,11 @@ export default function Index() {
               Holiday lighting packages
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-primary sm:text-4xl">
-              Christmas. At Scale.
+              1. 2. 3. Christmas
             </h2>
             <p className="mt-3 text-lg leading-relaxed text-foreground sm:mt-4">
-              After a 15 minute design consultation and idea understanding, we
-              present you a custom tailored design based off one of our 3 packages
+              Fill out the form below, call, or text to schedule a 15-30 minute design
+              consultation where we:- Walk your property with you- Work together on a design overview and custom mockup- Finalize a design tailored towards your plans and budget- Leave you with a Quote good for 7 Days- Hopefully give some Christmas Spirit
             </p>
           </div>
           <div className="mt-8 sm:mt-11 lg:hidden">

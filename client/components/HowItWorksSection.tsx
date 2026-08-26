@@ -47,7 +47,8 @@ const values = [
   {
     icon: Lightbulb,
     title: "Holiday Display",
-    description: "Commercial Grade lighting and decoration, owned and maintained by us, displayed magnificently by you",
+    description:
+      "Commercial-grade lighting and decor, owned and maintained by us, displayed magnificently at your home.",
   },
   {
     icon: Wrench,
