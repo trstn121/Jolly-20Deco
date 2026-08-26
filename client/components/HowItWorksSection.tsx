@@ -8,6 +8,7 @@ import {
   Wrench,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 const steps = [
   {
@@ -66,18 +67,32 @@ const values = [
   },
 ];
 
-export default function HowItWorksSection() {
+interface HowItWorksSectionProps {
+  dark?: boolean;
+}
+
+export default function HowItWorksSection({ dark = false }: HowItWorksSectionProps) {
   return (
-    <section className="bg-background py-12 sm:py-20">
+    <section className={cn("py-12 sm:py-20", dark ? "bg-primary text-background" : "bg-background")}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-accent">
             How it works
           </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold leading-tight text-primary sm:text-4xl">
+          <h2
+            className={cn(
+              "mt-3 font-heading text-3xl font-bold leading-tight sm:text-4xl",
+              dark ? "text-background" : "text-primary",
+            )}
+          >
             From first call to January cleanup, we handle it all
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+          <p
+            className={cn(
+              "mt-4 text-lg leading-relaxed",
+              dark ? "text-background/80" : "text-muted-foreground",
+            )}
+          >
             Here&apos;s exactly what happens once you reach out, and what&apos;s included in every package.
           </p>
         </div>
@@ -87,17 +102,43 @@ export default function HowItWorksSection() {
             const Icon = step.icon;
             return (
               <li key={step.title} className="flex items-start gap-4 sm:gap-5">
-                <div className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-primary text-sm font-bold text-accent sm:h-10 sm:w-10">
+                <div
+                  className={cn(
+                    "flex h-9 w-9 flex-none items-center justify-center rounded-full text-sm font-bold sm:h-10 sm:w-10",
+                    dark ? "bg-background/15 text-accent" : "bg-primary text-accent",
+                  )}
+                >
                   {index + 1}
                 </div>
-                <div className="flex-1 border-b border-primary/10 pb-6 sm:pb-7">
+                <div
+                  className={cn(
+                    "flex-1 border-b pb-6 sm:pb-7",
+                    dark ? "border-background/20" : "border-primary/10",
+                  )}
+                >
                   <div className="flex items-center gap-2">
-                    <Icon className="h-4 w-4 text-holiday-green" aria-hidden="true" />
-                    <h3 className="font-heading text-xl font-bold text-primary">
+                    <Icon
+                      className={cn(
+                        "h-4 w-4",
+                        dark ? "text-accent" : "text-holiday-green",
+                      )}
+                      aria-hidden="true"
+                    />
+                    <h3
+                      className={cn(
+                        "font-heading text-xl font-bold",
+                        dark ? "text-background" : "text-primary",
+                      )}
+                    >
                       {step.title}
                     </h3>
                   </div>
-                  <p className="mt-2 text-base leading-relaxed text-foreground">
+                  <p
+                    className={cn(
+                      "mt-2 text-base leading-relaxed",
+                      dark ? "text-background/85" : "text-foreground",
+                    )}
+                  >
                     {step.description}
                   </p>
                 </div>
@@ -107,7 +148,12 @@ export default function HowItWorksSection() {
         </ol>
 
         <div className="mx-auto mt-12 max-w-5xl sm:mt-16">
-          <h3 className="text-center font-heading text-2xl font-bold text-primary sm:text-3xl">
+          <h3
+            className={cn(
+              "text-center font-heading text-2xl font-bold sm:text-3xl",
+              dark ? "text-background" : "text-primary",
+            )}
+          >
             What you&apos;re actually paying for
           </h3>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">

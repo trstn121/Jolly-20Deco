@@ -135,14 +135,14 @@ export default function Index() {
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl text-background">
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-accent sm:text-base">
-              The Jolly Deco Co. · Cumming, GA
+              The Jolly Deco Co LLC -
             </p>
             <h1 className="font-heading text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               Holiday lighting for Cumming, Alpharetta, and Johns Creek.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-background/95 sm:text-xl">
-              Simple, well-done holiday decorating from a local owner who cares
-              about the details at your home.
+              Simple, well-done holiday decorating from a local who cares about
+              the details.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link to="/free-consultation" className="w-full sm:w-auto">
@@ -165,19 +165,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="bg-primary py-10 text-background sm:py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <MapPin className="mx-auto h-8 w-8 text-accent" />
-          <h2 className="mt-5 font-heading text-3xl font-bold sm:text-4xl">
-            Your local holiday lighting crew.
-          </h2>
-          <p className="mt-4 text-xl font-semibold leading-relaxed text-background/95">
-            Proudly serving Cumming, Alpharetta, and Johns Creek, GA.
-          </p>
-        </div>
-      </section>
-
-      <HowItWorksSection />
+      <HowItWorksSection dark />
 
       <WhyChooseUsSection />
 
