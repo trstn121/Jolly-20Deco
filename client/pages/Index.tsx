@@ -30,6 +30,7 @@ const serviceTiers = [
       "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Ffd0e879892d24477bf4d05d52665cbb1?format=webp&width=800&height=1200",
     imageAlt: "Illustrative example of the Elegance package with warm-white roofline lighting",
     imageCaption: "Example: Elegance package",
+    note: "All quotes are customer tailored, please contact for further pricing inquiry, addons paid seperate",
   },
   {
     title: "Premier",
@@ -46,20 +47,22 @@ const serviceTiers = [
       "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fdc212b84a9014d09bdb706ee9ee67f46?format=webp&width=800&height=1200",
     imageAlt: "Illustrative example of the Premier package with roofline and yard lighting",
     imageCaption: "Example: Premier package",
+    note: "All quotes are customer tailored, please contact for further pricing inquiry",
   },
   {
     title: "WonderWorld",
-    price: "Custom, starting around $3,000",
+    price: "Custom, starting around $3,000+",
     description: "Full-property, fully custom — built around exactly what you want.",
     included: [
       "Everything in Premier",
       "Custom tree and yard decor",
-      "Personal design consultation",
+      "Fully personal design choice ",
     ],
     imageUrl:
       "https://cdn.builder.io/api/v1/image/assets%2Fc46db2117e2947fb97b0993642d34356%2Fc124233793f94130b06a360d0308b3a8?format=webp&width=800&height=1200",
     imageAlt: "Illustrative example of the WonderWorld package with full-property lighting",
     imageCaption: "Example: Wonderworld package",
+    note: "All quotes are customer tailored, please contact for further pricing inquiry",
   },
 ];
 

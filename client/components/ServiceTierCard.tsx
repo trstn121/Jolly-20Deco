@@ -9,6 +9,7 @@ export interface ServiceTier {
   imageUrl: string;
   imageAlt: string;
   imageCaption: string;
+  note: string;
 }
 
 interface ServiceTierCardProps extends ServiceTier {
@@ -23,6 +24,7 @@ export default function ServiceTierCard({
   imageUrl,
   imageAlt,
   imageCaption,
+  note,
   selected = false,
 }: ServiceTierCardProps) {
   return (
@@ -52,7 +54,7 @@ export default function ServiceTierCard({
           ))}
         </ul>
         <p className="mt-auto pt-5 text-xs leading-relaxed text-muted-foreground sm:pt-7">
-          All quotes are customer tailored, please contact for further pricing inquiry, more available upon request
+          {note}
         </p>
       </CardContent>
     </Card>

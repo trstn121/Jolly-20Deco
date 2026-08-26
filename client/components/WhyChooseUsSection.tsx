@@ -45,7 +45,8 @@ export default function WhyChooseUsSection() {
             Holiday Lighting is MORE than Just Lights
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            Who doesn&apos;t get more into the Christmas spirit driving past a beautifully decorated home for the holidays? Every kid wants to ride around and see the lights. If Christmas lights aren&apos;t a sign of Christmas magic, we don&apos;t know what is. But there&apos;s a high level of detail and caution it takes to get those lights up there — let alone make them look flawless — and none of that part is magic. That&apos;s why we&apos;re here. We bring the magic.
+            Who doesn&apos;t get more into the Christmas spirit driving past a beautifully decorated home for the holidays? Every kid wants to ride around and see the lights. If Christmas lights aren&apos;t a sign of Christmas magic, we don&apos;t know what is. But there&apos;s a high level of detail and caution it takes to get those lights up there — let alone make them look flawless — and none of that part is magic.{" "}
+            <strong>That&apos;s why we&apos;re here. We bring the magic.</strong>
           </p>
         </div>
 
