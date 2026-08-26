@@ -46,13 +46,13 @@ const steps = [
 const values = [
   {
     icon: Lightbulb,
-    title: "We own the lights",
-    description: "No buying, storing, or replacing bulbs year after year.",
+    title: "Holiday Display",
+    description: "Commercial Grade lighting and decoration, owned and maintained by us, displayed magnificently by you",
   },
   {
     icon: Wrench,
     title: "Repairs included",
-    description: "Anything that stops working mid-season gets fixed at no extra charge.",
+    description: "Anything that stops working mid-season gets fixed pronto at no extra charge.",
   },
   {
     icon: Home,

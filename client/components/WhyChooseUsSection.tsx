@@ -36,16 +36,16 @@ export default function WhyChooseUsSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-accent">
-            Why choose us
+            Why Hire Professionals?
           </p>
           <h2
             id="why-choose-us-heading"
             className="mt-3 font-heading text-3xl font-bold leading-tight text-primary sm:text-4xl"
           >
-            The difference shows before we even flip the switch
+            Holiday Lighting is MORE than Just Lights
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            A lot of homeowners try it themselves first. Here&apos;s the honest difference between a DIY attempt and a professional install.
+            Who doesn&apos;t get more in the Christmas Spirit when they drive past a beautifully decorated home for the Holiday. Every kid want&apos;s to ride around to see the lights. If Christmas lights aren&apos;t a sign of Christmas magic, we don&apos;t know what is.
           </p>
         </div>
 

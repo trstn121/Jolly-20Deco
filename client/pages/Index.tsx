@@ -67,17 +67,17 @@ const faqItems = [
   {
     question: "How does pricing work?",
     answer:
-      "Every home is different, we will look at the roofline, the scope of the display, and the tier that fits before providing a clear quote.",
+      "Every home is different, during a free 15-30 minute introduction and discovery, in which we walk the property with you and discuss your design goals, we present you 3 design mock ups, and the tier that fits before providing a clear quote. Quotes are good for 7 days, no instant obligation (Besides installation booking queue)",
   },
   {
     question: "What is included in the service?",
     answer:
-      "Jolly Deco Co. provides a free design consultation, followed by custom made mockups. Upon contracting, Jolly Deco Co. owns and provides all lighting, decoration, and equipment used for the display. Jolly Deco Co. provides professional install, in season maintenance, post season take down and storage, customer priority and pricing next season. Other seasonal home maintenance options available upon ask.",
+      "We provide a free design consultation, followed by custom made mockups. Upon contracting, Jolly Deco Co. owns and provides all lighting, decoration, and equipment used for the display. Jolly Deco Co. provides professional install, using commercial grade product, proper and professional safety measurements, in season maintenance, post season take down and storage, customer priority and pricing next season.",
   },
   {
     question: "Can I request a custom look?",
     answer:
-      "Yes. WonderWorld includes custom multi-color options, and we are happy to talk through a look that fits your home and budget.",
+      "Yes, all of our presentations are custom tailored. We are happy to talk through a look that fits your home and budget.",
   },
 ];
 
@@ -176,7 +176,7 @@ export default function Index() {
               Holiday lighting packages
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-primary sm:text-4xl">
-              Home Décor. Your way.
+              Christmas. At Scale.
             </h2>
             <p className="mt-3 text-lg leading-relaxed text-foreground sm:mt-4">
               After a 15 minute design consultation and idea understanding, we
@@ -211,26 +211,29 @@ export default function Index() {
           <div className="space-y-6 text-lg leading-relaxed text-foreground">
             <p>
               Before I started this, I did door-to-door roofing sales and spent
-              close to a year as an industrial electrical apprentice — refineries,
-              chemical plants, warehouses. I learned more than I thought I would
-              about how some things actually work, and figured out along the way
-              that I liked being outside making things look good a lot more than
-              being inside a plant.
+              close to a year as an industrial electrical apprentice — factories,
+              chemical plants, warehouses. Door to Door roofing was the worst
+              though; the hardest I ever worked in one month on anything, driving
+              around the state looking for people who needed help with their roof,
+              climbing them daily, dealing with insurance... I made $0. I did,
+              however, learn more than I have in a year.
             </p>
             <p>
-              What I like best, though, is the part in between: coming up with a
-              design, showing you a mockup of what your house could look like,
-              and then getting to turn that into something real. There&apos;s
-              nothing like install day — seeing the exact picture we talked about
-              actually lit up on your house for the first time.
+              Because my favorite part, though, honestly is the work... I&apos;ve
+              always loved making cool design concepts and graphics, and who
+              doesn&apos;t love helping people to things they love. Being able to turn
+              both into one is a dream. The first conversation, coming up with a
+              design together, seeing the mockup of what your house could look
+              like, and then getting to turn that into something real. That&apos;s all
+              there is too it.
             </p>
             <p>
               Both jobs and the time I spent in school taught me the same thing:
               people need help, and doing that well builds a living. That&apos;s why
               we started Jolly Deco Co. We&apos;re not trying to be the biggest
               lighting company in North Georgia — just the one that shows up,
-              does it right, and treats your house like it matters. Satisfied
-              customers and safety is the whole goal.
+              does it right, and treats your house like it matters. Because it
+              does. Satisfied customers and safety are the whole goal.
             </p>
           </div>
         </div>
@@ -242,9 +245,6 @@ export default function Index() {
             <p className="text-sm font-bold uppercase tracking-[0.16em] text-holiday-green">
               From a customer
             </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-primary sm:text-4xl">
-              Real feedback, not filler.
-            </h2>
           </div>
           <Card className="mt-10 border border-primary/10 shadow-md">
             <CardContent className="p-7 sm:p-10">
@@ -315,7 +315,7 @@ export default function Index() {
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-background/90">
               Tell us a little about your home and what you&apos;re considering.
-              Triston will follow up with you directly.
+              Triston will follow up with you directly within 1-3 business days.
             </p>
           </div>
 
