@@ -177,9 +177,15 @@ export default function Index() {
               1. 2. 3. Christmas
             </h2>
             <p className="mt-3 text-lg leading-relaxed text-foreground sm:mt-4">
-              Fill out the form below, call, or text to schedule a 15-30 minute design
-              consultation where we:- Walk your property with you- Work together on a design overview and custom mockup- Finalize a design tailored towards your plans and budget- Leave you with a Quote good for 7 Days- Hopefully give some Christmas Spirit
+              Fill out the form below, call, or text to schedule a 15-30 minute design consultation where we:
             </p>
+            <ul className="mt-3 space-y-1 text-center text-lg leading-relaxed text-foreground">
+              <li>• Walk your property with you</li>
+              <li>• Work together on a design overview and custom mockup</li>
+              <li>• Finalize a design tailored towards your plans and budget</li>
+              <li>• Leave you with a Quote good for 7 Days</li>
+              <li>• Hopefully give some Christmas Spirit</li>
+            </ul>
           </div>
           <div className="mt-8 sm:mt-11 lg:hidden">
             <MobileTierCarousel tiers={serviceTiers} />
