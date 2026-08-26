@@ -33,7 +33,7 @@ const steps = [
     icon: Lightbulb,
     title: "We maintain it all season",
     description:
-      "If a strand goes dark in December, we come fix it. Not you, not a ladder in your yard.",
+      "If a strand goes dark in December, we come fix it. Not you on a ladder in your yard.",
   },
   {
     icon: CalendarDays,
