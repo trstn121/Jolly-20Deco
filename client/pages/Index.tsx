@@ -23,6 +23,7 @@ const completedWorkImage =
 const serviceTiers = [
   {
     title: "Elegance",
+    subheader: "The Classic Roofline",
     price: "Starting at $1,000",
     description: "A clean, classic roofline that makes your home feel ready for the season.",
     included: ["Roofline and eaves C9 lighting", "Warm-white lights"],
@@ -34,6 +35,7 @@ const serviceTiers = [
   },
   {
     title: "Premier",
+    subheader: "The Complete Front Entrance",
     price: "Starting at $2,000",
     description: "Everything in Elegance, with the extra touches that bring the whole front yard together.",
     included: [
@@ -51,6 +53,7 @@ const serviceTiers = [
   },
   {
     title: "WonderWorld",
+    subheader: "The Full Property Transformation",
     price: "Custom, starting around $3,000+",
     description: "Full-property, fully custom — built around exactly what you want.",
     included: [
@@ -177,7 +180,7 @@ export default function Index() {
               Holiday lighting packages
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-primary sm:text-4xl">
-              1. 2. 3. Christmas
+              The Art of Christmas
             </h2>
             <p className="mt-3 text-lg leading-relaxed text-foreground sm:mt-4">
               Fill out the form below, call, or text to schedule a 15-30 minute design consultation where we:

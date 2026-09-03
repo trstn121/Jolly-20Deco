@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export interface ServiceTier {
   title: string;
+  subheader: string;
   price: string;
   description: string;
   included: string[];
@@ -18,6 +19,7 @@ interface ServiceTierCardProps extends ServiceTier {
 
 export default function ServiceTierCard({
   title,
+  subheader,
   price,
   description,
   included,
@@ -31,7 +33,8 @@ export default function ServiceTierCard({
     <Card className={`relative isolate h-full overflow-visible border border-primary/10 bg-background shadow-sm transition-all duration-300 hover:z-10 hover:scale-[1.03] hover:shadow-2xl before:pointer-events-none before:absolute before:-inset-2 before:rounded-xl before:border-2 before:border-dashed before:border-accent before:shadow-[0_0_14px_hsl(var(--accent)/0.85)] before:transition-opacity before:duration-300 before:content-[''] ${selected ? "z-10 scale-[1.02] shadow-2xl before:opacity-100" : "before:opacity-0 hover:before:opacity-100"}`}>
       <CardContent className="flex h-full flex-col p-5 sm:p-8">
         <h3 className="min-h-9 font-heading text-2xl font-bold text-primary">{title}</h3>
-        <p className="mt-2 min-h-5 text-sm font-semibold text-holiday-green">{price}</p>
+        <p className="mt-2 min-h-5 text-base leading-snug text-foreground">{subheader}</p>
+        <p className="mt-1 min-h-5 text-sm font-semibold text-holiday-green">{price}</p>
         <p className="mt-3 min-h-[4rem] text-base leading-relaxed text-foreground sm:min-h-[4.5rem]">
           {description}
         </p>
