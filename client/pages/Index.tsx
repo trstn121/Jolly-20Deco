@@ -135,7 +135,7 @@ export default function Index() {
         <img
           src={completedWorkImage}
           alt="Completed warm-white roofline C9 lighting on a two-story home"
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center lg:object-[center_35%]"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-primary via-primary/85 to-primary/35" />
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -144,7 +144,7 @@ export default function Index() {
               The Jolly Deco Co LLC -
             </p>
             <h1 className="font-heading text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-              Holiday lighting for Cumming, Alpharetta, and Johns Creek.
+              Holiday lighting for Cumming.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-background/95 sm:text-xl">
               Simple, well-done holiday decorating from a local who cares about
@@ -160,11 +160,11 @@ export default function Index() {
                 </Button>
               </Link>
               <a
-                href="tel:4044169505"
+                href="tel:7707443965"
                 className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-background transition-colors hover:text-accent sm:justify-start"
               >
                 <Phone className="h-4 w-4" />
-                (404) 416-9505
+                (770)744-3965
               </a>
             </div>
           </div>
@@ -180,7 +180,7 @@ export default function Index() {
               Holiday lighting packages
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-primary sm:text-4xl">
-              The Art of Christmas
+              Christmas. Done Your Way.
             </h2>
             <p className="mt-3 text-lg leading-relaxed text-foreground sm:mt-4">
               Fill out the form below, call, or text to schedule a 15-30 minute design consultation where we:
@@ -338,10 +338,10 @@ export default function Index() {
                 <div>
                   <p className="font-semibold text-accent">Call or text</p>
                   <a
-                    href="tel:4044169505"
+                    href="tel:7707443965"
                     className="mt-1 inline-block text-lg hover:text-accent"
                   >
-                    (404) 416-9505
+                    (770)744-3965
                   </a>
                 </div>
               </div>

@@ -276,10 +276,10 @@ export default function FreeConsultation() {
           <div className="inline-flex items-center space-x-4 bg-background rounded-lg px-8 py-6 shadow-lg">
             <Phone className="w-8 h-8 text-accent" />
             <a
-              href="tel:4044169505"
+              href="tel:7707443965"
               className="text-3xl lg:text-4xl font-bold text-accent hover:text-accent/80 transition-colors"
             >
-              (404) 416-9505
+              (770)744-3965
             </a>
           </div>
         </div>

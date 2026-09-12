@@ -49,11 +49,11 @@ export default function Navigation() {
 
           <div className="hidden items-center gap-4 lg:flex">
             <a
-              href="tel:4044169505"
+              href="tel:7707443965"
               className="flex items-center gap-2 font-medium text-accent transition-colors hover:text-accent/80"
             >
               <Phone className="h-4 w-4" />
-              <span>(404) 416-9505</span>
+              <span>(770)744-3965</span>
             </a>
             <Link to="/free-consultation">
               <Button className="bg-accent font-semibold text-primary hover:bg-accent/90">
@@ -95,11 +95,11 @@ export default function Navigation() {
               ))}
               <div className="mt-1 space-y-3 border-t border-background/20 pt-4">
                 <a
-                  href="tel:4044169505"
+                  href="tel:7707443965"
                   className="flex items-center gap-2 font-medium text-accent"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>(404) 416-9505</span>
+                  <span>(770)744-3965</span>
                 </a>
                 <Link to="/free-consultation" onClick={() => setIsOpen(false)}>
                   <Button className="w-full bg-accent font-semibold text-primary hover:bg-accent/90">
