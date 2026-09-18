@@ -440,6 +440,16 @@ export default function Index() {
                   >
                     Request a Free Quote
                   </Button>
+                  <p className="text-center text-xs leading-relaxed text-muted-foreground">
+                    By submitting, you agree to be contacted by call, text, or email about your quote. See our{" "}
+                    <Link
+                      to="/privacy-policy"
+                      className="font-medium text-holiday-green underline underline-offset-2"
+                    >
+                      Privacy Policy
+                    </Link>
+                    .
+                  </p>
                 </form>
               </CardContent>
             </Card>

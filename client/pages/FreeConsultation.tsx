@@ -285,14 +285,6 @@ export default function FreeConsultation() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 bg-background border-t border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            The Jolly Deco Co.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
