@@ -73,7 +73,7 @@ const faqItems = [
   {
     question: "How does pricing work?",
     answer:
-      "Every home is different, during a free 15-30 minute introduction and discovery, in which we walk the property with you and discuss your design goals, we present you 3 design mock ups, and the tier that fits before providing a clear quote. Quotes are good for 7 days, no instant obligation (Besides installation booking queue)",
+      "Every home is different, during a free 15-30 minute introduction and discovery, in which we walk the property with you and discuss your design goals, we present you 3 design mock ups, and the tier that fits before providing a clear quote. Quotes are good for 7 days, no obligation",
   },
   {
     question: "What is included in the service?",
